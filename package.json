@@ -1,0 +1,9 @@
+{
+  "name": "vue-fa",
+  "version": "0.0.0",
+  "private": true,
+  "main": "fa.vue",
+  "author": "cweili",
+  "dependencies": {
+  }
+}
