@@ -1,9 +1,37 @@
 {
   "name": "vue-fa",
-  "version": "0.0.0",
-  "private": true,
-  "main": "fa.vue",
-  "author": "cweili",
-  "dependencies": {
+  "version": "0.0.1",
+  "description": "Simple FontAwesome 5.0+ component in Vue.js.",
+  "keywords": [
+    "fontawesome",
+    "font-awesome",
+    "vue",
+    "vue.js",
+    "component",
+    "icon"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cweili/vue-fa.git"
+  },
+  "author": "Cweili",
+  "license": "MIT",
+  "homepage": "https://github.com/Cweili/vue-fa",
+  "bugs": {
+    "url": "https://github.com/Cweili/vue-fa/issues"
+  },
+  "main": "dist/vue-fa.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "parse5": "^2.2.3",
+    "rollup": "^0.55.3",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue": "^2.5.13",
+    "vue-template-compiler": "^2.5.13"
   }
 }

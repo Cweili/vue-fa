@@ -33,11 +33,5 @@ bower_components
 .lock-wscript
 package-lock.json
 
-# Distribute packages
-dist
-*.zip
-
 # IDE configs
 .idea
-
-# Project spec
