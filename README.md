@@ -5,11 +5,11 @@
 [![npm][npm-license]](npm)
 [![github][github-issues]](github)
 
-Simple FontAwesome 5.0+ component in Vue.js.
+Simple [FontAwesome](fontawesome) 5 [Vue.js](vuejs) component.
 
 ## Install
 
-```
+```shell
 npm install vue-fa --save
 ```
 
@@ -52,11 +52,11 @@ npm install vue-fa --save
   size="2x"/>
 ```
 
-* `fw` fixed width
-* `flip` values `horizontal` `vertical` `both`
-* `pull` values `left` `right`
-* `rotation` values `90` `180` `270`
-* `size` values `xs` `sm` `lg` or `2x` `3x` `4x` ...
+* `fw`: fixed width
+* `flip`: values `horizontal`, `vertical`, `both`
+* `pull`: values `left`, `right`
+* `rotation`: values `90`, `180`, `270`
+* `size`: values `xs`, `sm`, `lg` or `2x`, `3x`, `4x` ...
 
 [npm]: https://www.npmjs.com/package/vue-fa
 [npm-version]: https://img.shields.io/npm/v/vue-fa.svg
@@ -65,3 +65,6 @@ npm install vue-fa --save
 
 [github]: https://github.com/Cweili/vue-fa
 [github-issues]: https://img.shields.io/github/issues/Cweili/vue-fa.svg
+
+[fontawesome]: https://fontawesome.com/
+[vuejs]: https://vuejs.org/

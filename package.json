@@ -1,7 +1,7 @@
 {
   "name": "vue-fa",
-  "version": "0.0.1",
-  "description": "Simple FontAwesome 5.0+ component in Vue.js.",
+  "version": "0.0.2",
+  "description": "Simple FontAwesome 5 Vue.js component",
   "keywords": [
     "fontawesome",
     "font-awesome",
