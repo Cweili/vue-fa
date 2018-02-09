@@ -98,7 +98,7 @@ export default {
         } else if (size == 'sm') {
           base.fontSize = '.875em';
         } else {
-          base.fontSize = `${size}em`;
+          base.fontSize = `${size.replace(/x/, '')}em`;
         }
       }
 
