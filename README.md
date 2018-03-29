@@ -1,9 +1,9 @@
 # vue-fa
 
-[![npm][npm-version]](npm)
-[![npm][npm-downloads]](npm)
-[![npm][npm-license]](npm)
-[![github][github-issues]](github)
+[![npm][npm-version]][npm]
+[![npm][npm-downloads]][npm]
+[![npm][npm-license]][npm]
+[![github][github-issues]][github]
 
 Simple [FontAwesome](fontawesome) 5 [Vue.js](vuejs) component.
 
