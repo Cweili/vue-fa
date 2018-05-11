@@ -39,7 +39,7 @@ var fa = { render: function render() {
       type: String,
       default: null,
       validator: function validator(value) {
-        return (/^(lg|xs|sm|(\d+)x)$/.test(value)
+        return (/^(lg|xs|sm|([\d\.]+)x)$/.test(value)
         );
       }
     }

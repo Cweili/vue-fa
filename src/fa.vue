@@ -40,7 +40,7 @@ export default {
     size: {
       type: String,
       default: null,
-      validator: value => /^(lg|xs|sm|(\d+)x)$/.test(value)
+      validator: value => /^(lg|xs|sm|([\d\.]+)x)$/.test(value)
     }
   },
 
