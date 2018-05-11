@@ -18,28 +18,29 @@ var fa = { render: function render() {
       type: String,
       default: null,
       validator: function validator(value) {
-        return ['horizontal', 'vertical', 'both'].indexOf(value) > -1;
+        return ['horizontal', 'vertical', 'both'].indexOf(value) >= 0;
       }
     },
     pull: {
       type: String,
       default: null,
       validator: function validator(value) {
-        return ['right', 'left'].indexOf(value) > -1;
+        return ['right', 'left'].indexOf(value) >= 0;
       }
     },
     rotation: {
       type: Number,
       default: null,
       validator: function validator(value) {
-        return [90, 180, 270].indexOf(value) > -1;
+        return [90, 180, 270].indexOf(value) >= 0;
       }
     },
     size: {
       type: String,
       default: null,
       validator: function validator(value) {
-        return ['lg', 'xs', 'sm'].indexOf(value) > -1 || /\d+x/.test(value);
+        return (/^(lg|xs|sm|(\d+)x)$/.test(value)
+        );
       }
     }
   },
@@ -97,7 +98,7 @@ var fa = { render: function render() {
         } else if (size == 'sm') {
           base.fontSize = '.875em';
         } else {
-          base.fontSize = size.replace(/x/, '') + "em";
+          base.fontSize = size.replace('x', 'em');
         }
       }
 

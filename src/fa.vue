@@ -25,22 +25,22 @@ export default {
     flip: {
       type: String,
       default: null,
-      validator: value => ['horizontal', 'vertical', 'both'].indexOf(value) > -1
+      validator: value => ['horizontal', 'vertical', 'both'].indexOf(value) >= 0
     },
     pull: {
       type: String,
       default: null,
-      validator: value => ['right', 'left'].indexOf(value) > -1
+      validator: value => ['right', 'left'].indexOf(value) >= 0
     },
     rotation: {
       type: Number,
       default: null,
-      validator: value => [90, 180, 270].indexOf(value) > -1
+      validator: value => [90, 180, 270].indexOf(value) >= 0
     },
     size: {
       type: String,
       default: null,
-      validator: value => ['lg', 'xs', 'sm'].indexOf(value) > -1 || /\d+x/.test(value)
+      validator: value => /^(lg|xs|sm|(\d+)x)$/.test(value)
     }
   },
 
@@ -98,7 +98,7 @@ export default {
         } else if (size == 'sm') {
           base.fontSize = '.875em';
         } else {
-          base.fontSize = `${size.replace(/x/, '')}em`;
+          base.fontSize = size.replace('x', 'em');
         }
       }
 
