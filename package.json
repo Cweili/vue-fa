@@ -1,7 +1,7 @@
 {
   "name": "vue-fa",
   "version": "1.0.0",
-  "description": "Simple FontAwesome 5.x Vue.js 2.x component",
+  "description": "Simple FontAwesome 5 Vue.js 2 component",
   "keywords": [
     "fontawesome",
     "font-awesome",
@@ -16,7 +16,7 @@
   },
   "author": "Cweili",
   "license": "MIT",
-  "homepage": "https://github.com/Cweili/vue-fa",
+  "homepage": "https://github.com/Cweili/vue-fa#readme",
   "bugs": {
     "url": "https://github.com/Cweili/vue-fa/issues"
   },

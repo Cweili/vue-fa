@@ -5,7 +5,9 @@
 [![npm][npm-license]][npm]
 [![github][github-issues]][github]
 
-Simple [FontAwesome 5.x](fontawesome) [Vue.js 2.x](vuejs) component.
+Simple [FontAwesome 5](fontawesome) [Vue.js 2](vuejs) component.
+
+[Documents and examples](doc).
 
 ## Install
 
@@ -68,3 +70,5 @@ npm install vue-fa --save
 
 [fontawesome]: https://fontawesome.com/
 [vuejs]: https://vuejs.org/
+
+[doc]: https://cweili.github.io/vue-fa/
