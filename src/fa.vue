@@ -5,7 +5,11 @@
     xmlns="http://www.w3.org/2000/svg"
     :viewBox="`0 0 ${icon.icon[0]} ${icon.icon[1]}`"
     :style="style">
-    <path fill="currentColor" :d="icon.icon[4]"/>
+    <g transform="translate(256 256)">
+      <g :transform="transform">
+        <path fill="currentColor" :d="icon.icon[4]" transform="translate(-256 -256)"/>
+      </g>
+    </g>
   </svg>
 </template>
 
@@ -32,10 +36,13 @@ export default {
       default: null,
       validator: value => ['right', 'left'].indexOf(value) >= 0
     },
-    rotation: {
-      type: Number,
+    rotate: {
+      type: [
+        Number,
+        String
+      ],
       default: null,
-      validator: value => [90, 180, 270].indexOf(value) >= 0
+      validator: value => /^[-\d\.]+$/.test(`${value}`)
     },
     size: {
       type: String,
@@ -47,7 +54,6 @@ export default {
   computed: {
     style() {
       const base = {
-        display: 'inline-block',
         fontSize: 'inherit',
         height: '1em',
         overflow: 'visible',
@@ -55,9 +61,7 @@ export default {
       };
       const {
         fw,
-        flip,
         pull,
-        rotation,
         size
       } = this;
 
@@ -66,26 +70,8 @@ export default {
         base.width = '1.25em';
       }
 
-      if (flip) {
-        if (flip == 'horizontal') {
-          base.msFilter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)';
-          base.transform = base.webkitTransform = 'scale(-1, 1)';
-        } else if (flip == 'vertical') {
-          base.msFilter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
-          base.transform = base.webkitTransform = 'scale(1, -1)';
-        } else {
-          base.msFilter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
-          base.transform = base.webkitTransform = 'scale(-1, -1)';
-        }
-      }
-
       if (pull) {
         base.float = pull;
-      }
-
-      if (rotation) {
-        base.msFilter = `progid:DXImageTransform.Microsoft.BasicImage(rotation=${rotation / 90})`;
-        base.transform = base.webkitTransform = `rotate(${rotation}deg)`;
       }
 
       if (size) {
@@ -103,6 +89,30 @@ export default {
       }
 
       return base;
+    },
+    transform() {
+      const {
+        flip,
+        rotate
+      } = this;
+
+      let transform = 'translate(0 0)';
+
+      if (flip) {
+        if (flip == 'horizontal') {
+          transform += 'scale(-1, 1)';
+        } else if (flip == 'vertical') {
+          transform += 'scale(1, -1)';
+        } else {
+          transform += 'scale(-1, -1)';
+        }
+      }
+
+      if (rotate) {
+        transform += `rotate(${rotate} 0 0)`;
+      }
+
+      return transform;
     }
   }
 };

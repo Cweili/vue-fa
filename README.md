@@ -5,7 +5,7 @@
 [![npm][npm-license]][npm]
 [![github][github-issues]][github]
 
-Simple [FontAwesome](fontawesome) 5 [Vue.js](vuejs) component.
+Simple [FontAwesome 5.x](fontawesome) [Vue.js 2.x](vuejs) component.
 
 ## Install
 
@@ -24,7 +24,7 @@ npm install vue-fa --save
 
 <script>
   import Fa from 'vue-fa'
-  import faFlag from '@fortawesome/fontawesome-free-solid/faFlag'
+  import { faFlag } from '@fortawesome/fontawesome-free-solid'
 
   export default {
     components: {
@@ -48,15 +48,15 @@ npm install vue-fa --save
   fw
   flip="horizontal"
   pull="left"
-  :rotation="90"
+  :rotate="90"
   size="2x"/>
 ```
 
 * `fw`: fixed width
-* `flip`: values `horizontal`, `vertical`, `both`
-* `pull`: values `left`, `right`
-* `rotation`: values `90`, `180`, `270`
-* `size`: values `xs`, `sm`, `lg` or `2x`, `3x`, `4x` ...
+* `flip`: `string` values `horizontal`, `vertical`, `both`
+* `pull`: `string` values `left`, `right`
+* `rotate`: `number or string` values `90`, `180`, `270`, `30`, `-30` ...
+* `size`: `string` values `xs`, `sm`, `lg` or `2x`, `3x`, `4x` ...
 
 [npm]: https://www.npmjs.com/package/vue-fa
 [npm-version]: https://img.shields.io/npm/v/vue-fa.svg

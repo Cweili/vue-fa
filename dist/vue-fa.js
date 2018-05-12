@@ -1,5 +1,5 @@
 var fa = { render: function render() {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('svg', { style: _vm.style, attrs: { "aria-hidden": "true", "role": "img", "xmlns": "http://www.w3.org/2000/svg", "viewBox": "0 0 " + _vm.icon.icon[0] + " " + _vm.icon.icon[1] } }, [_c('path', { attrs: { "fill": "currentColor", "d": _vm.icon.icon[4] } })]);
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('svg', { style: _vm.style, attrs: { "aria-hidden": "true", "role": "img", "xmlns": "http://www.w3.org/2000/svg", "viewBox": "0 0 " + _vm.icon.icon[0] + " " + _vm.icon.icon[1] } }, [_c('g', { attrs: { "transform": "translate(256 256)" } }, [_c('g', { attrs: { "transform": _vm.transform } }, [_c('path', { attrs: { "fill": "currentColor", "d": _vm.icon.icon[4], "transform": "translate(-256 -256)" } })])])]);
   }, staticRenderFns: [],
   props: {
     icon: {
@@ -28,11 +28,12 @@ var fa = { render: function render() {
         return ['right', 'left'].indexOf(value) >= 0;
       }
     },
-    rotation: {
-      type: Number,
+    rotate: {
+      type: [Number, String],
       default: null,
       validator: function validator(value) {
-        return [90, 180, 270].indexOf(value) >= 0;
+        return (/^[-\d\.]+$/.test("" + value)
+        );
       }
     },
     size: {
@@ -48,16 +49,13 @@ var fa = { render: function render() {
   computed: {
     style: function style() {
       var base = {
-        display: 'inline-block',
         fontSize: 'inherit',
         height: '1em',
         overflow: 'visible',
         verticalAlign: '-.125em'
       };
       var fw = this.fw,
-          flip = this.flip,
           pull = this.pull,
-          rotation = this.rotation,
           size = this.size;
 
 
@@ -66,26 +64,8 @@ var fa = { render: function render() {
         base.width = '1.25em';
       }
 
-      if (flip) {
-        if (flip == 'horizontal') {
-          base.msFilter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)';
-          base.transform = base.webkitTransform = 'scale(-1, 1)';
-        } else if (flip == 'vertical') {
-          base.msFilter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
-          base.transform = base.webkitTransform = 'scale(1, -1)';
-        } else {
-          base.msFilter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
-          base.transform = base.webkitTransform = 'scale(-1, -1)';
-        }
-      }
-
       if (pull) {
         base.float = pull;
-      }
-
-      if (rotation) {
-        base.msFilter = "progid:DXImageTransform.Microsoft.BasicImage(rotation=" + rotation / 90 + ")";
-        base.transform = base.webkitTransform = "rotate(" + rotation + "deg)";
       }
 
       if (size) {
@@ -103,6 +83,29 @@ var fa = { render: function render() {
       }
 
       return base;
+    },
+    transform: function transform() {
+      var flip = this.flip,
+          rotate = this.rotate;
+
+
+      var transform = 'translate(0 0)';
+
+      if (flip) {
+        if (flip == 'horizontal') {
+          transform += 'scale(-1, 1)';
+        } else if (flip == 'vertical') {
+          transform += 'scale(1, -1)';
+        } else {
+          transform += 'scale(-1, -1)';
+        }
+      }
+
+      if (rotate) {
+        transform += "rotate(" + rotate + " 0 0)";
+      }
+
+      return transform;
     }
   }
 };
