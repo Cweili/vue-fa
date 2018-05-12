@@ -9,7 +9,7 @@ Simple [FontAwesome 5][fontawesome] [Vue.js 2][vuejs] component.
 
 [Documents and examples][doc].
 
-## Install
+## Installation
 
 ```shell
 npm install vue-fa --save

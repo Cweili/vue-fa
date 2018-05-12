@@ -6,6 +6,26 @@
         Simple <a href="https://fontawesome.com/" target="_blank">FontAwesome 5</a> <a href="https://vuejs.org/" target="_blank">Vue.js 2</a> component.
       </p>
     </div>
+    <h4>Installation</h4>
+    <div class="shadow-sm p-3 mb-3 rounded bg-dark">
+      <pre class="mb-0 text-white"><code>npm install vue-fa --save</code></pre>
+    </div>
+    <div class="shadow-sm p-3 mb-3 rounded bg-dark">
+      <pre class="mb-0 text-white"><code>import Fa from 'vue-fa'
+import { faFlag } from '@fortawesome/fontawesome-free-solid'
+
+export default {
+  components: {
+    Fa
+  },
+
+  data() {
+    return {
+      faFlag
+    }
+  }
+}</code></pre>
+    </div>
     <h4>Basic Use</h4>
     <div class="shadow-sm p-3 mb-3 rounded">
       <fa :icon="faFlag"/> Flag
@@ -20,8 +40,8 @@
     </div>
     <div class="shadow-sm p-3 mb-3 rounded bg-dark">
       <pre class="mb-0 text-white"><code>&lt;div style="font-size: 3em; color: tomato"&gt;
-&lt;fa :icon="faFlag"/&gt;
-&lt;div/&gt;</code></pre>
+  &lt;fa :icon="faFlag"/&gt;
+&lt;/div&gt;</code></pre>
     </div>
     <h4>Additional Styling</h4>
     <h5>Icon Sizes</h5>
