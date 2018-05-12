@@ -5,9 +5,9 @@
 [![npm][npm-license]][npm]
 [![github][github-issues]][github]
 
-Simple [FontAwesome 5](fontawesome) [Vue.js 2](vuejs) component.
+Simple [FontAwesome 5][fontawesome] [Vue.js 2][vuejs] component.
 
-[Documents and examples](doc).
+[Documents and examples][doc].
 
 ## Install
 
