@@ -1,5 +1,6 @@
 <template>
   <svg
+    v-show="icon.icon[4]"
     aria-hidden="true"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
@@ -96,20 +97,23 @@ export default {
         rotate
       } = this;
 
-      let transform = 'translate(0 0)';
+      let transform = '';
 
       if (flip) {
+        let flipX = 1;
+        let flipY = 1;
         if (flip == 'horizontal') {
-          transform += 'scale(-1, 1)';
+          flipX = -1;
         } else if (flip == 'vertical') {
-          transform += 'scale(1, -1)';
+          flipY = -1;
         } else {
-          transform += 'scale(-1, -1)';
+          flipX = flipY = -1;
         }
+        transform += ` scale(${flipX} ${flipY})`;
       }
 
       if (rotate) {
-        transform += `rotate(${rotate} 0 0)`;
+        transform += ` rotate(${rotate} 0 0)`;
       }
 
       return transform;

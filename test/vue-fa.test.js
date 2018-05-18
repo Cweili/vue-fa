@@ -19,6 +19,6 @@ test('vue-fa', async() => {
     const out = await renderer.renderToString(new Vue(Object.assign({
       template
     }, App)));
-    expect(out).toBe(await readFile(resolve('expected', templateName), 'utf8'));
+    expect(out.trim()).toBe((await readFile(resolve('expected', templateName), 'utf8')).trim());
   }));
 });
