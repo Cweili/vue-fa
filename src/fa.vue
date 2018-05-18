@@ -55,7 +55,6 @@ export default {
   computed: {
     style() {
       const base = {
-        fontSize: 'inherit',
         height: '1em',
         overflow: 'visible',
         verticalAlign: '-.125em'

@@ -6730,7 +6730,6 @@ var Fa = { render: function render() {
   computed: {
     style: function style() {
       var base = {
-        fontSize: 'inherit',
         height: '1em',
         overflow: 'visible',
         verticalAlign: '-.125em'
