@@ -6,7 +6,7 @@
     xmlns="http://www.w3.org/2000/svg"
     :viewBox="`0 0 ${icon.icon[0]} ${icon.icon[1]}`"
     :style="style">
-    <g transform="translate(256 256)">
+    <g transform="translate(256 256)" v-if="icon.icon[4]">
       <g :transform="transform">
         <path fill="currentColor" :d="icon.icon[4]" transform="translate(-256 -256)"/>
       </g>
@@ -54,6 +54,9 @@ export default {
 
   computed: {
     style() {
+      if (!this.icon.icon[4]) {
+        return {};
+      }
       const base = {
         height: '1em',
         overflow: 'visible',

@@ -1,5 +1,5 @@
 var fa = { render: function render() {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('svg', { directives: [{ name: "show", rawName: "v-show", value: _vm.icon.icon[4], expression: "icon.icon[4]" }], style: _vm.style, attrs: { "aria-hidden": "true", "role": "img", "xmlns": "http://www.w3.org/2000/svg", "viewBox": "0 0 " + _vm.icon.icon[0] + " " + _vm.icon.icon[1] } }, [_c('g', { attrs: { "transform": "translate(256 256)" } }, [_c('g', { attrs: { "transform": _vm.transform } }, [_c('path', { attrs: { "fill": "currentColor", "d": _vm.icon.icon[4], "transform": "translate(-256 -256)" } })])])]);
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('svg', { directives: [{ name: "show", rawName: "v-show", value: _vm.icon.icon[4], expression: "icon.icon[4]" }], style: _vm.style, attrs: { "aria-hidden": "true", "role": "img", "xmlns": "http://www.w3.org/2000/svg", "viewBox": "0 0 " + _vm.icon.icon[0] + " " + _vm.icon.icon[1] } }, [_vm.icon.icon[4] ? _c('g', { attrs: { "transform": "translate(256 256)" } }, [_c('g', { attrs: { "transform": _vm.transform } }, [_c('path', { attrs: { "fill": "currentColor", "d": _vm.icon.icon[4], "transform": "translate(-256 -256)" } })])]) : _vm._e()]);
   }, staticRenderFns: [],
   props: {
     icon: {
@@ -48,6 +48,9 @@ var fa = { render: function render() {
 
   computed: {
     style: function style() {
+      if (!this.icon.icon[4]) {
+        return {};
+      }
       var base = {
         height: '1em',
         overflow: 'visible',
