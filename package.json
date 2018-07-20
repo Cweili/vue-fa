@@ -22,6 +22,7 @@
   },
   "main": "dist/vue-fa.js",
   "module": "dist/vue-fa.esm.js",
+  "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
     "examples": "cd examples && rollup -c",
