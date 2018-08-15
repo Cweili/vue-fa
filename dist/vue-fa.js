@@ -55,8 +55,7 @@ var fa = { render: function render() {
       }
       var base = {
         height: '1em',
-        overflow: 'visible',
-        verticalAlign: '-.125em'
+        overflow: 'visible'
       };
       var fw = this.fw,
           pull = this.pull,
@@ -76,7 +75,6 @@ var fa = { render: function render() {
         if (size == 'lg') {
           base.fontSize = '1.33333em';
           base.lineHeight = '.75em';
-          base.verticalAlign = '-.0667em';
         } else if (size == 'xs') {
           base.fontSize = '.75em';
         } else if (size == 'sm') {
