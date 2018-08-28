@@ -26,13 +26,13 @@
   "scripts": {
     "build": "rollup -c",
     "examples": "cd examples && rollup -c",
-    "test": "jest test --testURL \"http://localhost/\" --collectCoverage --coverageDirectory ./coverage/"
+    "test": "jest test --collectCoverage --coverageDirectory ./coverage/"
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.3.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.3",
+    "jest": "^23.5.0",
     "rollup": "^0.55.3",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-node-resolve": "^3.3.0",
