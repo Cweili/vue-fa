@@ -7,7 +7,8 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: 'cjs'
+      format: 'umd',
+      name: 'VueFa'
     },
     {
       file: pkg.module,
