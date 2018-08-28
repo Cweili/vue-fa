@@ -10,10 +10,11 @@ export default {
     name: 'vueFaExamples',
     format: 'iife',
     globals: {
-      vue: 'Vue'
+      vue: 'Vue',
+      'vue-fa': 'VueFa'
     },
   },
-  external: ['vue'],
+  external: ['vue', 'vue-fa'],
   plugins: [
     resolve({
       browser: true

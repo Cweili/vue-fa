@@ -57,7 +57,6 @@ export default {
     </div>
     <div class="shadow-sm p-3 mb-3 rounded bg-dark">
       <pre class="mb-0 text-white"><code>&lt;fa :icon="faFlag" size="xs"/&gt;
-&lt;fa :icon="faFlag" size="xs"/&gt;
 &lt;fa :icon="faFlag" size="sm"/&gt;
 &lt;fa :icon="faFlag" size="lg"/&gt;
 &lt;fa :icon="faFlag" size="2x"/&gt;
@@ -120,7 +119,7 @@ Gatsby believed in the green light, the orgastic future that year by year recede
 </template>
 
 <script>
-import Fa from '../src/fa.vue'
+import Fa from 'vue-fa'
 import {
   faFlag,
   faHome,

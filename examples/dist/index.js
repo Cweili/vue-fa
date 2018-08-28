@@ -1,122 +1,8 @@
-(function (Vue) {
+(function (Fa,Vue) {
 'use strict';
 
+Fa = Fa && Fa.hasOwnProperty('default') ? Fa['default'] : Fa;
 Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
-
-var Fa = { render: function render() {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('svg', { directives: [{ name: "show", rawName: "v-show", value: _vm.icon.icon[4], expression: "icon.icon[4]" }], style: _vm.style, attrs: { "aria-hidden": "true", "role": "img", "xmlns": "http://www.w3.org/2000/svg", "viewBox": "0 0 " + _vm.icon.icon[0] + " " + _vm.icon.icon[1] } }, [_vm.icon.icon[4] ? _c('g', { attrs: { "transform": "translate(256 256)" } }, [_c('g', { attrs: { "transform": _vm.transform } }, [_c('path', { attrs: { "fill": "currentColor", "d": _vm.icon.icon[4], "transform": "translate(-256 -256)" } })])]) : _vm._e()]);
-  }, staticRenderFns: [],
-  props: {
-    icon: {
-      type: Object,
-      default: function _default() {
-        return {
-          icon: [0, 0, '', [], '']
-        };
-      }
-    },
-    fw: {
-      type: Boolean,
-      default: false
-    },
-    flip: {
-      type: String,
-      default: null,
-      validator: function validator(value) {
-        return ['horizontal', 'vertical', 'both'].indexOf(value) >= 0;
-      }
-    },
-    pull: {
-      type: String,
-      default: null,
-      validator: function validator(value) {
-        return ['right', 'left'].indexOf(value) >= 0;
-      }
-    },
-    rotate: {
-      type: [Number, String],
-      default: null,
-      validator: function validator(value) {
-        return (/^[-\d\.]+$/.test("" + value)
-        );
-      }
-    },
-    size: {
-      type: String,
-      default: null,
-      validator: function validator(value) {
-        return (/^(lg|xs|sm|([\d\.]+)x)$/.test(value)
-        );
-      }
-    }
-  },
-
-  computed: {
-    style: function style() {
-      if (!this.icon.icon[4]) {
-        return {};
-      }
-      var base = {
-        height: '1em',
-        overflow: 'visible'
-      };
-      var fw = this.fw,
-          pull = this.pull,
-          size = this.size;
-
-
-      if (fw) {
-        base.textAlign = 'center';
-        base.width = '1.25em';
-      }
-
-      if (pull) {
-        base.float = pull;
-      }
-
-      if (size) {
-        if (size == 'lg') {
-          base.fontSize = '1.33333em';
-          base.lineHeight = '.75em';
-        } else if (size == 'xs') {
-          base.fontSize = '.75em';
-        } else if (size == 'sm') {
-          base.fontSize = '.875em';
-        } else {
-          base.fontSize = size.replace('x', 'em');
-        }
-      }
-
-      return base;
-    },
-    transform: function transform() {
-      var flip = this.flip,
-          rotate = this.rotate;
-
-
-      var transform = '';
-
-      if (flip) {
-        var flipX = 1;
-        var flipY = 1;
-        if (flip == 'horizontal') {
-          flipX = -1;
-        } else if (flip == 'vertical') {
-          flipY = -1;
-        } else {
-          flipX = flipY = -1;
-        }
-        transform += " scale(" + flipX + " " + flipY + ")";
-      }
-
-      if (rotate) {
-        transform += " rotate(" + rotate + " 0 0)";
-      }
-
-      return transform;
-    }
-  }
-};
 
 /*!
  * Font Awesome Free 5.3.0 by @fontawesome - https://fontawesome.com
@@ -136,7 +22,7 @@ var App = { render: function render() {
   }, function () {
     var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "shadow-sm p-3 mb-3 rounded bg-dark" }, [_c('pre', { staticClass: "mb-0 text-white" }, [_c('code', [_vm._v("<div style=\"font-size: 3em; color: tomato\">\n  <fa :icon=\"faFlag\"/>\n</div>")])])]);
   }, function () {
-    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "shadow-sm p-3 mb-3 rounded bg-dark" }, [_c('pre', { staticClass: "mb-0 text-white" }, [_c('code', [_vm._v("<fa :icon=\"faFlag\" size=\"xs\"/>\n<fa :icon=\"faFlag\" size=\"xs\"/>\n<fa :icon=\"faFlag\" size=\"sm\"/>\n<fa :icon=\"faFlag\" size=\"lg\"/>\n<fa :icon=\"faFlag\" size=\"2x\"/>\n<fa :icon=\"faFlag\" size=\"2.5x\"/>\n<fa :icon=\"faFlag\" size=\"5x\"/>\n<fa :icon=\"faFlag\" size=\"7x\"/>\n<fa :icon=\"faFlag\" size=\"10x\"/>")])])]);
+    var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "shadow-sm p-3 mb-3 rounded bg-dark" }, [_c('pre', { staticClass: "mb-0 text-white" }, [_c('code', [_vm._v("<fa :icon=\"faFlag\" size=\"xs\"/>\n<fa :icon=\"faFlag\" size=\"sm\"/>\n<fa :icon=\"faFlag\" size=\"lg\"/>\n<fa :icon=\"faFlag\" size=\"2x\"/>\n<fa :icon=\"faFlag\" size=\"2.5x\"/>\n<fa :icon=\"faFlag\" size=\"5x\"/>\n<fa :icon=\"faFlag\" size=\"7x\"/>\n<fa :icon=\"faFlag\" size=\"10x\"/>")])])]);
   }, function () {
     var _vm = this;var _h = _vm.$createElement;var _c = _vm._self._c || _h;return _c('div', { staticClass: "shadow-sm p-3 mb-3 rounded bg-dark" }, [_c('pre', { staticClass: "mb-0 text-white" }, [_c('code', [_vm._v("<div><fa :icon=\"faHome\" fw style=\"background: mistyrose\"/></div>\n<div><fa :icon=\"faInfo\" fw style=\"background: mistyrose\"/></div>\n<div><fa :icon=\"faBook\" fw style=\"background: mistyrose\"/></div>\n<div><fa :icon=\"faPencilAlt\" fw style=\"background: mistyrose\"/></div>\n<div><fa :icon=\"faCog\" fw style=\"background: mistyrose\"/></div>")])])]);
   }, function () {
@@ -171,4 +57,4 @@ new Vue({
   }
 });
 
-}(Vue));
+}(VueFa,Vue));
