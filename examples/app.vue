@@ -12,7 +12,7 @@
     </div>
     <div class="shadow-sm p-3 mb-3 rounded bg-dark">
       <pre class="mb-0 text-white"><code>import Fa from 'vue-fa'
-import { faFlag } from '@fortawesome/fontawesome-free-solid'
+import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   components: {
@@ -131,7 +131,7 @@ import {
   faQuoteLeft,
   faQuoteRight,
   faMagic
-} from '@fortawesome/fontawesome-free-solid'
+} from '@fortawesome/free-solid-svg-icons'
 
 export default {
   components: {

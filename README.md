@@ -31,7 +31,7 @@ npm install vue-fa --save
 
 <script>
   import Fa from 'vue-fa'
-  import { faFlag } from '@fortawesome/fontawesome-free-solid'
+  import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
   export default {
     components: {

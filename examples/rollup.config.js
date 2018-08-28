@@ -8,8 +8,12 @@ export default {
   output: {
     file: 'dist/index.js',
     name: 'vueFaExamples',
-    format: 'iife'
+    format: 'iife',
+    globals: {
+      vue: 'Vue'
+    },
   },
+  external: ['vue'],
   plugins: [
     resolve({
       browser: true

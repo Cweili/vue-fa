@@ -5,7 +5,7 @@ import {
   faQuoteLeft,
   faQuoteRight,
   faMagic
-} from '@fortawesome/fontawesome-free-solid';
+} from '@fortawesome/free-solid-svg-icons';
 
 export default {
   components: {
