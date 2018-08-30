@@ -16,7 +16,7 @@
   },
   "author": "Cweili",
   "license": "MIT",
-  "homepage": "https://github.com/Cweili/vue-fa#readme",
+  "homepage": "https://cweili.github.io/vue-fa/",
   "bugs": {
     "url": "https://github.com/Cweili/vue-fa/issues"
   },
@@ -35,8 +35,6 @@
     "jest": "^23.5.0",
     "rollup": "^0.55.3",
     "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-replace": "^2.0.0",
     "rollup-plugin-vue": "^3.0.0",
     "vue": "^2.5.16",
     "vue-server-renderer": "^2.5.16",
