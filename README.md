@@ -47,7 +47,7 @@ npm install vue-fa --save
 </script>
 ```
 
-## Attributes
+## Properties
 
 ```html
 <fa
