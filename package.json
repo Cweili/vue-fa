@@ -33,9 +33,9 @@
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "jest": "^23.5.0",
-    "rollup": "^0.55.3",
-    "rollup-plugin-babel": "^3.0.3",
-    "rollup-plugin-vue": "^3.0.0",
+    "rollup": "^0.66.6",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-vue": "^4.3.2",
     "vue": "^2.5.16",
     "vue-server-renderer": "^2.5.16",
     "vue-template-compiler": "^2.5.13"
