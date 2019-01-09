@@ -75,7 +75,7 @@ npm install vue-fa --save
 [github-issues]: https://img.shields.io/github/issues/Cweili/vue-fa.svg
 
 [travis]: https://travis-ci.org/Cweili/vue-fa
-[travis-build]: https://img.shields.io/travis/Cweili/vue-fa.svg
+[travis-build]: https://travis-ci.org/Cweili/vue-fa.svg?branch=master
 
 [codecov]: https://codecov.io/gh/Cweili/vue-fa
 [codecov-svg]: https://img.shields.io/codecov/c/github/Cweili/vue-fa.svg
