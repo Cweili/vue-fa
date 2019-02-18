@@ -26,15 +26,17 @@
   "scripts": {
     "build": "rollup -c",
     "examples": "cd examples && rollup -c",
-    "test": "jest test --collectCoverage --coverageDirectory ./coverage/"
+    "test": "jest test --coverage"
   },
   "devDependencies": {
-    "@fortawesome/free-solid-svg-icons": "^5.3.0",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "jest": "^23.5.0",
     "rollup": "^0.55.3",
     "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.1.0",
     "rollup-plugin-vue": "^3.0.0",
     "vue": "^2.5.16",
     "vue-server-renderer": "^2.5.16",
