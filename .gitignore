@@ -35,3 +35,6 @@ package-lock.json
 
 # IDE configs
 .idea
+
+# Distributions
+dist
