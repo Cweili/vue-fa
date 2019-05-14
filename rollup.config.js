@@ -17,8 +17,10 @@ export default {
   ],
   plugins: [
     vue({
-      css: false
+      css: false,
     }),
-    babel()
+    babel({
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
+    })
   ],
 };
