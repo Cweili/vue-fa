@@ -10,7 +10,7 @@
 [![travis][badge-build]][travis]
 [![coverage][badge-coverage]][codecov]
 
-Tiny [FontAwesome 5][fontawesome] [Vue.js 2][vuejs] component.
+Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
 
 [Documents and examples][doc].
 
