@@ -1,15 +1,15 @@
-import Fa from '../dist/vue-fa';
 import {
   faFlag,
   faHome,
   faQuoteLeft,
   faQuoteRight,
-  faMagic
+  faMagic,
 } from '@fortawesome/free-solid-svg-icons';
+import Fa from '../dist/vue-fa';
 
 export default {
   components: {
-    Fa
+    Fa,
   },
 
   data() {
@@ -18,7 +18,7 @@ export default {
       faHome,
       faQuoteLeft,
       faQuoteRight,
-      faMagic
-    }
-  }
+      faMagic,
+    };
+  },
 };

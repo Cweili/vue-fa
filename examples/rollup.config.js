@@ -11,20 +11,20 @@ export default {
     format: 'iife',
     globals: {
       vue: 'Vue',
-      'vue-fa': 'VueFa'
+      'vue-fa': 'VueFa',
     },
   },
   external: ['vue', 'vue-fa'],
   plugins: [
     resolve({
-      browser: true
+      browser: true,
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify('production')
+      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     vue({
-      css: false
+      css: false,
     }),
-    babel()
+    babel(),
   ],
 };

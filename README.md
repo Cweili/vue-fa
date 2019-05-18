@@ -7,7 +7,7 @@
 
 
 [![github][badge-issues]][github]
-[![travis][badge-build]][travis]
+[![build][badge-build]][travis]
 [![coverage][badge-coverage]][codecov]
 
 Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
@@ -83,7 +83,7 @@ npm install vue-fa --save
 [badge-issues]: https://img.shields.io/github/issues/Cweili/vue-fa.svg
 [github]: https://github.com/Cweili/vue-fa
 
-[badge-build]: https://travis-ci.org/Cweili/vue-fa.svg?branch=master
+[badge-build]: https://img.shields.io/travis/Cweili/vue-fa/master.svg
 [travis]: https://travis-ci.org/Cweili/vue-fa
 
 [badge-coverage]: https://img.shields.io/codecov/c/github/Cweili/vue-fa.svg

@@ -8,11 +8,11 @@ export default {
     {
       file: pkg.main,
       format: 'umd',
-      name: 'VueFa'
+      name: 'VueFa',
     },
     {
       file: pkg.module,
-      format: 'es'
+      format: 'es',
     },
   ],
   plugins: [
@@ -21,6 +21,6 @@ export default {
     }),
     babel({
       extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
-    })
+    }),
   ],
 };
