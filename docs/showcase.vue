@@ -60,7 +60,7 @@
 </template>
 
 <script>
-import Fa from '..';
+import Fa from 'vue-fa';
 import {
   faFlag,
   faHome,

@@ -25,10 +25,10 @@
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
-    "postbuild": "eslint --fix *.js src/*.vue test/*.js examples/*.js examples/*.vue",
-    "build:examples": "cd examples && rollup -c",
-    "dev:build": "cd examples && rollup -c -w",
-    "dev:serve": "sirv examples --dev",
+    "postbuild": "eslint --fix *.js src/*.vue test/*.js docs/*.js docs/*.vue",
+    "build:docs": "cd docs && rollup -c",
+    "dev:build": "cd docs && rollup -c -w",
+    "dev:serve": "sirv docs --dev",
     "dev": "run-p dev:build dev:serve",
     "test": "jest test --coverage"
   },

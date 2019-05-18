@@ -221,7 +221,7 @@ Gatsby believed in the green light, the orgastic future that year by year recede
 </template>
 
 <script>
-import Fa from '..';
+import Fa from 'vue-fa';
 import {
   faFlag,
   faHome,
