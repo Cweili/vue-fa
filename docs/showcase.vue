@@ -2,7 +2,9 @@
   <div class="jumbotron">
     <div class="row">
       <div class="col-md">
-        <h1>vue-fa</h1>
+        <h1 class="hue">
+          <strong>vue-fa</strong>
+        </h1>
         <p class="lead">
           Tiny <a
             href="https://fontawesome.com/"
@@ -43,7 +45,7 @@
         <div
           v-for="(icon, name) in icons"
           :key="name"
-          class="col text-center"
+          class="col text-center hue"
         >
           <fa
             :icon="icon"
@@ -92,3 +94,20 @@ export default {
   },
 };
 </script>
+
+<style>
+.hue {
+  color: #238ae6;
+  animation: hue 30s infinite linear;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}
+</style>

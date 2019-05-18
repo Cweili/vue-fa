@@ -23,7 +23,7 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     vue({
-      css: false,
+      css: true,
     }),
     babel(),
   ],
