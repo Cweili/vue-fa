@@ -5,7 +5,7 @@
         <h1 class="hue">
           <strong>vue-fa</strong>
         </h1>
-        <p class="lead">
+        <p class="lead mb-5">
           Tiny <a
             href="https://fontawesome.com/"
             target="_blank"
@@ -16,25 +16,81 @@
         </p>
         <form @submit.prevent>
           <div class="form-group row">
-            <label
-              class="col-sm-1 col-form-label"
-              for="size"
-            >Size</label>
-            <div class="col-sm-11 row">
-              <div class="col-md-9 pt-2 pb-2">
+            <label class="col-sm-3 col-form-label">Icon Sizes</label>
+            <div class="col-sm-9 row">
+              <div class="col-md-8 py-2">
                 <input
-                  id="size"
                   v-model="model.size"
                   type="range"
                   class="form-control-range"
                   min="1"
                   max="10"
-                  step="0.5"
+                  step="0.1"
                 >
               </div>
-              <div class="col-md-3">
-                <div class="form-control">
+              <div class="col-md-4">
+                <div class="form-control text-center">
                   {{ model.size }}x
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Pulled Icons</label>
+            <div class="col-sm-9">
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic example"
+              >
+                <button
+                  v-for="p in pull"
+                  :key="p"
+                  @click="setValue('pull', p)"
+                  :class="`btn btn-${checked('pull', p)}`"
+                  type="button"
+                >
+                  {{ p }}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Flipped Icons</label>
+            <div class="col-sm-9">
+              <div
+                class="btn-group"
+                role="group"
+                aria-label="Basic example"
+              >
+                <button
+                  v-for="f in flip"
+                  :key="f"
+                  @click="setValue('flip', f)"
+                  :class="`btn btn-${checked('flip', f)}`"
+                  type="button"
+                >
+                  {{ f }}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Rotate</label>
+            <div class="col-sm-9 row">
+              <div class="col-md-8 py-2">
+                <input
+                  v-model="model.rotate"
+                  type="range"
+                  class="form-control-range"
+                  min="-360"
+                  max="360"
+                  step="1"
+                >
+              </div>
+              <div class="col-md-4">
+                <div class="form-control text-center">
+                  {{ model.rotate }}deg
                 </div>
               </div>
             </div>
@@ -49,7 +105,6 @@
         >
           <fa
             :icon="icon"
-            :fw="model.fw"
             :flip="model.flip"
             :pull="model.pull"
             :rotate="model.rotate"
@@ -79,11 +134,12 @@ export default {
     return {
       model: {
         size: 5,
-        fw: false,
-        flip: '',
-        pull: '',
-        rotate: '',
+        pull: undefined,
+        flip: undefined,
+        rotate: 0,
       },
+      pull: ['None', 'Left', 'Right'],
+      flip: ['None', 'Horizontal', 'Vertical', 'Both'],
       icons: {
         faFlag,
         faHome,
@@ -91,6 +147,15 @@ export default {
         faMagic,
       },
     };
+  },
+
+  methods: {
+    setValue(prop, value) {
+      this.model[prop] = value == 'None' ? undefined : value.toLowerCase();
+    },
+    checked(prop, value) {
+      return this.model[prop] == (value == 'None' ? undefined : value.toLowerCase()) ? 'primary' : 'secondary';
+    },
   },
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-4 mb-4">
+  <div class="container my-4">
     <showcase />
     <docs />
   </div>
