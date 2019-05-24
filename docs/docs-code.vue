@@ -1,10 +1,15 @@
 <template>
   <div class="shadow-sm mb-3 rounded">
-    <pre><code :class="`language-${lang}`">{{ code }}</code></pre>
+    <pre><code
+      :class="`language-${lang}`"
+      v-ref="el"
+    >{{ code }}</code></pre>
   </div>
 </template>
 
 <script>
+/* global Prism */
+
 export default {
   props: {
     code: {
@@ -14,6 +19,20 @@ export default {
     lang: {
       type: String,
       default: 'html',
+    },
+  },
+
+  watch: {
+    code: 'highlight',
+  },
+
+  mounted() {
+    this.highlight();
+  },
+
+  methods: {
+    highlight() {
+      Prism.highlightElement(this.$refs.el);
     },
   },
 };
