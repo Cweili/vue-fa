@@ -1,19 +1,19 @@
 <template>
   <svg
-    v-show="icon.icon[4]"
-    :viewBox="`0 0 ${icon.icon[0]} ${icon.icon[1]}`"
+    v-show="i[4]"
+    :viewBox="`0 0 ${i[0]} ${i[1]}`"
     :style="style"
     aria-hidden="true"
     role="img"
     xmlns="http://www.w3.org/2000/svg"
   >
     <g
-      v-if="icon.icon[4]"
+      v-if="i[4]"
       transform="translate(256 256)"
     >
       <g :transform="transform">
         <path
-          :d="icon.icon[4]"
+          :d="i[4]"
           fill="currentColor"
           transform="translate(-256 -256)"
         />
@@ -25,24 +25,14 @@
 <script>
 export default {
   props: {
-    icon: {
-      type: Object,
-      default: () => ({
-        icon: [0, 0, '', [], ''],
-      }),
-    },
-    fw: {
-      type: Boolean,
-      default: false,
-    },
+    icon: Object,
+    fw: Boolean,
     flip: {
       type: String,
-      default: null,
       validator: value => ['horizontal', 'vertical', 'both'].indexOf(value) >= 0,
     },
     pull: {
       type: String,
-      default: null,
       validator: value => ['right', 'left'].indexOf(value) >= 0,
     },
     rotate: {
@@ -50,19 +40,20 @@ export default {
         Number,
         String,
       ],
-      default: null,
       validator: value => /^[-\d.]+$/.test(`${value}`),
     },
     size: {
       type: String,
-      default: null,
       validator: value => /^(lg|xs|sm|([\d.]+)x)$/.test(value),
     },
   },
 
   computed: {
+    i() {
+      return (this.icon && this.icon.icon) || [0, 0, '', [], ''];
+    },
     style() {
-      if (!this.icon.icon[4]) {
+      if (!this.i[4]) {
         return {};
       }
       const base = {
