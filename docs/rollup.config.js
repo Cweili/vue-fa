@@ -25,6 +25,8 @@ export default {
     vue({
       css: true,
     }),
-    babel(),
+    babel({
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
+    }),
   ],
 };
