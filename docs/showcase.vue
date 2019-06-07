@@ -56,7 +56,7 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-sm-3 col-form-label">Flipped Icons</label>
+            <label class="col-sm-3 col-form-label">Flip</label>
             <div class="col-sm-9">
               <div
                 class="btn-group"
@@ -99,8 +99,8 @@
       </div>
       <div class="col-md row">
         <div
-          v-for="(icon, name) in icons"
-          :key="name"
+          v-for="(icon, i) in icons"
+          :key="i"
           class="col text-center hue"
         >
           <fa
@@ -140,12 +140,12 @@ export default {
       },
       pull: ['None', 'Left', 'Right'],
       flip: ['None', 'Horizontal', 'Vertical', 'Both'],
-      icons: {
+      icons: [
         faFlag,
         faHome,
         faCog,
         faMagic,
-      },
+      ],
     };
   },
 
