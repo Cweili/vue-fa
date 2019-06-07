@@ -292,7 +292,11 @@
     },
     methods: {
       highlight: function highlight() {
-        Prism.highlightElement(this.$refs.el);
+        var el = this.$refs.el;
+
+        if (el) {
+          Prism.highlightElement(el);
+        }
       }
     }
   };

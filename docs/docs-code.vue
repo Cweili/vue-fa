@@ -32,7 +32,10 @@ export default {
 
   methods: {
     highlight() {
-      Prism.highlightElement(this.$refs.el);
+      const { el } = this.$refs;
+      if (el) {
+        Prism.highlightElement(el);
+      }
     },
   },
 };
