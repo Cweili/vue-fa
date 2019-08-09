@@ -23,6 +23,12 @@ export default {
       faQuoteRight,
       faMagic,
       fadFlag,
+      theme: {
+        primaryColor: 'red',
+        secondaryColor: '#000000',
+        primaryOpacity: 0.8,
+        secondaryOpacity: 0.6,
+      },
     };
   },
 };

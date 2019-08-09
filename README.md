@@ -81,11 +81,11 @@ import { faFlag } from '@fortawesome/pro-duotone-svg-icons'
 ```html
 <fa
   :icon="faFlag"
-  primaryColor="red"
-  secondaryColor="#000000"
-  :primaryOpacity="0.8"
-  :secondaryOpacity="0.6"
-  swapOpacity/>
+  primary-color="red"
+  secondary-color="#000000"
+  :primary-opacity="0.8"
+  :secondary-opacity="0.6"
+  swap-opacity/>
 ```
 
 ### Duotone Icons Theme
