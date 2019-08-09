@@ -123,7 +123,7 @@ import {
   faHome,
   faCog,
   faMagic,
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/pro-duotone-svg-icons';
 
 export default {
   components: {
