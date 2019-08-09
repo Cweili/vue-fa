@@ -13,10 +13,25 @@
     >
       <g :transform="transform">
         <path
+          v-if="typeof i[4] == 'string'"
           :d="i[4]"
-          fill="currentColor"
+          :fill="color || primaryColor || 'currentColor'"
           transform="translate(-256 -256)"
         />
+        <template v-else>
+          <path
+            :d="i[4][0]"
+            :fill="secondaryColor || color || 'currentColor'"
+            :fill-opacity="swapOpacity !== false ? primaryOpacity : secondaryOpacity"
+            transform="translate(-256 -256)"
+          />
+          <path
+            :d="i[4][1]"
+            :fill="primaryColor || color || 'currentColor'"
+            :fill-opacity="swapOpacity !== false ? secondaryOpacity : primaryOpacity"
+            transform="translate(-256 -256)"
+          />
+        </template>
       </g>
     </g>
   </svg>
@@ -45,6 +60,27 @@ export default {
     size: {
       type: String,
       validator: value => /^(lg|xs|sm|([\d.]+)x)$/.test(value),
+    },
+    color: String,
+    primaryColor: String,
+    secondaryColor: String,
+    primaryOpacity: {
+      type: [
+        Number,
+        String,
+      ],
+      default: 1,
+    },
+    secondaryOpacity: {
+      type: [
+        Number,
+        String,
+      ],
+      default: 0.4,
+    },
+    // eslint-disable-next-line vue/require-prop-types
+    swapOpacity: {
+      default: false,
     },
   },
 

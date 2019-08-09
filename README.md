@@ -12,6 +12,11 @@
 
 Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
 
+* FontAwesome svg icons
+* Tree-shakable, only import used icons
+* No CSS file required
+* FontAwesome duotone icons
+
 [Documents and examples][doc].
 
 ## Installation
@@ -56,7 +61,8 @@ npm install vue-fa --save
   flip="horizontal"
   pull="left"
   :rotate="90"
-  size="2x"/>
+  size="2x"
+  color="#ff0000"/>
 ```
 
 * `fw`: fixed width
@@ -64,6 +70,43 @@ npm install vue-fa --save
 * `pull`: `string` values `left`, `right`
 * `rotate`: `number or string` values `90`, `180`, `270`, `30`, `-30` ...
 * `size`: `string` values `xs`, `sm`, `lg` or `2x`, `3x`, `4x` ...
+* `color`: icon color, default `currentColor`
+
+## Duotone Icons
+
+```js
+import { faFlag } from '@fortawesome/pro-duotone-svg-icons'
+```
+
+```html
+<fa
+  :icon="faFlag"
+  primaryColor="red"
+  secondaryColor="#000000"
+  :primaryOpacity="0.8"
+  :secondaryOpacity="0.6"
+  swapOpacity/>
+```
+
+### Duotone Icons Theme
+
+```html
+<script>
+import Fa from 'svelte-fa'
+import { faFlag } from '@fortawesome/pro-duotone-svg-icons'
+
+const theme = {
+  primaryColor: 'red',
+  secondaryColor: '#000000',
+  primaryOpacity: 0.8,
+  secondaryOpacity: 0.6,
+}
+</script>
+
+<fa
+  icon={faFlag}
+  v-bind="theme"/>
+```
 
 [fontawesome]: https://fontawesome.com/
 [vuejs]: https://vuejs.org/
