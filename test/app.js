@@ -4,10 +4,8 @@ import {
   faQuoteLeft,
   faQuoteRight,
   faMagic,
-} from '@fortawesome/free-solid-svg-icons';
-import {
-  faFlag as fadFlag,
-} from '@fortawesome/pro-duotone-svg-icons';
+  fadFlag,
+} from '@cweili/fa-test-util';
 import Fa from '../dist/vue-fa';
 
 export default {

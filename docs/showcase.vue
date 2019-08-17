@@ -3,13 +3,65 @@
     <div class="row">
       <div class="col-md">
         <h1 class="hue">
-          <strong>vue-fa</strong>
+          <strong><a
+            href="https://github.com/Cweili/vue-fa"
+            target="_blank"
+          >vue-fa</a></strong>
         </h1>
+        <p>
+          <a
+            href="https://www.npmjs.com/package/vue-fa"
+            target="_blank"
+          >
+            <img
+              src="https://img.shields.io/npm/v/vue-fa.svg"
+              alt="npm version"
+            >
+          </a>
+          <a
+            href="https://bundlephobia.com/result?p=vue-fa"
+            target="_blank"
+          >
+            <img
+              src="https://img.shields.io/bundlephobia/minzip/vue-fa.svg"
+              alt="bundle size"
+            >
+          </a>
+          <a
+            href="https://github.com/Cweili/vue-fa/blob/master/LICENSE"
+            target="_blank"
+          >
+            <img
+              src="https://img.shields.io/npm/l/vue-fa.svg"
+              alt="MIT licence"
+            >
+          </a>
+          <a
+            href="https://www.npmjs.com/package/vue-fa"
+            target="_blank"
+          >
+            <img
+              src="https://img.shields.io/npm/dt/vue-fa.svg"
+              alt="npm downloads"
+            >
+          </a>
+          <a
+            href="https://github.com/Cweili/vue-fa"
+            target="_blank"
+          >
+            <img
+              src="https://img.shields.io/github/issues/Cweili/vue-fa.svg"
+              alt="github issues"
+            >
+          </a>
+        </p>
         <p class="lead mb-5">
           Tiny <a
+            class="hue"
             href="https://fontawesome.com/"
             target="_blank"
           >FontAwesome 5</a> component for <a
+            class="hue"
             href="https://vuejs.org/"
             target="_blank"
           >Vue.js</a>.
@@ -103,7 +155,7 @@
           :key="i"
           class="col text-center hue"
         >
-          <fa
+          <Fa
             :icon="icon"
             :flip="model.flip"
             :pull="model.pull"
@@ -123,7 +175,7 @@ import {
   faHome,
   faCog,
   faMagic,
-} from '@fortawesome/pro-duotone-svg-icons';
+} from '@fortawesome/free-solid-svg-icons';
 
 export default {
   components: {
