@@ -1,165 +1,177 @@
 <template>
   <div>
-    <h4>Installation</h4>
-    <docs-code :code="codes.installation[0]" />
-    <docs-code
+    <DocsTitle title="Installation" />
+    <DocsCode :code="codes.installation[0]" />
+    <DocsCode
       :code="codes.installation[1]"
       lang="js"
     />
-    <h4>Basic Use</h4>
+    <DocsTitle title="Basic Use" />
     <div class="shadow-sm p-3 mb-3 rounded">
-      <fa :icon="faFlag" /> Flag
+      <Fa :icon="faFlag" /> Flag
     </div>
-    <docs-code :code="codes.basicUse[0]" />
+    <DocsCode :code="codes.basicUse[0]" />
     <div class="shadow-sm p-3 mb-3 rounded">
       <div style="font-size: 3em; color: tomato">
-        <fa :icon="faFlag" />
+        <Fa :icon="faFlag" />
       </div>
     </div>
-    <docs-code :code="codes.basicUse[1]" />
-    <h4>Additional Styling</h4>
-    <h5>Icon Sizes</h5>
+    <DocsCode :code="codes.basicUse[1]" />
+    <DocsTitle title="Additional Styling" />
+    <DocsTitle
+      :level="5"
+      title="Icon Sizes"
+    />
     <div class="shadow-sm p-3 mb-3 rounded">
-      <fa
+      <Fa
         :icon="faFlag"
         size="xs"
       />
-      <fa
+      <Fa
         :icon="faFlag"
         size="sm"
       />
-      <fa
+      <Fa
         :icon="faFlag"
         size="lg"
       />
-      <fa
+      <Fa
         :icon="faFlag"
         size="2x"
       />
-      <fa
+      <Fa
         :icon="faFlag"
         size="2.5x"
       />
-      <fa
+      <Fa
         :icon="faFlag"
         size="5x"
       />
-      <fa
+      <Fa
         :icon="faFlag"
         size="7x"
       />
-      <fa
+      <Fa
         :icon="faFlag"
         size="10x"
       />
     </div>
-    <docs-code :code="codes.additionalStyling[0]" />
-    <h5>Fixed Width Icons</h5>
+    <DocsCode :code="codes.additionalStyling[0]" />
+    <DocsTitle
+      :level="5"
+      title="Fixed Width Icons"
+    />
     <div class="shadow-sm p-3 mb-3 rounded">
       <div>
-        <fa
+        <Fa
           :icon="faHome"
           fw
           style="background: mistyrose"
         /> Home
       </div>
       <div>
-        <fa
+        <Fa
           :icon="faInfo"
           fw
           style="background: mistyrose"
         /> Info
       </div>
       <div>
-        <fa
+        <Fa
           :icon="faBook"
           fw
           style="background: mistyrose"
         /> Library
       </div>
       <div>
-        <fa
+        <Fa
           :icon="faPencilAlt"
           fw
           style="background: mistyrose"
         /> Applications
       </div>
       <div>
-        <fa
+        <Fa
           :icon="faCog"
           fw
           style="background: mistyrose"
         /> Settins
       </div>
     </div>
-    <docs-code :code="codes.additionalStyling[1]" />
-    <h5>Pulled Icons</h5>
+    <DocsCode :code="codes.additionalStyling[1]" />
+    <DocsTitle
+      :level="5"
+      title="Pulled Icons"
+    />
     <div class="shadow-sm p-3 mb-3 rounded clearfix">
-      <fa
+      <Fa
         :icon="faQuoteLeft"
         pull="left"
         size="2x"
       />
-      <fa
+      <Fa
         :icon="faQuoteRight"
         pull="right"
         size="2x"
       />
       Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
     </div>
-    <docs-code :code="codes.additionalStyling[2]" />
-    <h4>Power Transforms</h4>
-    <h5>Rotating &amp; Flipping</h5>
+    <DocsCode :code="codes.additionalStyling[2]" />
+    <DocsTitle title="Power Transforms" />
+    <DocsTitle
+      :level="5"
+      title="Rotating &amp; Flipping"
+    />
     <div class="shadow-sm p-3 mb-3 rounded">
-      <fa
+      <Fa
         :icon="faMagic"
         :rotate="90"
         size="4x"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         :rotate="180"
         size="4x"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         size="4x"
         rotate="270"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         size="4x"
         rotate="30"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         size="4x"
         rotate="-30"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         size="4x"
         flip="vertical"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         size="4x"
         flip="horizontal"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         size="4x"
         flip="both"
         style="background: mistyrose"
       />
-      <fa
+      <Fa
         :icon="faMagic"
         size="4x"
         flip="both"
@@ -167,7 +179,76 @@
         style="background: mistyrose"
       />
     </div>
-    <docs-code :code="codes.powerTransforms[0]" />
+    <DocsCode :code="codes.powerTransforms[0]" />
+    <DocsTitle title="Duotone Icons" />
+    <DocsTitle
+      :level="5"
+      title="Basic Use"
+    />
+    <DocsImg
+      src="assets/duotone-0.png"
+      alt="duotone icons basic use"
+    />
+    <DocsCode
+      :code="codes.duotoneIcons[0]"
+      lang="js"
+    />
+    <DocsCode :code="codes.duotoneIcons[1]" />
+    <DocsTitle
+      :level="5"
+      title="Swapping Layer Opacity"
+    />
+    <DocsImg
+      src="assets/duotone-1.png"
+      alt="swapping duotone icons layer opacity"
+    />
+    <DocsCode :code="codes.duotoneIcons[2]" />
+    <DocsTitle
+      :level="5"
+      title="Changing Opacity"
+    />
+    <DocsImg
+      src="assets/duotone-2.png"
+      alt="changing duotone icons opacity"
+    />
+    <DocsCode :code="codes.duotoneIcons[3]" />
+    <DocsImg
+      src="assets/duotone-3.png"
+      alt="changing duotone icons opacity"
+    />
+    <DocsCode :code="codes.duotoneIcons[4]" />
+    <DocsTitle
+      :level="5"
+      title="Coloring Duotone Icons"
+    />
+    <DocsImg
+      src="assets/duotone-4.png"
+      alt="coloring duotone icons"
+    />
+    <DocsCode :code="codes.duotoneIcons[5]" />
+    <DocsTitle
+      :level="5"
+      title="Advanced Use"
+    />
+    <DocsImg
+      src="assets/duotone-5.png"
+      alt="duotone icons advanced use"
+    />
+    <DocsCode :code="codes.duotoneIcons[6]" />
+    <DocsImg
+      src="assets/duotone-6.png"
+      alt="duotone icons advanced use"
+    />
+    <DocsCode :code="codes.duotoneIcons[7]" />
+    <DocsImg
+      src="assets/duotone-7.png"
+      alt="duotone icons advanced use"
+    />
+    <DocsCode
+      :code="codes.duotoneIcons[8]"
+      lang="js"
+    />
+    <DocsCode :code="codes.duotoneIcons[9]" />
   </div>
 </template>
 
@@ -186,11 +267,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 import DocsCode from './docs-code.vue';
+import DocsImg from './docs-img.vue';
+import DocsTitle from './docs-title.vue';
 
 export default {
   components: {
     Fa,
     DocsCode,
+    DocsImg,
+    DocsTitle,
   },
 
   data() {
@@ -226,49 +311,110 @@ import { faFlag } from '@fortawesome/free-solid-svg-icons'
 }`,
         ],
         basicUse: [
-          '<fa :icon="faFlag" /> Flag',
+          '<Fa :icon="faFlag" /> Flag',
           `<div style="font-size: 3em; color: tomato">
-  <fa :icon="faFlag" />
+  <Fa :icon="faFlag" />
 </div>`,
         ],
         additionalStyling: [
-          `<fa :icon="faFlag" size="xs" />
-<fa :icon="faFlag" size="sm" />
-<fa :icon="faFlag" size="lg" />
-<fa :icon="faFlag" size="2x" />
-<fa :icon="faFlag" size="2.5x" />
-<fa :icon="faFlag" size="5x" />
-<fa :icon="faFlag" size="7x" />
-<fa :icon="faFlag" size="10x" />`,
+          `<Fa :icon="faFlag" size="xs" />
+<Fa :icon="faFlag" size="sm" />
+<Fa :icon="faFlag" size="lg" />
+<Fa :icon="faFlag" size="2x" />
+<Fa :icon="faFlag" size="2.5x" />
+<Fa :icon="faFlag" size="5x" />
+<Fa :icon="faFlag" size="7x" />
+<Fa :icon="faFlag" size="10x" />`,
           `<div>
-  <fa :icon="faHome" fw style="background: mistyrose" /> Home
+  <Fa :icon="faHome" fw style="background: mistyrose" /> Home
 </div>
 <div>
-  <fa :icon="faInfo" fw style="background: mistyrose" /> Info
+  <Fa :icon="faInfo" fw style="background: mistyrose" /> Info
 </div>
 <div>
-  <fa :icon="faBook" fw style="background: mistyrose" /> Library
+  <Fa :icon="faBook" fw style="background: mistyrose" /> Library
 </div>
 <div>
-  <fa :icon="faPencilAlt" fw style="background: mistyrose" /> Applications
+  <Fa :icon="faPencilAlt" fw style="background: mistyrose" /> Applications
 </div>
 <div>
-  <fa :icon="faCog" fw style="background: mistyrose" /> Settins
+  <Fa :icon="faCog" fw style="background: mistyrose" /> Settins
 </div>`,
-          `<fa :icon="faQuoteLeft" pull="left" size="2x" />
-<fa :icon="faQuoteRight" pull="right" size="2x" />
+          `<Fa :icon="faQuoteLeft" pull="left" size="2x" />
+<Fa :icon="faQuoteRight" pull="right" size="2x" />
 Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.`,
         ],
         powerTransforms: [
-          `<fa :icon="faMagic" size="4x" :rotate="90" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" :rotate="180" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" rotate="270" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" rotate="30" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" rotate="-30" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" flip="vertical" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" flip="horizontal" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" flip="both" style="background: mistyrose"/>
-<fa :icon="faMagic" size="4x" flip="both" style="background: mistyrose"/>`,
+          `<Fa :icon="faMagic" size="4x" :rotate="90" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" :rotate="180" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" rotate="270" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" rotate="30" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" rotate="-30" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" flip="vertical" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" flip="horizontal" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" flip="both" style="background: mistyrose"/>
+<Fa :icon="faMagic" size="4x" flip="both" style="background: mistyrose"/>`,
+        ],
+        duotoneIcons: [
+          `import {
+  faCamera,
+  faFireAlt,
+  faBusAlt,
+  faFillDrip,
+} from '@fortawesome/pro-duotone-svg-icons'`,
+          `<Fa :icon="faCamera" size="3x" />
+<Fa :icon="faFireAlt" size="3x" />
+<Fa :icon="faBusAlt" size="3x" />
+<Fa :icon="faFillDrip" size="3x" />`,
+          `<Fa :icon="faCamera" size="3x" />
+<Fa :icon="faCamera" size="3x" swap-opacity />
+<Fa :icon="faFireAlt" size="3x" />
+<Fa :icon="faFireAlt" size="3x" swap-opacity />
+<Fa :icon="faBusAlt" size="3x" />
+<Fa :icon="faBusAlt" size="3x" swap-opacity />
+<Fa :icon="faFillDrip" size="3x" />
+<Fa :icon="faFillDrip" size="3x" swap-opacity />`,
+          `<Fa :icon="faBusAlt" size="3x" :secondary-opacity=".2" />
+<Fa :icon="faBusAlt" size="3x" :secondary-opacity=".4" />
+<Fa :icon="faBusAlt" size="3x" :secondary-opacity=".6" />
+<Fa :icon="faBusAlt" size="3x" :secondary-opacity=".8" />
+<Fa :icon="faBusAlt" size="3x" :secondary-opacity="1" />`,
+          `<Fa :icon="faBusAlt" size="3x" :primary-opacity=".2" />
+<Fa :icon="faBusAlt" size="3x" :primary-opacity=".4" />
+<Fa :icon="faBusAlt" size="3x" :primary-opacity=".6" />
+<Fa :icon="faBusAlt" size="3x" :primary-opacity=".8" />
+<Fa :icon="faBusAlt" size="3x" :primary-opacity="1" />`,
+          `<Fa :icon="faBusAlt" size="3x" primary-color="gold" />
+<Fa :icon="faBusAlt" size="3x" primary-color="orangered" />
+<Fa :icon="faFillDrip" size="3x" secondary-color="limegreen" />
+<Fa :icon="faFillDrip" size="3x" secondary-color="rebeccapurple" />
+<Fa :icon="faBatteryFull" size="3x" primary-color="limegreen" secondary-color="dimgray" />
+<Fa :icon="faBatteryQuarter" size="3x" primary-color="orange" secondary-color="dimgray" />`,
+          `<Fa :icon="faBook" size="3x" :secondary-opacity="1" primary-color="lightseagreen" secondary-color="linen" />
+<Fa :icon="faBookSpells" size="3x" :secondary-opacity="1" primary-color="mediumpurple" secondary-color="linen" />
+<Fa :icon="faBookMedical" size="3x" :secondary-opacity="1" primary-color="crimson" secondary-color="linen" />
+<Fa :icon="faBookUser" size="3x" :secondary-opacity="1" primary-color="peru" secondary-color="linen" />
+<Fa :icon="faToggleOff" size="3x" :secondary-opacity="1" primary-color="white" secondary-color="gray" />
+<Fa :icon="faToggleOn" size="3x" :secondary-opacity="1" primary-color="dodgerblue" secondary-color="white" />
+<Fa :icon="faFilePlus" size="3x" :secondary-opacity="1" primary-color="white" secondary-color="limegreen" />
+<Fa :icon="faFileExclamation" size="3x" :secondary-opacity="1" primary-color="white" secondary-color="gold" />
+<Fa :icon="faFileTimes" size="3x" :secondary-opacity="1" primary-color="white" secondary-color="tomato" />`,
+          `<Fa :icon="faCrow" size="3x" :secondary-opacity="1" primary-color="dodgerblue" secondary-color="gold" />
+<Fa :icon="faCampfire" size="3x" :secondary-opacity="1" primary-color="sienna" secondary-color="red" />
+<Fa :icon="faBirthdayCake" size="3x" :secondary-opacity="1" primary-color="pink" secondary-color="palevioletred" />
+<Fa :icon="faEar" size="3x" :secondary-opacity="1" primary-color="sandybrown" secondary-color="bisque" />
+<Fa :icon="faCorn" size="3x" :secondary-opacity="1" primary-color="mediumseagreen" secondary-color="gold" />
+<Fa :icon="faCookieBite" size="3x" :secondary-opacity="1" primary-color="saddlebrown" secondary-color="burlywood" />`,
+          `const themeRavenclaw = {
+  secondaryOpacity: 1,
+  primary-color: '#0438a1',
+  secondary-color: '#6c6c6c',
+}`,
+          `<Fa :icon="faHatWizard" size="3x" v-bind="themeRavenclaw" />
+<Fa :icon="faFlaskPotion" size="3x" v-bind="themeRavenclaw" />
+<Fa :icon="faWandMagic" size="3x" v-bind="themeRavenclaw" />
+<Fa :icon="faScarf" size="3x" v-bind="themeRavenclaw" />
+<Fa :icon="faBookSpells" size="3x" v-bind="themeRavenclaw" />`,
         ],
       },
     };
