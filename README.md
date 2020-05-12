@@ -126,8 +126,8 @@ const theme = {
 [badge-issues]: https://img.shields.io/github/issues/Cweili/vue-fa.svg
 [github]: https://github.com/Cweili/vue-fa
 
-[badge-build]: https://img.shields.io/travis/Cweili/vue-fa/master.svg
-[travis]: https://travis-ci.org/Cweili/vue-fa
+[badge-build]: https://img.shields.io/travis/com/Cweili/vue-fa/master.svg
+[travis]: https://travis-ci.com/Cweili/vue-fa
 
 [badge-coverage]: https://img.shields.io/codecov/c/github/Cweili/vue-fa.svg
 [codecov]: https://codecov.io/gh/Cweili/vue-fa
