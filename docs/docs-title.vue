@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Fa from 'vue-fa';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import Fa from '../dist/vue-fa.esm';
 
 export default {
   components: {

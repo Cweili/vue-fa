@@ -38,3 +38,5 @@ package-lock.json
 
 # Distributions
 /dist
+/docs/dist/src
+/docs/dist/docs

@@ -5,14 +5,16 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
+
 import Showcase from './showcase.vue';
 import Docs from './docs.vue';
 
-export default {
+export default defineComponent({
   components: {
     Showcase,
     Docs,
   },
-};
+});
 </script>

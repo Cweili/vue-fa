@@ -17,8 +17,7 @@
               src="https://img.shields.io/npm/v/vue-fa.svg"
               alt="npm version"
             >
-          </a>
-          <a
+          </a> <a
             href="https://bundlephobia.com/result?p=vue-fa"
             target="_blank"
           >
@@ -26,8 +25,7 @@
               src="https://img.shields.io/bundlephobia/minzip/vue-fa.svg"
               alt="bundle size"
             >
-          </a>
-          <a
+          </a> <a
             href="https://github.com/Cweili/vue-fa/blob/master/LICENSE"
             target="_blank"
           >
@@ -35,8 +33,7 @@
               src="https://img.shields.io/npm/l/vue-fa.svg"
               alt="MIT licence"
             >
-          </a>
-          <a
+          </a> <a
             href="https://www.npmjs.com/package/vue-fa"
             target="_blank"
           >
@@ -44,8 +41,7 @@
               src="https://img.shields.io/npm/dt/vue-fa.svg"
               alt="npm downloads"
             >
-          </a>
-          <a
+          </a> <a
             href="https://github.com/Cweili/vue-fa"
             target="_blank"
           >
@@ -98,9 +94,9 @@
                 <button
                   v-for="p in pull"
                   :key="p"
-                  @click="setValue('pull', p)"
                   :class="`btn btn-${checked('pull', p)}`"
                   type="button"
+                  @click="setValue('pull', p)"
                 >
                   {{ p }}
                 </button>
@@ -118,9 +114,9 @@
                 <button
                   v-for="f in flip"
                   :key="f"
-                  @click="setValue('flip', f)"
                   :class="`btn btn-${checked('flip', f)}`"
                   type="button"
+                  @click="setValue('flip', f)"
                 >
                   {{ f }}
                 </button>
@@ -169,13 +165,13 @@
 </template>
 
 <script>
-import Fa from 'vue-fa';
 import {
   faFlag,
   faHome,
   faCog,
   faMagic,
 } from '@fortawesome/free-solid-svg-icons';
+import Fa from '../dist/vue-fa.esm';
 
 export default {
   components: {
@@ -203,16 +199,16 @@ export default {
 
   methods: {
     setValue(prop, value) {
-      this.model[prop] = value == 'None' ? undefined : value.toLowerCase();
+      this.model[prop] = value === 'None' ? undefined : value.toLowerCase();
     },
     checked(prop, value) {
-      return this.model[prop] == (value == 'None' ? undefined : value.toLowerCase()) ? 'primary' : 'secondary';
+      return this.model[prop] === (value === 'None' ? undefined : value.toLowerCase()) ? 'primary' : 'secondary';
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .hue {
   color: #238ae6;
   animation: hue 30s infinite linear;

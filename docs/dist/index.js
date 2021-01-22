@@ -1,280 +1,186 @@
-(function (Vue, Fa) {
+(function (vue) {
   'use strict';
-
-  Vue = Vue && Vue.hasOwnProperty('default') ? Vue['default'] : Vue;
-  Fa = Fa && Fa.hasOwnProperty('default') ? Fa['default'] : Fa;
 
   var faBook={prefix:'fas',iconName:'book',icon:[448,512,[],"f02d","M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"]};var faCog={prefix:'fas',iconName:'cog',icon:[512,512,[],"f013","M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"]};var faFlag={prefix:'fas',iconName:'flag',icon:[512,512,[],"f024","M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"]};var faHome={prefix:'fas',iconName:'home',icon:[576,512,[],"f015","M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"]};var faInfo={prefix:'fas',iconName:'info',icon:[192,512,[],"f129","M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"]};var faLink={prefix:'fas',iconName:'link',icon:[512,512,[],"f0c1","M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"]};var faMagic={prefix:'fas',iconName:'magic',icon:[512,512,[],"f0d0","M224 96l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zM80 160l26.66-53.33L160 80l-53.34-26.67L80 0 53.34 53.33 0 80l53.34 26.67L80 160zm352 128l-26.66 53.33L352 368l53.34 26.67L432 448l26.66-53.33L512 368l-53.34-26.67L432 288zm70.62-193.77L417.77 9.38C411.53 3.12 403.34 0 395.15 0c-8.19 0-16.38 3.12-22.63 9.38L9.38 372.52c-12.5 12.5-12.5 32.76 0 45.25l84.85 84.85c6.25 6.25 14.44 9.37 22.62 9.37 8.19 0 16.38-3.12 22.63-9.37l363.14-363.15c12.5-12.48 12.5-32.75 0-45.24zM359.45 203.46l-50.91-50.91 86.6-86.6 50.91 50.91-86.6 86.6z"]};var faPencilAlt={prefix:'fas',iconName:'pencil-alt',icon:[512,512,[],"f303","M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"]};var faQuoteLeft={prefix:'fas',iconName:'quote-left',icon:[512,512,[],"f10d","M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"]};var faQuoteRight={prefix:'fas',iconName:'quote-right',icon:[512,512,[],"f10e","M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"]};
 
-  (function () {
-    if (typeof document !== 'undefined') {
-      var head = document.head || document.getElementsByTagName('head')[0],
-          style = document.createElement('style'),
-          css = " .hue { color: #238ae6; animation: hue 30s infinite linear; } @keyframes hue { from { filter: hue-rotate(0deg); } to { filter: hue-rotate(-360deg); } } ";
-      style.type = 'text/css';
-
-      if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-      } else {
-        style.appendChild(document.createTextNode(css));
+  var validFlip = ['horizontal', 'vertical', 'both'];
+  var validPull = ['right', 'left'];
+  var script = vue.defineComponent({
+    props: {
+      icon: {
+        type: Object,
+        required: true
+      },
+      fw: Boolean,
+      flip: {
+        type: String,
+        validator: function validator(value) {
+          return validFlip.indexOf(value) >= 0;
+        }
+      },
+      pull: {
+        type: String,
+        validator: function validator(value) {
+          return validPull.indexOf(value) >= 0;
+        }
+      },
+      rotate: {
+        type: [Number, String],
+        validator: function validator(value) {
+          return /^[-\d.]+$/.test("" + value);
+        }
+      },
+      size: {
+        type: String,
+        validator: function validator(value) {
+          return /^(lg|xs|sm|([\d.]+)x)$/.test(value);
+        }
+      },
+      color: String,
+      primaryColor: String,
+      secondaryColor: String,
+      primaryOpacity: {
+        type: [Number, String],
+        default: 1
+      },
+      secondaryOpacity: {
+        type: [Number, String],
+        default: 0.4
+      },
+      // eslint-disable-next-line vue/require-prop-types
+      swapOpacity: {
+        default: false
       }
-
-      head.appendChild(style);
-    }
-  })();
-  var Showcase = {
-    render: function render() {
-      var _vm = this;
-
-      var _h = _vm.$createElement;
-
-      var _c = _vm._self._c || _h;
-
-      return _c('div', {
-        staticClass: "jumbotron"
-      }, [_c('div', {
-        staticClass: "row"
-      }, [_c('div', {
-        staticClass: "col-md"
-      }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('form', {
-        on: {
-          "submit": function submit($event) {
-            $event.preventDefault();
-          }
-        }
-      }, [_c('div', {
-        staticClass: "form-group row"
-      }, [_c('label', {
-        staticClass: "col-sm-3 col-form-label"
-      }, [_vm._v("Icon Sizes")]), _vm._v(" "), _c('div', {
-        staticClass: "col-sm-9 row"
-      }, [_c('div', {
-        staticClass: "col-md-8 py-2"
-      }, [_c('input', {
-        directives: [{
-          name: "model",
-          rawName: "v-model",
-          value: _vm.model.size,
-          expression: "model.size"
-        }],
-        staticClass: "form-control-range",
-        attrs: {
-          "type": "range",
-          "min": "1",
-          "max": "10",
-          "step": "0.1"
-        },
-        domProps: {
-          "value": _vm.model.size
-        },
-        on: {
-          "__r": function __r($event) {
-            return _vm.$set(_vm.model, "size", $event.target.value);
-          }
-        }
-      })]), _vm._v(" "), _c('div', {
-        staticClass: "col-md-4"
-      }, [_c('div', {
-        staticClass: "form-control text-center"
-      }, [_vm._v(" " + _vm._s(_vm.model.size) + "x ")])])])]), _vm._v(" "), _c('div', {
-        staticClass: "form-group row"
-      }, [_c('label', {
-        staticClass: "col-sm-3 col-form-label"
-      }, [_vm._v("Pulled Icons")]), _vm._v(" "), _c('div', {
-        staticClass: "col-sm-9"
-      }, [_c('div', {
-        staticClass: "btn-group",
-        attrs: {
-          "role": "group",
-          "aria-label": "Basic example"
-        }
-      }, _vm._l(_vm.pull, function (p) {
-        return _c('button', {
-          key: p,
-          class: "btn btn-" + _vm.checked('pull', p),
-          attrs: {
-            "type": "button"
-          },
-          on: {
-            "click": function click($event) {
-              return _vm.setValue('pull', p);
-            }
-          }
-        }, [_vm._v(" " + _vm._s(p) + " ")]);
-      }), 0)])]), _vm._v(" "), _c('div', {
-        staticClass: "form-group row"
-      }, [_c('label', {
-        staticClass: "col-sm-3 col-form-label"
-      }, [_vm._v("Flip")]), _vm._v(" "), _c('div', {
-        staticClass: "col-sm-9"
-      }, [_c('div', {
-        staticClass: "btn-group",
-        attrs: {
-          "role": "group",
-          "aria-label": "Basic example"
-        }
-      }, _vm._l(_vm.flip, function (f) {
-        return _c('button', {
-          key: f,
-          class: "btn btn-" + _vm.checked('flip', f),
-          attrs: {
-            "type": "button"
-          },
-          on: {
-            "click": function click($event) {
-              return _vm.setValue('flip', f);
-            }
-          }
-        }, [_vm._v(" " + _vm._s(f) + " ")]);
-      }), 0)])]), _vm._v(" "), _c('div', {
-        staticClass: "form-group row"
-      }, [_c('label', {
-        staticClass: "col-sm-3 col-form-label"
-      }, [_vm._v("Rotate")]), _vm._v(" "), _c('div', {
-        staticClass: "col-sm-9 row"
-      }, [_c('div', {
-        staticClass: "col-md-8 py-2"
-      }, [_c('input', {
-        directives: [{
-          name: "model",
-          rawName: "v-model",
-          value: _vm.model.rotate,
-          expression: "model.rotate"
-        }],
-        staticClass: "form-control-range",
-        attrs: {
-          "type": "range",
-          "min": "-360",
-          "max": "360",
-          "step": "1"
-        },
-        domProps: {
-          "value": _vm.model.rotate
-        },
-        on: {
-          "__r": function __r($event) {
-            return _vm.$set(_vm.model, "rotate", $event.target.value);
-          }
-        }
-      })]), _vm._v(" "), _c('div', {
-        staticClass: "col-md-4"
-      }, [_c('div', {
-        staticClass: "form-control text-center"
-      }, [_vm._v(" " + _vm._s(_vm.model.rotate) + "deg ")])])])])])]), _vm._v(" "), _c('div', {
-        staticClass: "col-md row"
-      }, _vm._l(_vm.icons, function (icon, i) {
-        return _c('div', {
-          key: i,
-          staticClass: "col text-center hue"
-        }, [_c('Fa', {
-          attrs: {
-            "icon": icon,
-            "flip": _vm.model.flip,
-            "pull": _vm.model.pull,
-            "rotate": _vm.model.rotate,
-            "size": _vm.model.size + "x"
-          }
-        })], 1);
-      }), 0)])]);
     },
-    staticRenderFns: [function () {
-      var _vm = this;
+    setup: function setup(props) {
+      var i = function i() {
+        var _props$icon$icon, _props$icon;
 
-      var _h = _vm.$createElement;
+        return (_props$icon$icon = (_props$icon = props.icon) == null ? void 0 : _props$icon.icon) != null ? _props$icon$icon : [0, 0, '', [], ''];
+      };
 
-      var _c = _vm._self._c || _h;
+      return {
+        i: vue.computed(i),
+        style: vue.computed(function () {
+          if (!i()[4]) {
+            return {};
+          }
 
-      return _c('h1', {
-        staticClass: "hue"
-      }, [_c('strong', [_c('a', {
-        attrs: {
-          "href": "https://github.com/Cweili/vue-fa",
-          "target": "_blank"
-        }
-      }, [_vm._v("vue-fa")])])]);
-    }, function () {
-      var _vm = this;
+          var base = {
+            height: '1em',
+            overflow: 'visible',
+            verticalAlign: '-.125em'
+          };
+          var fw = props.fw,
+              pull = props.pull,
+              size = props.size;
 
-      var _h = _vm.$createElement;
+          if (fw) {
+            base.textAlign = 'center';
+            base.width = '1.25em';
+          }
 
-      var _c = _vm._self._c || _h;
+          if (pull) {
+            base.float = pull;
+          }
 
-      return _c('p', [_c('a', {
-        attrs: {
-          "href": "https://www.npmjs.com/package/vue-fa",
-          "target": "_blank"
-        }
-      }, [_c('img', {
-        attrs: {
-          "src": "https://img.shields.io/npm/v/vue-fa.svg",
-          "alt": "npm version"
-        }
-      })]), _vm._v(" "), _c('a', {
-        attrs: {
-          "href": "https://bundlephobia.com/result?p=vue-fa",
-          "target": "_blank"
-        }
-      }, [_c('img', {
-        attrs: {
-          "src": "https://img.shields.io/bundlephobia/minzip/vue-fa.svg",
-          "alt": "bundle size"
-        }
-      })]), _vm._v(" "), _c('a', {
-        attrs: {
-          "href": "https://github.com/Cweili/vue-fa/blob/master/LICENSE",
-          "target": "_blank"
-        }
-      }, [_c('img', {
-        attrs: {
-          "src": "https://img.shields.io/npm/l/vue-fa.svg",
-          "alt": "MIT licence"
-        }
-      })]), _vm._v(" "), _c('a', {
-        attrs: {
-          "href": "https://www.npmjs.com/package/vue-fa",
-          "target": "_blank"
-        }
-      }, [_c('img', {
-        attrs: {
-          "src": "https://img.shields.io/npm/dt/vue-fa.svg",
-          "alt": "npm downloads"
-        }
-      })]), _vm._v(" "), _c('a', {
-        attrs: {
-          "href": "https://github.com/Cweili/vue-fa",
-          "target": "_blank"
-        }
-      }, [_c('img', {
-        attrs: {
-          "src": "https://img.shields.io/github/issues/Cweili/vue-fa.svg",
-          "alt": "github issues"
-        }
-      })])]);
-    }, function () {
-      var _vm = this;
+          if (size) {
+            if (size === 'lg') {
+              base.fontSize = '1.33333em';
+              base.lineHeight = '.75em';
+              base.verticalAlign = '-.225em';
+            } else if (size === 'xs') {
+              base.fontSize = '.75em';
+            } else if (size === 'sm') {
+              base.fontSize = '.875em';
+            } else {
+              base.fontSize = size.replace('x', 'em');
+            }
+          }
 
-      var _h = _vm.$createElement;
+          return base;
+        }),
+        transform: vue.computed(function () {
+          var flip = props.flip,
+              rotate = props.rotate;
+          var transform = '';
 
-      var _c = _vm._self._c || _h;
+          if (flip) {
+            var flipX = 1;
+            var flipY = 1;
 
-      return _c('p', {
-        staticClass: "lead mb-5"
-      }, [_vm._v(" Tiny "), _c('a', {
-        staticClass: "hue",
-        attrs: {
-          "href": "https://fontawesome.com/",
-          "target": "_blank"
-        }
-      }, [_vm._v("FontAwesome 5")]), _vm._v(" component for "), _c('a', {
-        staticClass: "hue",
-        attrs: {
-          "href": "https://vuejs.org/",
-          "target": "_blank"
-        }
-      }, [_vm._v("Vue.js")]), _vm._v(". ")]);
-    }],
+            if (flip === 'horizontal') {
+              flipX = -1;
+            } else if (flip === 'vertical') {
+              flipY = -1;
+            } else {
+              flipX = flipY = -1;
+            }
+
+            transform += " scale(" + flipX + " " + flipY + ")";
+          }
+
+          if (rotate) {
+            transform += " rotate(" + rotate + " 0 0)";
+          }
+
+          return transform;
+        })
+      };
+    }
+  });
+  var _hoisted_1 = {
+    key: 0,
+    transform: "translate(256 256)"
+  };
+
+  function render(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.withDirectives((vue.openBlock(), vue.createBlock("svg", {
+      viewBox: "0 0 " + _ctx.i[0] + " " + _ctx.i[1],
+      style: _ctx.style,
+      "aria-hidden": "true",
+      role: "img",
+      xmlns: "http://www.w3.org/2000/svg"
+    }, [_ctx.i[4] ? (vue.openBlock(), vue.createBlock("g", _hoisted_1, [vue.createVNode("g", {
+      transform: _ctx.transform
+    }, [typeof _ctx.i[4] === 'string' ? (vue.openBlock(), vue.createBlock("path", {
+      key: 0,
+      d: _ctx.i[4],
+      fill: _ctx.color || _ctx.primaryColor || 'currentColor',
+      transform: "translate(-256 -256)"
+    }, null, 8
+    /* PROPS */
+    , ["d", "fill"])) : (vue.openBlock(), vue.createBlock(vue.Fragment, {
+      key: 1
+    }, [vue.createVNode("path", {
+      d: _ctx.i[4][0],
+      fill: _ctx.secondaryColor || _ctx.color || 'currentColor',
+      "fill-opacity": _ctx.swapOpacity !== false ? _ctx.primaryOpacity : _ctx.secondaryOpacity,
+      transform: "translate(-256 -256)"
+    }, null, 8
+    /* PROPS */
+    , ["d", "fill", "fill-opacity"]), vue.createVNode("path", {
+      d: _ctx.i[4][1],
+      fill: _ctx.primaryColor || _ctx.color || 'currentColor',
+      "fill-opacity": _ctx.swapOpacity !== false ? _ctx.secondaryOpacity : _ctx.primaryOpacity,
+      transform: "translate(-256 -256)"
+    }, null, 8
+    /* PROPS */
+    , ["d", "fill", "fill-opacity"])], 64
+    /* STABLE_FRAGMENT */
+    ))], 8
+    /* PROPS */
+    , ["transform"])])) : vue.createCommentVNode("v-if", true)], 12
+    /* STYLE, PROPS */
+    , ["viewBox"])), [[vue.vShow, _ctx.i[4]]]);
+  }
+
+  script.render = render;
+  script.__file = "src/fa.vue";
+
+  var script$1 = {
     components: {
-      Fa: Fa
+      Fa: script
     },
     data: function data() {
       return {
@@ -291,54 +197,199 @@
     },
     methods: {
       setValue: function setValue(prop, value) {
-        this.model[prop] = value == 'None' ? undefined : value.toLowerCase();
+        this.model[prop] = value === 'None' ? undefined : value.toLowerCase();
       },
       checked: function checked(prop, value) {
-        return this.model[prop] == (value == 'None' ? undefined : value.toLowerCase()) ? 'primary' : 'secondary';
+        return this.model[prop] === (value === 'None' ? undefined : value.toLowerCase()) ? 'primary' : 'secondary';
       }
     }
   };
 
-  (function () {
-    if (typeof document !== 'undefined') {
-      var head = document.head || document.getElementsByTagName('head')[0],
-          style = document.createElement('style'),
-          css = "";
-      style.type = 'text/css';
+  var _withId = /*#__PURE__*/vue.withScopeId("data-v-d8b0228a");
 
-      if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-      } else {
-        style.appendChild(document.createTextNode(css));
-      }
+  vue.pushScopeId("data-v-d8b0228a");
 
-      head.appendChild(style);
-    }
-  })();
+  var _hoisted_1$1 = {
+    class: "jumbotron"
+  };
+  var _hoisted_2 = {
+    class: "row"
+  };
+  var _hoisted_3 = {
+    class: "col-md"
+  };
+
+  var _hoisted_4 = /*#__PURE__*/vue.createStaticVNode("<h1 class=\"hue\" data-v-d8b0228a><strong data-v-d8b0228a><a href=\"https://github.com/Cweili/vue-fa\" target=\"_blank\" data-v-d8b0228a>vue-fa</a></strong></h1><p data-v-d8b0228a><a href=\"https://www.npmjs.com/package/vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/npm/v/vue-fa.svg\" alt=\"npm version\" data-v-d8b0228a></a> <a href=\"https://bundlephobia.com/result?p=vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/bundlephobia/minzip/vue-fa.svg\" alt=\"bundle size\" data-v-d8b0228a></a> <a href=\"https://github.com/Cweili/vue-fa/blob/master/LICENSE\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/npm/l/vue-fa.svg\" alt=\"MIT licence\" data-v-d8b0228a></a> <a href=\"https://www.npmjs.com/package/vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/npm/dt/vue-fa.svg\" alt=\"npm downloads\" data-v-d8b0228a></a> <a href=\"https://github.com/Cweili/vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/github/issues/Cweili/vue-fa.svg\" alt=\"github issues\" data-v-d8b0228a></a></p><p class=\"lead mb-5\" data-v-d8b0228a> Tiny <a class=\"hue\" href=\"https://fontawesome.com/\" target=\"_blank\" data-v-d8b0228a>FontAwesome 5</a> component for <a class=\"hue\" href=\"https://vuejs.org/\" target=\"_blank\" data-v-d8b0228a>Vue.js</a>. </p>", 3);
+
+  var _hoisted_7 = {
+    class: "form-group row"
+  };
+
+  var _hoisted_8 = /*#__PURE__*/vue.createVNode("label", {
+    class: "col-sm-3 col-form-label"
+  }, "Icon Sizes", -1
+  /* HOISTED */
+  );
+
+  var _hoisted_9 = {
+    class: "col-sm-9 row"
+  };
+  var _hoisted_10 = {
+    class: "col-md-8 py-2"
+  };
+  var _hoisted_11 = {
+    class: "col-md-4"
+  };
+  var _hoisted_12 = {
+    class: "form-control text-center"
+  };
+  var _hoisted_13 = {
+    class: "form-group row"
+  };
+
+  var _hoisted_14 = /*#__PURE__*/vue.createVNode("label", {
+    class: "col-sm-3 col-form-label"
+  }, "Pulled Icons", -1
+  /* HOISTED */
+  );
+
+  var _hoisted_15 = {
+    class: "col-sm-9"
+  };
+  var _hoisted_16 = {
+    class: "btn-group",
+    role: "group",
+    "aria-label": "Basic example"
+  };
+  var _hoisted_17 = {
+    class: "form-group row"
+  };
+
+  var _hoisted_18 = /*#__PURE__*/vue.createVNode("label", {
+    class: "col-sm-3 col-form-label"
+  }, "Flip", -1
+  /* HOISTED */
+  );
+
+  var _hoisted_19 = {
+    class: "col-sm-9"
+  };
+  var _hoisted_20 = {
+    class: "btn-group",
+    role: "group",
+    "aria-label": "Basic example"
+  };
+  var _hoisted_21 = {
+    class: "form-group row"
+  };
+
+  var _hoisted_22 = /*#__PURE__*/vue.createVNode("label", {
+    class: "col-sm-3 col-form-label"
+  }, "Rotate", -1
+  /* HOISTED */
+  );
+
+  var _hoisted_23 = {
+    class: "col-sm-9 row"
+  };
+  var _hoisted_24 = {
+    class: "col-md-8 py-2"
+  };
+  var _hoisted_25 = {
+    class: "col-md-4"
+  };
+  var _hoisted_26 = {
+    class: "form-control text-center"
+  };
+  var _hoisted_27 = {
+    class: "col-md row"
+  };
+
+  vue.popScopeId();
+
+  var render$1 = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
+    var _component_Fa = vue.resolveComponent("Fa");
+
+    return vue.openBlock(), vue.createBlock("div", _hoisted_1$1, [vue.createVNode("div", _hoisted_2, [vue.createVNode("div", _hoisted_3, [_hoisted_4, vue.createVNode("form", {
+      onSubmit: _cache[3] || (_cache[3] = vue.withModifiers(function () {}, ["prevent"]))
+    }, [vue.createVNode("div", _hoisted_7, [_hoisted_8, vue.createVNode("div", _hoisted_9, [vue.createVNode("div", _hoisted_10, [vue.withDirectives(vue.createVNode("input", {
+      "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
+        return $data.model.size = $event;
+      }),
+      type: "range",
+      class: "form-control-range",
+      min: "1",
+      max: "10",
+      step: "0.1"
+    }, null, 512
+    /* NEED_PATCH */
+    ), [[vue.vModelText, $data.model.size]])]), vue.createVNode("div", _hoisted_11, [vue.createVNode("div", _hoisted_12, vue.toDisplayString($data.model.size) + "x ", 1
+    /* TEXT */
+    )])])]), vue.createVNode("div", _hoisted_13, [_hoisted_14, vue.createVNode("div", _hoisted_15, [vue.createVNode("div", _hoisted_16, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList($data.pull, function (p) {
+      return vue.openBlock(), vue.createBlock("button", {
+        key: p,
+        class: "btn btn-" + $options.checked('pull', p),
+        type: "button",
+        onClick: function onClick($event) {
+          return $options.setValue('pull', p);
+        }
+      }, vue.toDisplayString(p), 11
+      /* TEXT, CLASS, PROPS */
+      , ["onClick"]);
+    }), 128
+    /* KEYED_FRAGMENT */
+    ))])])]), vue.createVNode("div", _hoisted_17, [_hoisted_18, vue.createVNode("div", _hoisted_19, [vue.createVNode("div", _hoisted_20, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList($data.flip, function (f) {
+      return vue.openBlock(), vue.createBlock("button", {
+        key: f,
+        class: "btn btn-" + $options.checked('flip', f),
+        type: "button",
+        onClick: function onClick($event) {
+          return $options.setValue('flip', f);
+        }
+      }, vue.toDisplayString(f), 11
+      /* TEXT, CLASS, PROPS */
+      , ["onClick"]);
+    }), 128
+    /* KEYED_FRAGMENT */
+    ))])])]), vue.createVNode("div", _hoisted_21, [_hoisted_22, vue.createVNode("div", _hoisted_23, [vue.createVNode("div", _hoisted_24, [vue.withDirectives(vue.createVNode("input", {
+      "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+        return $data.model.rotate = $event;
+      }),
+      type: "range",
+      class: "form-control-range",
+      min: "-360",
+      max: "360",
+      step: "1"
+    }, null, 512
+    /* NEED_PATCH */
+    ), [[vue.vModelText, $data.model.rotate]])]), vue.createVNode("div", _hoisted_25, [vue.createVNode("div", _hoisted_26, vue.toDisplayString($data.model.rotate) + "deg ", 1
+    /* TEXT */
+    )])])])], 32
+    /* HYDRATE_EVENTS */
+    )]), vue.createVNode("div", _hoisted_27, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList($data.icons, function (icon, i) {
+      return vue.openBlock(), vue.createBlock("div", {
+        key: i,
+        class: "col text-center hue"
+      }, [vue.createVNode(_component_Fa, {
+        icon: icon,
+        flip: $data.model.flip,
+        pull: $data.model.pull,
+        rotate: $data.model.rotate,
+        size: $data.model.size + "x"
+      }, null, 8
+      /* PROPS */
+      , ["icon", "flip", "pull", "rotate", "size"])]);
+    }), 128
+    /* KEYED_FRAGMENT */
+    ))])])]);
+  });
+
+  script$1.render = render$1;
+  script$1.__scopeId = "data-v-d8b0228a";
+  script$1.__file = "showcase.vue";
+
   /* global Prism */
-
-
-  var DocsCode = {
-    render: function render() {
-      var _vm = this;
-
-      var _h = _vm.$createElement;
-
-      var _c = _vm._self._c || _h;
-
-      return _c('div', {
-        staticClass: "shadow-sm mb-3 rounded"
-      }, [_c('pre', [_c('code', {
-        directives: [{
-          name: "ref",
-          rawName: "v-ref",
-          value: _vm.el,
-          expression: "el"
-        }],
-        class: "language-" + _vm.lang
-      }, [_vm._v(_vm._s(_vm.code))])])]);
-    },
-    staticRenderFns: [],
+  var script$2 = {
     props: {
       code: {
         type: String,
@@ -366,83 +417,52 @@
     }
   };
 
-  (function () {
-    if (typeof document !== 'undefined') {
-      var head = document.head || document.getElementsByTagName('head')[0],
-          style = document.createElement('style'),
-          css = " img[data-v-218e963f] { max-width: 100%; max-height: 48px; } small[data-v-218e963f] { position: absolute; right: 1rem; bottom: .1rem; color: #ddd; z-index: -1; } ";
-      style.type = 'text/css';
+  var _hoisted_1$2 = {
+    class: "shadow-sm mb-3 rounded"
+  };
+  function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createBlock("div", _hoisted_1$2, [vue.createVNode("pre", null, [vue.createVNode("code", {
+      ref: "el",
+      class: "language-" + $props.lang
+    }, vue.toDisplayString($props.code), 3
+    /* TEXT, CLASS */
+    )])]);
+  }
 
-      if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-      } else {
-        style.appendChild(document.createTextNode(css));
-      }
+  script$2.render = render$2;
+  script$2.__file = "docs-code.vue";
 
-      head.appendChild(style);
-    }
-  })();
-
-  var DocsImg = {
-    render: function render() {
-      var _vm = this;
-
-      var _h = _vm.$createElement;
-
-      var _c = _vm._self._c || _h;
-
-      return _c('div', {
-        staticClass: "position-relative shadow-sm p-3 mb-3 rounded"
-      }, [_c('img', _vm._b({}, 'img', _vm.$attrs, false)), _vm._v(" "), _c('small', [_vm._v("images © fontawesome.com")])]);
-    },
-    staticRenderFns: [],
-    _scopeId: 'data-v-218e963f',
+  var script$3 = {
     inheritAttrs: false
   };
 
-  (function () {
-    if (typeof document !== 'undefined') {
-      var head = document.head || document.getElementsByTagName('head')[0],
-          style = document.createElement('style'),
-          css = " a[data-v-5fc7f558], a[data-v-5fc7f558]:visited { color: currentColor; } small[data-v-5fc7f558] { visibility: hidden; } a:hover + small[data-v-5fc7f558] { visibility: visible; } ";
-      style.type = 'text/css';
+  var _withId$1 = /*#__PURE__*/vue.withScopeId("data-v-218e963f");
 
-      if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-      } else {
-        style.appendChild(document.createTextNode(css));
-      }
+  vue.pushScopeId("data-v-218e963f");
 
-      head.appendChild(style);
-    }
-  })();
-  var DocsTitle = {
-    render: function render() {
-      var _vm = this;
+  var _hoisted_1$3 = {
+    class: "position-relative shadow-sm p-3 mb-3 rounded"
+  };
 
-      var _h = _vm.$createElement;
+  var _hoisted_2$1 = /*#__PURE__*/vue.createVNode("small", null, "images © fontawesome.com", -1
+  /* HOISTED */
+  );
 
-      var _c = _vm._self._c || _h;
+  vue.popScopeId();
 
-      return _c('h4', {
-        class: "h" + _vm.level,
-        attrs: {
-          "id": _vm.id
-        }
-      }, [_c('a', {
-        attrs: {
-          "href": "#" + _vm.id
-        }
-      }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('small', [_c('Fa', {
-        attrs: {
-          "icon": _vm.faLink
-        }
-      })], 1)]);
-    },
-    staticRenderFns: [],
-    _scopeId: 'data-v-5fc7f558',
+  var render$3 = /*#__PURE__*/_withId$1(function (_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createBlock("div", _hoisted_1$3, [vue.createVNode("img", _ctx.$attrs, null, 16
+    /* FULL_PROPS */
+    ), _hoisted_2$1]);
+  });
+
+  script$3.render = render$3;
+  script$3.__scopeId = "data-v-218e963f";
+  script$3.__file = "docs-img.vue";
+
+  var script$4 = {
     components: {
-      Fa: Fa
+      Fa: script
     },
     props: {
       level: {
@@ -464,417 +484,43 @@
     }
   };
 
-  (function () {
-    if (typeof document !== 'undefined') {
-      var head = document.head || document.getElementsByTagName('head')[0],
-          style = document.createElement('style'),
-          css = "";
-      style.type = 'text/css';
+  var _withId$2 = /*#__PURE__*/vue.withScopeId("data-v-5fc7f558");
 
-      if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-      } else {
-        style.appendChild(document.createTextNode(css));
-      }
+  vue.pushScopeId("data-v-5fc7f558");
 
-      head.appendChild(style);
-    }
-  })();
-  var Docs = {
-    render: function render() {
-      var _vm = this;
+  var _hoisted_1$4 = /*#__PURE__*/vue.createTextVNode();
 
-      var _h = _vm.$createElement;
+  vue.popScopeId();
 
-      var _c = _vm._self._c || _h;
+  var render$4 = /*#__PURE__*/_withId$2(function (_ctx, _cache, $props, $setup, $data, $options) {
+    var _component_Fa = vue.resolveComponent("Fa");
 
-      return _c('div', [_c('DocsTitle', {
-        attrs: {
-          "title": "Installation"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.installation[0]
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.installation[1],
-          "lang": "js"
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "title": "Basic Use"
-        }
-      }), _vm._v(" "), _c('div', {
-        staticClass: "shadow-sm p-3 mb-3 rounded"
-      }, [_c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag
-        }
-      }), _vm._v(" Flag ")], 1), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.basicUse[0]
-        }
-      }), _vm._v(" "), _c('div', {
-        staticClass: "shadow-sm p-3 mb-3 rounded"
-      }, [_c('div', {
-        staticStyle: {
-          "font-size": "3em",
-          "color": "tomato"
-        }
-      }, [_c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag
-        }
-      })], 1)]), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.basicUse[1]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "title": "Additional Styling"
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Icon Sizes"
-        }
-      }), _vm._v(" "), _c('div', {
-        staticClass: "shadow-sm p-3 mb-3 rounded"
-      }, [_c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "xs"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "sm"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "lg"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "2x"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "2.5x"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "5x"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "7x"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faFlag,
-          "size": "10x"
-        }
-      })], 1), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.additionalStyling[0]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Fixed Width Icons"
-        }
-      }), _vm._v(" "), _c('div', {
-        staticClass: "shadow-sm p-3 mb-3 rounded"
-      }, [_c('div', [_c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faHome,
-          "fw": ""
-        }
-      }), _vm._v(" Home ")], 1), _vm._v(" "), _c('div', [_c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faInfo,
-          "fw": ""
-        }
-      }), _vm._v(" Info ")], 1), _vm._v(" "), _c('div', [_c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faBook,
-          "fw": ""
-        }
-      }), _vm._v(" Library ")], 1), _vm._v(" "), _c('div', [_c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faPencilAlt,
-          "fw": ""
-        }
-      }), _vm._v(" Applications ")], 1), _vm._v(" "), _c('div', [_c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faCog,
-          "fw": ""
-        }
-      }), _vm._v(" Settins ")], 1)]), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.additionalStyling[1]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Pulled Icons"
-        }
-      }), _vm._v(" "), _c('div', {
-        staticClass: "shadow-sm p-3 mb-3 rounded clearfix"
-      }, [_c('Fa', {
-        attrs: {
-          "icon": _vm.faQuoteLeft,
-          "pull": "left",
-          "size": "2x"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        attrs: {
-          "icon": _vm.faQuoteRight,
-          "pull": "right",
-          "size": "2x"
-        }
-      }), _vm._v(" Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past. ")], 1), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.additionalStyling[2]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "title": "Power Transforms"
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Rotating & Flipping"
-        }
-      }), _vm._v(" "), _c('div', {
-        staticClass: "shadow-sm p-3 mb-3 rounded"
-      }, [_c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "rotate": 90,
-          "size": "4x"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "rotate": 180,
-          "size": "4x"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "size": "4x",
-          "rotate": "270"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "size": "4x",
-          "rotate": "30"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "size": "4x",
-          "rotate": "-30"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "size": "4x",
-          "flip": "vertical"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "size": "4x",
-          "flip": "horizontal"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "size": "4x",
-          "flip": "both"
-        }
-      }), _vm._v(" "), _c('Fa', {
-        staticStyle: {
-          "background": "mistyrose"
-        },
-        attrs: {
-          "icon": _vm.faMagic,
-          "size": "4x",
-          "flip": "both",
-          "rotate": "30"
-        }
-      })], 1), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.powerTransforms[0]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "title": "Duotone Icons"
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Basic Use"
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-0.png",
-          "alt": "duotone icons basic use"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[0],
-          "lang": "js"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[1]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Swapping Layer Opacity"
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-1.png",
-          "alt": "swapping duotone icons layer opacity"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[2]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Changing Opacity"
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-2.png",
-          "alt": "changing duotone icons opacity"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[3]
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-3.png",
-          "alt": "changing duotone icons opacity"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[4]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Coloring Duotone Icons"
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-4.png",
-          "alt": "coloring duotone icons"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[5]
-        }
-      }), _vm._v(" "), _c('DocsTitle', {
-        attrs: {
-          "level": 5,
-          "title": "Advanced Use"
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-5.png",
-          "alt": "duotone icons advanced use"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[6]
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-6.png",
-          "alt": "duotone icons advanced use"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[7]
-        }
-      }), _vm._v(" "), _c('DocsImg', {
-        attrs: {
-          "src": "assets/duotone-7.png",
-          "alt": "duotone icons advanced use"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[8],
-          "lang": "js"
-        }
-      }), _vm._v(" "), _c('DocsCode', {
-        attrs: {
-          "code": _vm.codes.duotoneIcons[9]
-        }
-      })], 1);
-    },
-    staticRenderFns: [],
+    return vue.openBlock(), vue.createBlock("h4", {
+      id: $options.id,
+      class: "h" + $props.level
+    }, [vue.createVNode("a", {
+      href: "#" + $options.id
+    }, vue.toDisplayString($props.title), 9
+    /* TEXT, PROPS */
+    , ["href"]), _hoisted_1$4, vue.createVNode("small", null, [vue.createVNode(_component_Fa, {
+      icon: _ctx.faLink
+    }, null, 8
+    /* PROPS */
+    , ["icon"])])], 10
+    /* CLASS, PROPS */
+    , ["id"]);
+  });
+
+  script$4.render = render$4;
+  script$4.__scopeId = "data-v-5fc7f558";
+  script$4.__file = "docs-title.vue";
+
+  var script$5 = {
     components: {
-      Fa: Fa,
-      DocsCode: DocsCode,
-      DocsImg: DocsImg,
-      DocsTitle: DocsTitle
+      Fa: script,
+      DocsCode: script$2,
+      DocsImg: script$3,
+      DocsTitle: script$4
     },
     data: function data() {
       return {
@@ -898,49 +544,401 @@
     }
   };
 
-  (function () {
-    if (typeof document !== 'undefined') {
-      var head = document.head || document.getElementsByTagName('head')[0],
-          style = document.createElement('style'),
-          css = "";
-      style.type = 'text/css';
-
-      if (style.styleSheet) {
-        style.styleSheet.cssText = css;
-      } else {
-        style.appendChild(document.createTextNode(css));
-      }
-
-      head.appendChild(style);
-    }
-  })();
-  var App = {
-    render: function render() {
-      var _vm = this;
-
-      var _h = _vm.$createElement;
-
-      var _c = _vm._self._c || _h;
-
-      return _c('div', {
-        staticClass: "container my-4"
-      }, [_c('showcase'), _vm._v(" "), _c('docs')], 1);
-    },
-    staticRenderFns: [],
-    components: {
-      Showcase: Showcase,
-      Docs: Docs
-    }
+  var _hoisted_1$5 = {
+    class: "shadow-sm p-3 mb-3 rounded"
   };
 
-  new Vue({
-    el: '#app',
+  var _hoisted_2$2 = /*#__PURE__*/vue.createTextVNode(" Flag ");
+
+  var _hoisted_3$1 = {
+    class: "shadow-sm p-3 mb-3 rounded"
+  };
+  var _hoisted_4$1 = {
+    style: {
+      "font-size": "3em",
+      "color": "tomato"
+    }
+  };
+  var _hoisted_5 = {
+    class: "shadow-sm p-3 mb-3 rounded"
+  };
+  var _hoisted_6 = {
+    class: "shadow-sm p-3 mb-3 rounded"
+  };
+
+  var _hoisted_7$1 = /*#__PURE__*/vue.createTextVNode(" Home ");
+
+  var _hoisted_8$1 = /*#__PURE__*/vue.createTextVNode(" Info ");
+
+  var _hoisted_9$1 = /*#__PURE__*/vue.createTextVNode(" Library ");
+
+  var _hoisted_10$1 = /*#__PURE__*/vue.createTextVNode(" Applications ");
+
+  var _hoisted_11$1 = /*#__PURE__*/vue.createTextVNode(" Settins ");
+
+  var _hoisted_12$1 = {
+    class: "shadow-sm p-3 mb-3 rounded clearfix"
+  };
+
+  var _hoisted_13$1 = /*#__PURE__*/vue.createTextVNode(" Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past. ");
+
+  var _hoisted_14$1 = {
+    class: "shadow-sm p-3 mb-3 rounded"
+  };
+  function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+    var _component_DocsTitle = vue.resolveComponent("DocsTitle");
+
+    var _component_DocsCode = vue.resolveComponent("DocsCode");
+
+    var _component_Fa = vue.resolveComponent("Fa");
+
+    var _component_DocsImg = vue.resolveComponent("DocsImg");
+
+    return vue.openBlock(), vue.createBlock("div", null, [vue.createVNode(_component_DocsTitle, {
+      title: "Installation"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.installation[0]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.installation[1],
+      lang: "js"
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      title: "Basic Use"
+    }), vue.createVNode("div", _hoisted_1$5, [vue.createVNode(_component_Fa, {
+      icon: $data.faFlag
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_2$2]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.basicUse[0]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode("div", _hoisted_3$1, [vue.createVNode("div", _hoisted_4$1, [vue.createVNode(_component_Fa, {
+      icon: $data.faFlag
+    }, null, 8
+    /* PROPS */
+    , ["icon"])])]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.basicUse[1]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      title: "Additional Styling"
+    }), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Icon Sizes"
+    }), vue.createVNode("div", _hoisted_5, [vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "xs"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "sm"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "lg"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "2x"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "2.5x"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "5x"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "7x"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faFlag,
+      size: "10x"
+    }, null, 8
+    /* PROPS */
+    , ["icon"])]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.additionalStyling[0]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Fixed Width Icons"
+    }), vue.createVNode("div", _hoisted_6, [vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+      icon: $data.faHome,
+      fw: "",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_7$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+      icon: $data.faInfo,
+      fw: "",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_8$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+      icon: $data.faBook,
+      fw: "",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_9$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+      icon: $data.faPencilAlt,
+      fw: "",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_10$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+      icon: $data.faCog,
+      fw: "",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_11$1])]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.additionalStyling[1]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Pulled Icons"
+    }), vue.createVNode("div", _hoisted_12$1, [vue.createVNode(_component_Fa, {
+      icon: $data.faQuoteLeft,
+      pull: "left",
+      size: "2x"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faQuoteRight,
+      pull: "right",
+      size: "2x"
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_13$1]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.additionalStyling[2]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      title: "Power Transforms"
+    }), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Rotating & Flipping"
+    }), vue.createVNode("div", _hoisted_14$1, [vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      rotate: 90,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      rotate: 180,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      size: "4x",
+      rotate: "270",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      size: "4x",
+      rotate: "30",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      size: "4x",
+      rotate: "-30",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      size: "4x",
+      flip: "vertical",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      size: "4x",
+      flip: "horizontal",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      size: "4x",
+      flip: "both",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $data.faMagic,
+      size: "4x",
+      flip: "both",
+      rotate: "30",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"])]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.powerTransforms[0]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      title: "Duotone Icons"
+    }), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Basic Use"
+    }), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-0.png",
+      alt: "duotone icons basic use"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[0],
+      lang: "js"
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[1]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Swapping Layer Opacity"
+    }), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-1.png",
+      alt: "swapping duotone icons layer opacity"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[2]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Changing Opacity"
+    }), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-2.png",
+      alt: "changing duotone icons opacity"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[3]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-3.png",
+      alt: "changing duotone icons opacity"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[4]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Coloring Duotone Icons"
+    }), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-4.png",
+      alt: "coloring duotone icons"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[5]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      level: 5,
+      title: "Advanced Use"
+    }), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-5.png",
+      alt: "duotone icons advanced use"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[6]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-6.png",
+      alt: "duotone icons advanced use"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[7]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsImg, {
+      src: "assets/duotone-7.png",
+      alt: "duotone icons advanced use"
+    }), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[8],
+      lang: "js"
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsCode, {
+      code: $data.codes.duotoneIcons[9]
+    }, null, 8
+    /* PROPS */
+    , ["code"])]);
+  }
+
+  script$5.render = render$5;
+  script$5.__file = "docs.vue";
+
+  var script$6 = vue.defineComponent({
     components: {
-      App: App
-    },
-    render: function render(h) {
-      return h('app');
+      Showcase: script$1,
+      Docs: script$5
     }
   });
 
-}(Vue, VueFa));
+  var _hoisted_1$6 = {
+    class: "container my-4"
+  };
+  function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+    var _component_showcase = vue.resolveComponent("showcase");
+
+    var _component_docs = vue.resolveComponent("docs");
+
+    return vue.openBlock(), vue.createBlock("div", _hoisted_1$6, [vue.createVNode(_component_showcase), vue.createVNode(_component_docs)]);
+  }
+
+  script$6.render = render$6;
+  script$6.__file = "app.vue";
+
+  vue.createApp(script$6).mount('#app');
+
+}(Vue));

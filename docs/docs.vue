@@ -253,7 +253,6 @@
 </template>
 
 <script>
-import Fa from 'vue-fa';
 import {
   faFlag,
   faHome,
@@ -265,6 +264,7 @@ import {
   faQuoteRight,
   faMagic,
 } from '@fortawesome/free-solid-svg-icons';
+import Fa from '../dist/vue-fa.esm';
 
 import DocsCode from './docs-code.vue';
 import DocsImg from './docs-img.vue';

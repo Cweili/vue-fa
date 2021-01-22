@@ -8,7 +8,7 @@ import {
 
 import { createSSRApp } from 'vue';
 import { renderToString } from '@vue/server-renderer';
-import pretty from 'pretty'
+import pretty from 'pretty';
 
 import App from './app';
 

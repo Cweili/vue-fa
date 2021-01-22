@@ -1,17 +1,19 @@
-import resolve from 'rollup-plugin-node-resolve';
-import replace from 'rollup-plugin-replace';
+import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
+import babel from '@rollup/plugin-babel';
+import typescript from 'rollup-plugin-typescript2';
 import vue from 'rollup-plugin-vue';
-import babel from 'rollup-plugin-babel';
+import css from 'rollup-plugin-css-only';
 
 export default {
-  input: 'index.js',
+  input: 'index.ts',
   output: {
     file: 'dist/index.js',
     name: 'vueFaExamples',
     format: 'iife',
     globals: {
       vue: 'Vue',
-      'vue-fa': 'VueFa',
+      // 'vue-fa': 'VueFa',
     },
   },
   external: ['vue', 'vue-fa'],
@@ -23,8 +25,12 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
     vue({
-      css: true,
+      css: false,
     }),
+    css({
+      output: 'index.css',
+    }),
+    typescript(),
     babel({
       extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
     }),

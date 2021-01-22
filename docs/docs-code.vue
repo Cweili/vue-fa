@@ -1,8 +1,8 @@
 <template>
   <div class="shadow-sm mb-3 rounded">
     <pre><code
+      ref="el"
       :class="`language-${lang}`"
-      v-ref="el"
     >{{ code }}</code></pre>
   </div>
 </template>
