@@ -264,7 +264,7 @@ import {
   faQuoteRight,
   faMagic,
 } from '@fortawesome/free-solid-svg-icons';
-import Fa from '../dist/vue-fa.esm';
+import Fa from 'vue-fa';
 
 import DocsCode from './docs-code.vue';
 import DocsImg from './docs-img.vue';

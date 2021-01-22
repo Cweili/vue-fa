@@ -171,7 +171,7 @@ import {
   faCog,
   faMagic,
 } from '@fortawesome/free-solid-svg-icons';
-import Fa from '../dist/vue-fa.esm';
+import Fa from 'vue-fa';
 
 export default {
   components: {

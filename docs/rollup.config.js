@@ -13,7 +13,7 @@ export default {
     format: 'iife',
     globals: {
       vue: 'Vue',
-      // 'vue-fa': 'VueFa',
+      'vue-fa': 'VueFa',
     },
   },
   external: ['vue', 'vue-fa'],
