@@ -6,14 +6,15 @@ import {
   faMagic,
   fadFlag,
 } from '@cweili/fa-test-util';
+import { defineComponent } from 'vue';
 import Fa from '../dist/vue-fa';
 
-export default {
+export default defineComponent({
   components: {
     Fa,
   },
 
-  data() {
+  setup() {
     return {
       faFlag,
       faHome,
@@ -29,4 +30,4 @@ export default {
       },
     };
   },
-};
+});
