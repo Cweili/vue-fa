@@ -5,17 +5,7 @@ import typescript from 'rollup-plugin-typescript2';
 import vue from 'rollup-plugin-vue';
 import css from 'rollup-plugin-css-only';
 
-export default {
-  input: 'index.ts',
-  output: {
-    file: 'dist/index.js',
-    name: 'vueFaExamples',
-    format: 'iife',
-    globals: {
-      vue: 'Vue',
-      'vue-fa': 'VueFa',
-    },
-  },
+const commonConfig = (outputPrefix = '') => ({
   external: ['vue', 'vue-fa'],
   plugins: [
     resolve({
@@ -28,11 +18,40 @@ export default {
       css: false,
     }),
     css({
-      output: 'index.css',
+      output: `${outputPrefix}index.css`,
     }),
     typescript(),
     babel({
       extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
     }),
   ],
-};
+});
+
+export default [
+  {
+    ...commonConfig(),
+    input: 'index.ts',
+    output: {
+      file: 'dist/index.js',
+      name: 'vueFaExamples',
+      format: 'iife',
+      globals: {
+        vue: 'Vue',
+        'vue-fa': 'VueFa',
+      },
+    },
+  },
+  {
+    ...commonConfig('v2.'),
+    input: 'v2/index.ts',
+    output: {
+      file: 'dist/v2.index.js',
+      name: 'vueFaExamples',
+      format: 'iife',
+      globals: {
+        vue: 'Vue',
+        'vue-fa': 'VueFa',
+      },
+    },
+  },
+];

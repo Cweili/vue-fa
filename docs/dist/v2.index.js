@@ -772,7 +772,7 @@
   }
 
   script$5.render = render$5;
-  script$5.__file = "app.vue";
+  script$5.__file = "v2/app.vue";
 
   vue.createApp(script$5).mount('#app');
 

@@ -19,6 +19,12 @@ Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
 
 [Documents and examples][doc].
 
+> **Notice:** vue-fa 3.x is based on Vue.js 3.x.
+>
+> Old versions:
+>
+> vue-fa@2 => vue@2 [[Documents][doc-v2]]
+
 ## Installation
 
 ```shell
@@ -112,6 +118,7 @@ const theme = {
 [vuejs]: https://vuejs.org/
 
 [doc]: https://cweili.github.io/vue-fa/
+[doc-v2]: https://cweili.github.io/vue-fa/v2/
 
 [badge-version]: https://img.shields.io/npm/v/vue-fa.svg
 [badge-downloads]: https://img.shields.io/npm/dt/vue-fa.svg

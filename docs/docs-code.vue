@@ -7,10 +7,21 @@
   </div>
 </template>
 
-<script>
-/* global Prism */
+<script lang="ts">
+import {
+  defineComponent,
+  ref,
+  watch,
+  onMounted,
+} from 'vue';
 
-export default {
+declare global {
+  interface Window {
+    Prism: any
+  }
+}
+
+export default defineComponent({
   props: {
     code: {
       type: String,
@@ -22,21 +33,22 @@ export default {
     },
   },
 
-  watch: {
-    code: 'highlight',
-  },
+  setup(props) {
+    const el = ref();
 
-  mounted() {
-    this.highlight();
-  },
-
-  methods: {
-    highlight() {
-      const { el } = this.$refs;
-      if (el) {
-        Prism.highlightElement(el);
+    const highlight = () => {
+      if (el.value) {
+        window.Prism.highlightElement(el.value);
       }
-    },
+    };
+
+    watch(() => props.code, highlight);
+
+    onMounted(highlight);
+
+    return {
+      el,
+    };
   },
-};
+});
 </script>

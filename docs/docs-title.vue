@@ -7,11 +7,15 @@
   </h4>
 </template>
 
-<script>
+<script lang="ts">
+import {
+  defineComponent,
+  computed,
+} from 'vue';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import Fa from 'vue-fa';
 
-export default {
+export default defineComponent({
   components: {
     Fa,
   },
@@ -25,16 +29,13 @@ export default {
     },
   },
 
-  data: () => ({
-    faLink,
-  }),
-
-  computed: {
-    id() {
-      return this.title.toLowerCase().replace(/[^\w]/g, '-');
-    },
+  setup(props) {
+    return {
+      faLink,
+      id: computed(() => props.title.toLowerCase().replace(/[^\w]/g, '-')),
+    };
   },
-};
+});
 </script>
 
 <style scoped>

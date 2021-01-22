@@ -8,49 +8,6 @@
             target="_blank"
           >vue-fa</a></strong>
         </h1>
-        <p>
-          <a
-            href="https://www.npmjs.com/package/vue-fa"
-            target="_blank"
-          >
-            <img
-              src="https://img.shields.io/npm/v/vue-fa.svg"
-              alt="npm version"
-            >
-          </a> <a
-            href="https://bundlephobia.com/result?p=vue-fa"
-            target="_blank"
-          >
-            <img
-              src="https://img.shields.io/bundlephobia/minzip/vue-fa.svg"
-              alt="bundle size"
-            >
-          </a> <a
-            href="https://github.com/Cweili/vue-fa/blob/master/LICENSE"
-            target="_blank"
-          >
-            <img
-              src="https://img.shields.io/npm/l/vue-fa.svg"
-              alt="MIT licence"
-            >
-          </a> <a
-            href="https://www.npmjs.com/package/vue-fa"
-            target="_blank"
-          >
-            <img
-              src="https://img.shields.io/npm/dt/vue-fa.svg"
-              alt="npm downloads"
-            >
-          </a> <a
-            href="https://github.com/Cweili/vue-fa"
-            target="_blank"
-          >
-            <img
-              src="https://img.shields.io/github/issues/Cweili/vue-fa.svg"
-              alt="github issues"
-            >
-          </a>
-        </p>
         <p class="lead mb-5">
           Tiny <a
             class="hue"
