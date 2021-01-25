@@ -6,6 +6,12 @@
       :code="codes.installation[1]"
       lang="js"
     />
+    <div class="p-2 mb-3">
+      <Fa :icon="faInfo" fw />
+      for Vue.js v2.x, uses vue-fa@2:
+      <span class="shadow-sm p-1 rounded">npm install vue-fa@2</span>
+      [<a href="https://cweili.github.io/vue-fa/v2/" target="_blank">vue-fa v2 documents</a>]
+    </div>
     <DocsTitle title="Basic Use" />
     <div class="shadow-sm p-3 mb-3 rounded">
       <Fa :icon="faFlag" /> Flag
@@ -292,10 +298,7 @@ export default {
 
       codes: {
         installation: [
-          `npm install vue-fa
-
-# for Vue.js v2.x, uses vue-fa@2
-# npm install vue-fa@2`,
+          'npm install vue-fa',
           `import Fa from 'vue-fa'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 

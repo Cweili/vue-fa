@@ -369,7 +369,7 @@
         faQuoteRight: faQuoteRight,
         faMagic: faMagic,
         codes: {
-          installation: ["npm install vue-fa\n\n# for Vue.js v2.x, uses vue-fa@2\n# npm install vue-fa@2", "import Fa from 'vue-fa'\nimport { faFlag } from '@fortawesome/free-solid-svg-icons'\n\n" + 'export ' + "default {\n  components: {\n    Fa\n  },\n\n  setup() {\n    return {\n      faFlag\n    }\n  }\n}"],
+          installation: ['npm install vue-fa', "import Fa from 'vue-fa'\nimport { faFlag } from '@fortawesome/free-solid-svg-icons'\n\n" + 'export ' + "default {\n  components: {\n    Fa\n  },\n\n  setup() {\n    return {\n      faFlag\n    }\n  }\n}"],
           basicUse: ['<Fa :icon="faFlag" /> Flag', "<div style=\"font-size: 3em; color: tomato\">\n  <Fa :icon=\"faFlag\" />\n</div>"],
           additionalStyling: ["<Fa :icon=\"faFlag\" size=\"xs\" />\n<Fa :icon=\"faFlag\" size=\"sm\" />\n<Fa :icon=\"faFlag\" size=\"lg\" />\n<Fa :icon=\"faFlag\" size=\"2x\" />\n<Fa :icon=\"faFlag\" size=\"2.5x\" />\n<Fa :icon=\"faFlag\" size=\"5x\" />\n<Fa :icon=\"faFlag\" size=\"7x\" />\n<Fa :icon=\"faFlag\" size=\"10x\" />", "<div>\n  <Fa :icon=\"faHome\" fw style=\"background: mistyrose\" /> Home\n</div>\n<div>\n  <Fa :icon=\"faInfo\" fw style=\"background: mistyrose\" /> Info\n</div>\n<div>\n  <Fa :icon=\"faBook\" fw style=\"background: mistyrose\" /> Library\n</div>\n<div>\n  <Fa :icon=\"faPencilAlt\" fw style=\"background: mistyrose\" /> Applications\n</div>\n<div>\n  <Fa :icon=\"faCog\" fw style=\"background: mistyrose\" /> Settins\n</div>", "<Fa :icon=\"faQuoteLeft\" pull=\"left\" size=\"2x\" />\n<Fa :icon=\"faQuoteRight\" pull=\"right\" size=\"2x\" />\nGatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that\u2019s no matter \u2014 tomorrow we will run faster, stretch our arms further... And one fine morning \u2014 So we beat on, boats against the current, borne back ceaselessly into the past."],
           powerTransforms: ["<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"90\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"180\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"270\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"-30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"vertical\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"horizontal\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>"],
@@ -380,44 +380,67 @@
   };
 
   var _hoisted_1$4 = {
+    class: "p-2 mb-3"
+  };
+
+  var _hoisted_2$2 = /*#__PURE__*/vue.createTextVNode(" for Vue.js v2.x, uses vue-fa@2: ");
+
+  var _hoisted_3$1 = /*#__PURE__*/vue.createVNode("span", {
+    class: "shadow-sm p-1 rounded"
+  }, "npm install vue-fa@2", -1
+  /* HOISTED */
+  );
+
+  var _hoisted_4$1 = /*#__PURE__*/vue.createTextVNode(" [");
+
+  var _hoisted_5 = /*#__PURE__*/vue.createVNode("a", {
+    href: "https://cweili.github.io/vue-fa/v2/",
+    target: "_blank"
+  }, "vue-fa v2 documents", -1
+  /* HOISTED */
+  );
+
+  var _hoisted_6 = /*#__PURE__*/vue.createTextVNode("] ");
+
+  var _hoisted_7$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
 
-  var _hoisted_2$2 = /*#__PURE__*/vue.createTextVNode(" Flag ");
+  var _hoisted_8$1 = /*#__PURE__*/vue.createTextVNode(" Flag ");
 
-  var _hoisted_3$1 = {
+  var _hoisted_9$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
-  var _hoisted_4$1 = {
+  var _hoisted_10$1 = {
     style: {
       "font-size": "3em",
       "color": "tomato"
     }
   };
-  var _hoisted_5 = {
+  var _hoisted_11$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
-  var _hoisted_6 = {
-    class: "shadow-sm p-3 mb-3 rounded"
-  };
-
-  var _hoisted_7$1 = /*#__PURE__*/vue.createTextVNode(" Home ");
-
-  var _hoisted_8$1 = /*#__PURE__*/vue.createTextVNode(" Info ");
-
-  var _hoisted_9$1 = /*#__PURE__*/vue.createTextVNode(" Library ");
-
-  var _hoisted_10$1 = /*#__PURE__*/vue.createTextVNode(" Applications ");
-
-  var _hoisted_11$1 = /*#__PURE__*/vue.createTextVNode(" Settins ");
-
   var _hoisted_12$1 = {
+    class: "shadow-sm p-3 mb-3 rounded"
+  };
+
+  var _hoisted_13$1 = /*#__PURE__*/vue.createTextVNode(" Home ");
+
+  var _hoisted_14$1 = /*#__PURE__*/vue.createTextVNode(" Info ");
+
+  var _hoisted_15$1 = /*#__PURE__*/vue.createTextVNode(" Library ");
+
+  var _hoisted_16$1 = /*#__PURE__*/vue.createTextVNode(" Applications ");
+
+  var _hoisted_17$1 = /*#__PURE__*/vue.createTextVNode(" Settins ");
+
+  var _hoisted_18$1 = {
     class: "shadow-sm p-3 mb-3 rounded clearfix"
   };
 
-  var _hoisted_13$1 = /*#__PURE__*/vue.createTextVNode(" Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past. ");
+  var _hoisted_19$1 = /*#__PURE__*/vue.createTextVNode(" Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past. ");
 
-  var _hoisted_14$1 = {
+  var _hoisted_20$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
   function render$4(_ctx, _cache, $props, $setup, $data, $options) {
@@ -440,17 +463,22 @@
       lang: "js"
     }, null, 8
     /* PROPS */
-    , ["code"]), vue.createVNode(_component_DocsTitle, {
+    , ["code"]), vue.createVNode("div", _hoisted_1$4, [vue.createVNode(_component_Fa, {
+      icon: $setup.faInfo,
+      fw: ""
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), _hoisted_2$2, _hoisted_3$1, _hoisted_4$1, _hoisted_5, _hoisted_6]), vue.createVNode(_component_DocsTitle, {
       title: "Basic Use"
-    }), vue.createVNode("div", _hoisted_1$4, [vue.createVNode(_component_Fa, {
+    }), vue.createVNode("div", _hoisted_7$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faFlag
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_2$2]), vue.createVNode(_component_DocsCode, {
+    , ["icon"]), _hoisted_8$1]), vue.createVNode(_component_DocsCode, {
       code: $setup.codes.basicUse[0]
     }, null, 8
     /* PROPS */
-    , ["code"]), vue.createVNode("div", _hoisted_3$1, [vue.createVNode("div", _hoisted_4$1, [vue.createVNode(_component_Fa, {
+    , ["code"]), vue.createVNode("div", _hoisted_9$1, [vue.createVNode("div", _hoisted_10$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faFlag
     }, null, 8
     /* PROPS */
@@ -463,7 +491,7 @@
     }), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Icon Sizes"
-    }), vue.createVNode("div", _hoisted_5, [vue.createVNode(_component_Fa, {
+    }), vue.createVNode("div", _hoisted_11$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faFlag,
       size: "xs"
     }, null, 8
@@ -510,7 +538,7 @@
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Fixed Width Icons"
-    }), vue.createVNode("div", _hoisted_6, [vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+    }), vue.createVNode("div", _hoisted_12$1, [vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faHome,
       fw: "",
       style: {
@@ -518,7 +546,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_7$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_13$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faInfo,
       fw: "",
       style: {
@@ -526,7 +554,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_8$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_14$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faBook,
       fw: "",
       style: {
@@ -534,7 +562,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_9$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_15$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faPencilAlt,
       fw: "",
       style: {
@@ -542,7 +570,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_10$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_16$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faCog,
       fw: "",
       style: {
@@ -550,14 +578,14 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_11$1])]), vue.createVNode(_component_DocsCode, {
+    , ["icon"]), _hoisted_17$1])]), vue.createVNode(_component_DocsCode, {
       code: $setup.codes.additionalStyling[1]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Pulled Icons"
-    }), vue.createVNode("div", _hoisted_12$1, [vue.createVNode(_component_Fa, {
+    }), vue.createVNode("div", _hoisted_18$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faQuoteLeft,
       pull: "left",
       size: "2x"
@@ -569,7 +597,7 @@
       size: "2x"
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_13$1]), vue.createVNode(_component_DocsCode, {
+    , ["icon"]), _hoisted_19$1]), vue.createVNode(_component_DocsCode, {
       code: $setup.codes.additionalStyling[2]
     }, null, 8
     /* PROPS */
@@ -578,7 +606,7 @@
     }), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Rotating & Flipping"
-    }), vue.createVNode("div", _hoisted_14$1, [vue.createVNode(_component_Fa, {
+    }), vue.createVNode("div", _hoisted_20$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faMagic,
       rotate: 90,
       size: "4x",
