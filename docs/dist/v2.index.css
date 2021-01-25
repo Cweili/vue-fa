@@ -1,9 +1,9 @@
 
-.hue[data-v-d8b0228a] {
+.hue[data-v-535d0c7c] {
   color: #238ae6;
-  animation: hue-d8b0228a 30s infinite linear;
+  animation: hue-535d0c7c 30s infinite linear;
 }
-@keyframes hue-d8b0228a {
+@keyframes hue-535d0c7c {
 from {
     filter: hue-rotate(0deg);
 }

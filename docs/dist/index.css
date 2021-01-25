@@ -12,6 +12,17 @@ to {
 }
 }
 
+a[data-v-5fc7f558],
+a[data-v-5fc7f558]:visited {
+  color: currentColor;
+}
+small[data-v-5fc7f558] {
+  visibility: hidden;
+}
+a:hover + small[data-v-5fc7f558] {
+  visibility: visible;
+}
+
 img[data-v-218e963f] {
   max-width: 100%;
   max-height: 48px;
@@ -22,15 +33,4 @@ small[data-v-218e963f] {
   bottom: .1rem;
   color: #ddd;
   z-index: -1;
-}
-
-a[data-v-5fc7f558],
-a[data-v-5fc7f558]:visited {
-  color: currentColor;
-}
-small[data-v-5fc7f558] {
-  visibility: hidden;
-}
-a:hover + small[data-v-5fc7f558] {
-  visibility: visible;
 }

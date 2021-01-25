@@ -41,9 +41,9 @@
     }
   });
 
-  var _withId = /*#__PURE__*/vue.withScopeId("data-v-d8b0228a");
+  var _withId = /*#__PURE__*/vue.withScopeId("data-v-535d0c7c");
 
-  vue.pushScopeId("data-v-d8b0228a");
+  vue.pushScopeId("data-v-535d0c7c");
 
   var _hoisted_1 = {
     class: "jumbotron"
@@ -55,89 +55,89 @@
     class: "col-md"
   };
 
-  var _hoisted_4 = /*#__PURE__*/vue.createStaticVNode("<h1 class=\"hue\" data-v-d8b0228a><strong data-v-d8b0228a><a href=\"https://github.com/Cweili/vue-fa\" target=\"_blank\" data-v-d8b0228a>vue-fa</a></strong></h1><p data-v-d8b0228a><a href=\"https://www.npmjs.com/package/vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/npm/v/vue-fa.svg\" alt=\"npm version\" data-v-d8b0228a></a> <a href=\"https://bundlephobia.com/result?p=vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/bundlephobia/minzip/vue-fa.svg\" alt=\"bundle size\" data-v-d8b0228a></a> <a href=\"https://github.com/Cweili/vue-fa/blob/master/LICENSE\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/npm/l/vue-fa.svg\" alt=\"MIT licence\" data-v-d8b0228a></a> <a href=\"https://www.npmjs.com/package/vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/npm/dt/vue-fa.svg\" alt=\"npm downloads\" data-v-d8b0228a></a> <a href=\"https://github.com/Cweili/vue-fa\" target=\"_blank\" data-v-d8b0228a><img src=\"https://img.shields.io/github/issues/Cweili/vue-fa.svg\" alt=\"github issues\" data-v-d8b0228a></a></p><p class=\"lead mb-5\" data-v-d8b0228a> Tiny <a class=\"hue\" href=\"https://fontawesome.com/\" target=\"_blank\" data-v-d8b0228a>FontAwesome 5</a> component for <a class=\"hue\" href=\"https://vuejs.org/\" target=\"_blank\" data-v-d8b0228a>Vue.js</a>. </p>", 3);
+  var _hoisted_4 = /*#__PURE__*/vue.createStaticVNode("<h1 class=\"hue\" data-v-535d0c7c><strong data-v-535d0c7c><a href=\"https://github.com/Cweili/vue-fa\" target=\"_blank\" data-v-535d0c7c>vue-fa</a></strong></h1><p class=\"lead mb-5\" data-v-535d0c7c> Tiny <a class=\"hue\" href=\"https://fontawesome.com/\" target=\"_blank\" data-v-535d0c7c>FontAwesome 5</a> component for <a class=\"hue\" href=\"https://vuejs.org/\" target=\"_blank\" data-v-535d0c7c>Vue.js</a>. </p>", 2);
 
-  var _hoisted_7 = {
+  var _hoisted_6 = {
     class: "form-group row"
   };
 
-  var _hoisted_8 = /*#__PURE__*/vue.createVNode("label", {
+  var _hoisted_7 = /*#__PURE__*/vue.createVNode("label", {
     class: "col-sm-3 col-form-label"
   }, "Icon Sizes", -1
   /* HOISTED */
   );
 
-  var _hoisted_9 = {
+  var _hoisted_8 = {
     class: "col-sm-9 row"
   };
-  var _hoisted_10 = {
+  var _hoisted_9 = {
     class: "col-md-8 py-2"
   };
-  var _hoisted_11 = {
+  var _hoisted_10 = {
     class: "col-md-4"
   };
-  var _hoisted_12 = {
+  var _hoisted_11 = {
     class: "form-control text-center"
   };
-  var _hoisted_13 = {
+  var _hoisted_12 = {
     class: "form-group row"
   };
 
-  var _hoisted_14 = /*#__PURE__*/vue.createVNode("label", {
+  var _hoisted_13 = /*#__PURE__*/vue.createVNode("label", {
     class: "col-sm-3 col-form-label"
   }, "Pulled Icons", -1
   /* HOISTED */
   );
 
-  var _hoisted_15 = {
+  var _hoisted_14 = {
     class: "col-sm-9"
   };
-  var _hoisted_16 = {
+  var _hoisted_15 = {
     class: "btn-group",
     role: "group",
     "aria-label": "Basic example"
   };
-  var _hoisted_17 = {
+  var _hoisted_16 = {
     class: "form-group row"
   };
 
-  var _hoisted_18 = /*#__PURE__*/vue.createVNode("label", {
+  var _hoisted_17 = /*#__PURE__*/vue.createVNode("label", {
     class: "col-sm-3 col-form-label"
   }, "Flip", -1
   /* HOISTED */
   );
 
-  var _hoisted_19 = {
+  var _hoisted_18 = {
     class: "col-sm-9"
   };
-  var _hoisted_20 = {
+  var _hoisted_19 = {
     class: "btn-group",
     role: "group",
     "aria-label": "Basic example"
   };
-  var _hoisted_21 = {
+  var _hoisted_20 = {
     class: "form-group row"
   };
 
-  var _hoisted_22 = /*#__PURE__*/vue.createVNode("label", {
+  var _hoisted_21 = /*#__PURE__*/vue.createVNode("label", {
     class: "col-sm-3 col-form-label"
   }, "Rotate", -1
   /* HOISTED */
   );
 
-  var _hoisted_23 = {
+  var _hoisted_22 = {
     class: "col-sm-9 row"
   };
-  var _hoisted_24 = {
+  var _hoisted_23 = {
     class: "col-md-8 py-2"
   };
-  var _hoisted_25 = {
+  var _hoisted_24 = {
     class: "col-md-4"
   };
-  var _hoisted_26 = {
+  var _hoisted_25 = {
     class: "form-control text-center"
   };
-  var _hoisted_27 = {
+  var _hoisted_26 = {
     class: "col-md row"
   };
 
@@ -148,7 +148,7 @@
 
     return vue.openBlock(), vue.createBlock("div", _hoisted_1, [vue.createVNode("div", _hoisted_2, [vue.createVNode("div", _hoisted_3, [_hoisted_4, vue.createVNode("form", {
       onSubmit: _cache[3] || (_cache[3] = vue.withModifiers(function () {}, ["prevent"]))
-    }, [vue.createVNode("div", _hoisted_7, [_hoisted_8, vue.createVNode("div", _hoisted_9, [vue.createVNode("div", _hoisted_10, [vue.withDirectives(vue.createVNode("input", {
+    }, [vue.createVNode("div", _hoisted_6, [_hoisted_7, vue.createVNode("div", _hoisted_8, [vue.createVNode("div", _hoisted_9, [vue.withDirectives(vue.createVNode("input", {
       "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
         return _ctx.model.size = $event;
       }),
@@ -159,9 +159,9 @@
       step: "0.1"
     }, null, 512
     /* NEED_PATCH */
-    ), [[vue.vModelText, _ctx.model.size]])]), vue.createVNode("div", _hoisted_11, [vue.createVNode("div", _hoisted_12, vue.toDisplayString(_ctx.model.size) + "x ", 1
+    ), [[vue.vModelText, _ctx.model.size]])]), vue.createVNode("div", _hoisted_10, [vue.createVNode("div", _hoisted_11, vue.toDisplayString(_ctx.model.size) + "x ", 1
     /* TEXT */
-    )])])]), vue.createVNode("div", _hoisted_13, [_hoisted_14, vue.createVNode("div", _hoisted_15, [vue.createVNode("div", _hoisted_16, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.pull, function (p) {
+    )])])]), vue.createVNode("div", _hoisted_12, [_hoisted_13, vue.createVNode("div", _hoisted_14, [vue.createVNode("div", _hoisted_15, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.pull, function (p) {
       return vue.openBlock(), vue.createBlock("button", {
         key: p,
         class: "btn btn-" + _ctx.checked('pull', p),
@@ -174,7 +174,7 @@
       , ["onClick"]);
     }), 128
     /* KEYED_FRAGMENT */
-    ))])])]), vue.createVNode("div", _hoisted_17, [_hoisted_18, vue.createVNode("div", _hoisted_19, [vue.createVNode("div", _hoisted_20, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.flip, function (f) {
+    ))])])]), vue.createVNode("div", _hoisted_16, [_hoisted_17, vue.createVNode("div", _hoisted_18, [vue.createVNode("div", _hoisted_19, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.flip, function (f) {
       return vue.openBlock(), vue.createBlock("button", {
         key: f,
         class: "btn btn-" + _ctx.checked('flip', f),
@@ -187,7 +187,7 @@
       , ["onClick"]);
     }), 128
     /* KEYED_FRAGMENT */
-    ))])])]), vue.createVNode("div", _hoisted_21, [_hoisted_22, vue.createVNode("div", _hoisted_23, [vue.createVNode("div", _hoisted_24, [vue.withDirectives(vue.createVNode("input", {
+    ))])])]), vue.createVNode("div", _hoisted_20, [_hoisted_21, vue.createVNode("div", _hoisted_22, [vue.createVNode("div", _hoisted_23, [vue.withDirectives(vue.createVNode("input", {
       "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
         return _ctx.model.rotate = $event;
       }),
@@ -198,11 +198,11 @@
       step: "1"
     }, null, 512
     /* NEED_PATCH */
-    ), [[vue.vModelText, _ctx.model.rotate]])]), vue.createVNode("div", _hoisted_25, [vue.createVNode("div", _hoisted_26, vue.toDisplayString(_ctx.model.rotate) + "deg ", 1
+    ), [[vue.vModelText, _ctx.model.rotate]])]), vue.createVNode("div", _hoisted_24, [vue.createVNode("div", _hoisted_25, vue.toDisplayString(_ctx.model.rotate) + "deg ", 1
     /* TEXT */
     )])])])], 32
     /* HYDRATE_EVENTS */
-    )]), vue.createVNode("div", _hoisted_27, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.icons, function (icon, i) {
+    )]), vue.createVNode("div", _hoisted_26, [(vue.openBlock(true), vue.createBlock(vue.Fragment, null, vue.renderList(_ctx.icons, function (icon, i) {
       return vue.openBlock(), vue.createBlock("div", {
         key: i,
         class: "col text-center hue"
@@ -221,8 +221,8 @@
   });
 
   script.render = render;
-  script.__scopeId = "data-v-d8b0228a";
-  script.__file = "showcase.vue";
+  script.__scopeId = "data-v-535d0c7c";
+  script.__file = "v2/showcase.vue";
 
   var script$1 = vue.defineComponent({
     props: {
@@ -357,7 +357,7 @@
       DocsImg: script$2,
       DocsTitle: script$3
     },
-    data: function data() {
+    setup: function setup() {
       return {
         faFlag: faFlag,
         faHome: faHome,
@@ -369,7 +369,7 @@
         faQuoteRight: faQuoteRight,
         faMagic: faMagic,
         codes: {
-          installation: ['npm install vue-fa --save', "import Fa from 'vue-fa'\nimport { faFlag } from '@fortawesome/free-solid-svg-icons'\n\n" + 'export ' + "default {\n  components: {\n    Fa\n  },\n\n  data() {\n    return {\n      faFlag\n    }\n  }\n}"],
+          installation: ['npm install vue-fa', "import Fa from 'vue-fa'\nimport { faFlag } from '@fortawesome/free-solid-svg-icons'\n\n" + 'export ' + "default {\n  components: {\n    Fa\n  },\n\n  data() {\n    return {\n      faFlag\n    }\n  }\n}"],
           basicUse: ['<Fa :icon="faFlag" /> Flag', "<div style=\"font-size: 3em; color: tomato\">\n  <Fa :icon=\"faFlag\" />\n</div>"],
           additionalStyling: ["<Fa :icon=\"faFlag\" size=\"xs\" />\n<Fa :icon=\"faFlag\" size=\"sm\" />\n<Fa :icon=\"faFlag\" size=\"lg\" />\n<Fa :icon=\"faFlag\" size=\"2x\" />\n<Fa :icon=\"faFlag\" size=\"2.5x\" />\n<Fa :icon=\"faFlag\" size=\"5x\" />\n<Fa :icon=\"faFlag\" size=\"7x\" />\n<Fa :icon=\"faFlag\" size=\"10x\" />", "<div>\n  <Fa :icon=\"faHome\" fw style=\"background: mistyrose\" /> Home\n</div>\n<div>\n  <Fa :icon=\"faInfo\" fw style=\"background: mistyrose\" /> Info\n</div>\n<div>\n  <Fa :icon=\"faBook\" fw style=\"background: mistyrose\" /> Library\n</div>\n<div>\n  <Fa :icon=\"faPencilAlt\" fw style=\"background: mistyrose\" /> Applications\n</div>\n<div>\n  <Fa :icon=\"faCog\" fw style=\"background: mistyrose\" /> Settins\n</div>", "<Fa :icon=\"faQuoteLeft\" pull=\"left\" size=\"2x\" />\n<Fa :icon=\"faQuoteRight\" pull=\"right\" size=\"2x\" />\nGatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that\u2019s no matter \u2014 tomorrow we will run faster, stretch our arms further... And one fine morning \u2014 So we beat on, boats against the current, borne back ceaselessly into the past."],
           powerTransforms: ["<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"90\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"180\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"270\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"-30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"vertical\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"horizontal\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>"],
@@ -397,7 +397,7 @@
   var _hoisted_5 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
-  var _hoisted_6 = {
+  var _hoisted_6$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
 
@@ -432,30 +432,30 @@
     return vue.openBlock(), vue.createBlock("div", null, [vue.createVNode(_component_DocsTitle, {
       title: "Installation"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.installation[0]
+      code: $setup.codes.installation[0]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.installation[1],
+      code: $setup.codes.installation[1],
       lang: "js"
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       title: "Basic Use"
     }), vue.createVNode("div", _hoisted_1$4, [vue.createVNode(_component_Fa, {
-      icon: $data.faFlag
+      icon: $setup.faFlag
     }, null, 8
     /* PROPS */
     , ["icon"]), _hoisted_2$2]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.basicUse[0]
+      code: $setup.codes.basicUse[0]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode("div", _hoisted_3$1, [vue.createVNode("div", _hoisted_4$1, [vue.createVNode(_component_Fa, {
-      icon: $data.faFlag
+      icon: $setup.faFlag
     }, null, 8
     /* PROPS */
     , ["icon"])])]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.basicUse[1]
+      code: $setup.codes.basicUse[1]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
@@ -464,54 +464,54 @@
       level: 5,
       title: "Icon Sizes"
     }), vue.createVNode("div", _hoisted_5, [vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "xs"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "sm"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "lg"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "2x"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "2.5x"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "5x"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "7x"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faFlag,
+      icon: $setup.faFlag,
       size: "10x"
     }, null, 8
     /* PROPS */
     , ["icon"])]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.additionalStyling[0]
+      code: $setup.codes.additionalStyling[0]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Fixed Width Icons"
-    }), vue.createVNode("div", _hoisted_6, [vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
-      icon: $data.faHome,
+    }), vue.createVNode("div", _hoisted_6$1, [vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
+      icon: $setup.faHome,
       fw: "",
       style: {
         "background": "mistyrose"
@@ -519,7 +519,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), _hoisted_7$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
-      icon: $data.faInfo,
+      icon: $setup.faInfo,
       fw: "",
       style: {
         "background": "mistyrose"
@@ -527,7 +527,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), _hoisted_8$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
-      icon: $data.faBook,
+      icon: $setup.faBook,
       fw: "",
       style: {
         "background": "mistyrose"
@@ -535,7 +535,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), _hoisted_9$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
-      icon: $data.faPencilAlt,
+      icon: $setup.faPencilAlt,
       fw: "",
       style: {
         "background": "mistyrose"
@@ -543,7 +543,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), _hoisted_10$1]), vue.createVNode("div", null, [vue.createVNode(_component_Fa, {
-      icon: $data.faCog,
+      icon: $setup.faCog,
       fw: "",
       style: {
         "background": "mistyrose"
@@ -551,26 +551,26 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), _hoisted_11$1])]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.additionalStyling[1]
+      code: $setup.codes.additionalStyling[1]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Pulled Icons"
     }), vue.createVNode("div", _hoisted_12$1, [vue.createVNode(_component_Fa, {
-      icon: $data.faQuoteLeft,
+      icon: $setup.faQuoteLeft,
       pull: "left",
       size: "2x"
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faQuoteRight,
+      icon: $setup.faQuoteRight,
       pull: "right",
       size: "2x"
     }, null, 8
     /* PROPS */
     , ["icon"]), _hoisted_13$1]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.additionalStyling[2]
+      code: $setup.codes.additionalStyling[2]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
@@ -579,7 +579,7 @@
       level: 5,
       title: "Rotating & Flipping"
     }), vue.createVNode("div", _hoisted_14$1, [vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       rotate: 90,
       size: "4x",
       style: {
@@ -588,7 +588,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       rotate: 180,
       size: "4x",
       style: {
@@ -597,7 +597,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       size: "4x",
       rotate: "270",
       style: {
@@ -606,7 +606,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       size: "4x",
       rotate: "30",
       style: {
@@ -615,7 +615,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       size: "4x",
       rotate: "-30",
       style: {
@@ -624,7 +624,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       size: "4x",
       flip: "vertical",
       style: {
@@ -633,7 +633,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       size: "4x",
       flip: "horizontal",
       style: {
@@ -642,7 +642,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       size: "4x",
       flip: "both",
       style: {
@@ -651,7 +651,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"]), vue.createVNode(_component_Fa, {
-      icon: $data.faMagic,
+      icon: $setup.faMagic,
       size: "4x",
       flip: "both",
       rotate: "30",
@@ -661,7 +661,7 @@
     }, null, 8
     /* PROPS */
     , ["icon"])]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.powerTransforms[0]
+      code: $setup.codes.powerTransforms[0]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
@@ -670,88 +670,88 @@
       level: 5,
       title: "Basic Use"
     }), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-0.png",
+      src: "../assets/duotone-0.png",
       alt: "duotone icons basic use"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[0],
+      code: $setup.codes.duotoneIcons[0],
       lang: "js"
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[1]
+      code: $setup.codes.duotoneIcons[1]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Swapping Layer Opacity"
     }), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-1.png",
+      src: "../assets/duotone-1.png",
       alt: "swapping duotone icons layer opacity"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[2]
+      code: $setup.codes.duotoneIcons[2]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Changing Opacity"
     }), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-2.png",
+      src: "../assets/duotone-2.png",
       alt: "changing duotone icons opacity"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[3]
+      code: $setup.codes.duotoneIcons[3]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-3.png",
+      src: "../assets/duotone-3.png",
       alt: "changing duotone icons opacity"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[4]
+      code: $setup.codes.duotoneIcons[4]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Coloring Duotone Icons"
     }), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-4.png",
+      src: "../assets/duotone-4.png",
       alt: "coloring duotone icons"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[5]
+      code: $setup.codes.duotoneIcons[5]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Advanced Use"
     }), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-5.png",
+      src: "../assets/duotone-5.png",
       alt: "duotone icons advanced use"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[6]
+      code: $setup.codes.duotoneIcons[6]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-6.png",
+      src: "../assets/duotone-6.png",
       alt: "duotone icons advanced use"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[7]
+      code: $setup.codes.duotoneIcons[7]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsImg, {
-      src: "assets/duotone-7.png",
+      src: "../assets/duotone-7.png",
       alt: "duotone icons advanced use"
     }), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[8],
+      code: $setup.codes.duotoneIcons[8],
       lang: "js"
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsCode, {
-      code: $data.codes.duotoneIcons[9]
+      code: $setup.codes.duotoneIcons[9]
     }, null, 8
     /* PROPS */
     , ["code"])]);
   }
 
   script$4.render = render$4;
-  script$4.__file = "docs.vue";
+  script$4.__file = "v2/docs.vue";
 
   var script$5 = vue.defineComponent({
     components: {

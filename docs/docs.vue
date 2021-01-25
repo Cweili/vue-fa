@@ -252,7 +252,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import {
   faFlag,
   faHome,
@@ -278,7 +278,7 @@ export default {
     DocsTitle,
   },
 
-  data() {
+  setup() {
     return {
       faFlag,
       faHome,
@@ -292,7 +292,10 @@ export default {
 
       codes: {
         installation: [
-          'npm install vue-fa --save',
+          `npm install vue-fa
+
+# for Vue.js v2.x, uses vue-fa@2
+# npm install vue-fa@2`,
           `import Fa from 'vue-fa'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 
@@ -303,7 +306,7 @@ import { faFlag } from '@fortawesome/free-solid-svg-icons'
     Fa
   },
 
-  data() {
+  setup() {
     return {
       faFlag
     }

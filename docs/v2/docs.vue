@@ -186,7 +186,7 @@
       title="Basic Use"
     />
     <DocsImg
-      src="assets/duotone-0.png"
+      src="../assets/duotone-0.png"
       alt="duotone icons basic use"
     />
     <DocsCode
@@ -199,7 +199,7 @@
       title="Swapping Layer Opacity"
     />
     <DocsImg
-      src="assets/duotone-1.png"
+      src="../assets/duotone-1.png"
       alt="swapping duotone icons layer opacity"
     />
     <DocsCode :code="codes.duotoneIcons[2]" />
@@ -208,12 +208,12 @@
       title="Changing Opacity"
     />
     <DocsImg
-      src="assets/duotone-2.png"
+      src="../assets/duotone-2.png"
       alt="changing duotone icons opacity"
     />
     <DocsCode :code="codes.duotoneIcons[3]" />
     <DocsImg
-      src="assets/duotone-3.png"
+      src="../assets/duotone-3.png"
       alt="changing duotone icons opacity"
     />
     <DocsCode :code="codes.duotoneIcons[4]" />
@@ -222,7 +222,7 @@
       title="Coloring Duotone Icons"
     />
     <DocsImg
-      src="assets/duotone-4.png"
+      src="../assets/duotone-4.png"
       alt="coloring duotone icons"
     />
     <DocsCode :code="codes.duotoneIcons[5]" />
@@ -231,17 +231,17 @@
       title="Advanced Use"
     />
     <DocsImg
-      src="assets/duotone-5.png"
+      src="../assets/duotone-5.png"
       alt="duotone icons advanced use"
     />
     <DocsCode :code="codes.duotoneIcons[6]" />
     <DocsImg
-      src="assets/duotone-6.png"
+      src="../assets/duotone-6.png"
       alt="duotone icons advanced use"
     />
     <DocsCode :code="codes.duotoneIcons[7]" />
     <DocsImg
-      src="assets/duotone-7.png"
+      src="../assets/duotone-7.png"
       alt="duotone icons advanced use"
     />
     <DocsCode
@@ -252,7 +252,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import {
   faFlag,
   faHome,
@@ -278,7 +278,7 @@ export default {
     DocsTitle,
   },
 
-  data() {
+  setup() {
     return {
       faFlag,
       faHome,
@@ -292,7 +292,7 @@ export default {
 
       codes: {
         installation: [
-          'npm install vue-fa --save',
+          'npm install vue-fa',
           `import Fa from 'vue-fa'
 import { faFlag } from '@fortawesome/free-solid-svg-icons'
 

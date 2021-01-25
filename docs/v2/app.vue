@@ -8,8 +8,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
-import Showcase from '../showcase.vue';
-import Docs from '../docs.vue';
+import Showcase from './showcase.vue';
+import Docs from './docs.vue';
 
 export default defineComponent({
   components: {
