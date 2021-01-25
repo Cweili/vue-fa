@@ -22,8 +22,10 @@
   "bugs": {
     "url": "https://github.com/Cweili/vue-fa/issues"
   },
-  "main": "dist/vue-fa.js",
+  "main": "dist/vue-fa.cjs.js",
   "module": "dist/vue-fa.esm.js",
+  "unpkg": "dist/vue-fa.js",
+  "jsdelivr": "dist/vue-fa.js",
   "source": "src/fa.vue",
   "types": "dist/fa.vue.d.ts",
   "sideEffects": false,

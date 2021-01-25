@@ -8,12 +8,19 @@ export default {
   output: [
     {
       file: pkg.main,
-      format: 'umd',
-      name: 'VueFa',
+      format: 'cjs',
     },
     {
       file: pkg.module,
       format: 'es',
+    },
+    {
+      file: pkg.unpkg,
+      format: 'umd',
+      name: 'VueFa',
+      globals: {
+        vue: 'Vue',
+      },
     },
   ],
   plugins: [
