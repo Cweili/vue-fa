@@ -49,7 +49,7 @@ npm install vue-fa --save
       Fa
     },
 
-    data() {
+    setup() {
       return {
         faFlag
       }
