@@ -19,17 +19,17 @@ Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
 
 [Documents and examples][doc].
 
-> **Notice:** vue-fa 3.x is based on Vue.js 3.x.
->
-> Old versions:
->
-> vue-fa@2 => vue@2 [[Documents][doc-v2]]
-
 ## Installation
 
 ```shell
 npm install vue-fa --save
 ```
+
+> **Notice:** vue-fa 3.x is based on Vue.js 3.x.
+>
+> Old versions:
+>
+> vue-fa@2 => vue@2 [[Documents][doc-v2]]
 
 ## Usage
 
