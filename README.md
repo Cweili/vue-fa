@@ -25,6 +25,10 @@ Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
 npm install vue-fa --save
 ```
 
+> **Notice:** For Vue.js 3.x, please use vue-fa v3
+>
+> `npm install vue-fa@next`
+
 ## Usage
 
 ```html
