@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: weekly
+    time: "21:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - Cweili
+  ignore:
+  - dependency-name: rollup-plugin-vue
+    versions:
+    - ">= 4.a, < 5"
+  - dependency-name: rollup-plugin-vue
+    versions:
+    - ">= 5.a, < 6"
