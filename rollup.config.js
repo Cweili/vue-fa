@@ -1,3 +1,4 @@
+import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
 import babel from '@rollup/plugin-babel';
 import vue from 'rollup-plugin-vue';
@@ -24,9 +25,8 @@ export default {
     },
   ],
   plugins: [
-    vue({
-      css: false,
-    }),
+    vue(),
+    postcss(),
     typescript(),
     babel({
       extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],

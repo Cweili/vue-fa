@@ -7,7 +7,7 @@ import {
   fadFlag,
 } from '@cweili/fa-test-util';
 import { defineComponent } from 'vue';
-import Fa from '../dist/vue-fa.esm';
+import Fa from '../src/fa.vue';
 
 export default defineComponent({
   components: {

@@ -2,6 +2,10 @@
   <svg
     v-show="i[4]"
     :viewBox="`0 0 ${i[0]} ${i[1]}`"
+    :class="{
+      spin,
+      pulse,
+    }"
     :style="style"
     aria-hidden="true"
     role="img"
@@ -9,7 +13,8 @@
   >
     <g
       v-if="i[4]"
-      transform="translate(256 256)"
+      :transform="`translate(${i[0] / 2} ${i[1] / 2})`"
+      :transform-origin="`${i[0] / 4} 0`"
     >
       <g :transform="transform">
         <path
@@ -58,14 +63,22 @@ export default defineComponent({
       type: Object as PropType<IconDefinition>,
       required: true,
     },
-    fw: Boolean,
-    flip: {
-      type: String as PropType<Flip>,
-      validator: (value: Flip) => validFlip.indexOf(value) >= 0,
+
+    size: {
+      type: String,
+      validator: (value: string) => /^(lg|xs|sm|([\d.]+)x)$/.test(value),
     },
+    color: String,
+
+    fw: Boolean,
     pull: {
       type: String as PropType<Pull>,
       validator: (value: Pull) => validPull.indexOf(value) >= 0,
+    },
+
+    flip: {
+      type: String as PropType<Flip>,
+      validator: (value: Flip) => validFlip.indexOf(value) >= 0,
     },
     rotate: {
       type: [
@@ -74,11 +87,10 @@ export default defineComponent({
       ],
       validator: (value: number | string) => /^[-\d.]+$/.test(`${value}`),
     },
-    size: {
-      type: String,
-      validator: (value: string) => /^(lg|xs|sm|([\d.]+)x)$/.test(value),
-    },
-    color: String,
+
+    spin: Boolean,
+    pulse: Boolean,
+
     primaryColor: String,
     secondaryColor: String,
     primaryOpacity: {
@@ -95,10 +107,7 @@ export default defineComponent({
       ],
       default: 0.4,
     },
-    // eslint-disable-next-line vue/require-prop-types
-    swapOpacity: {
-      default: false,
-    },
+    swapOpacity: Boolean,
   },
 
   setup(props) {
@@ -177,3 +186,22 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.spin {
+  animation: spin 2s 0s infinite linear;
+}
+
+.pulse {
+  animation: spin 1s infinite steps(8);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>

@@ -65,20 +65,26 @@ npm install vue-fa@next --save
 ```html
 <fa
   :icon="faFlag"
-  fw
-  flip="horizontal"
-  pull="left"
-  :rotate="90"
   size="2x"
-  color="#ff0000"/>
+  color="#ff0000"
+  fw
+  pull="left"
+  flip="horizontal"
+  :rotate="90"
+  spin
+  pulse
+/>
 ```
 
-* `fw`: fixed width
-* `flip`: `string` values `horizontal`, `vertical`, `both`
+* `icon`: icon from FontAwesome packages, for example: `@fortawesome/free-solid-svg-icons`
+* `size`: `string` values `xs`, `sm`, `lg` or `2x`, `3x`, `4x`, ..., `10x`
+* `color`: `string` icon color, default `currentColor`
+* `fw`: `boolean` fixed width
 * `pull`: `string` values `left`, `right`
-* `rotate`: `number or string` values `90`, `180`, `270`, `30`, `-30` ...
-* `size`: `string` values `xs`, `sm`, `lg` or `2x`, `3x`, `4x` ...
-* `color`: icon color, default `currentColor`
+* `flip`: `string` values `horizontal`, `vertical`, `both`
+* `rotate`: `number | string` values `90`, `180`, `270`, `30`, `-30` ...
+* * `spin`: `boolean` spin icons
+* `pulse`: `boolean` pulse spin icons
 
 ## Duotone Icons
 
