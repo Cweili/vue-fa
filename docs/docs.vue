@@ -123,6 +123,42 @@
       Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
     </div>
     <DocsCode :code="codes.additionalStyling[2]" />
+
+    <DocsTitle title="Animating Icons" />
+    <div class="shadow-sm p-3 mb-3 rounded">
+      <Fa
+        :icon="faSpinner"
+        size="3x"
+        spin
+      />
+      <Fa
+        :icon="faCircleNotch"
+        size="3x"
+        spin
+      />
+      <Fa
+        :icon="faSync"
+        size="3x"
+        spin
+      />
+      <Fa
+        :icon="faCog"
+        size="3x"
+        spin
+      />
+      <Fa
+        :icon="faSpinner"
+        size="3x"
+        pulse
+      />
+      <Fa
+        :icon="faStroopwafel"
+        size="3x"
+        spin
+      />
+    </div>
+    <DocsCode :code="codes.animatingIcons[0]" />
+
     <DocsTitle title="Power Transforms" />
     <DocsTitle
       :level="5"
@@ -266,11 +302,15 @@ import {
   faBook,
   faPencilAlt,
   faCog,
+  faCircleNotch,
   faQuoteLeft,
   faQuoteRight,
+  faSpinner,
+  faStroopwafel,
+  faSync,
   faMagic,
 } from '@fortawesome/free-solid-svg-icons';
-import Fa from 'vue-fa';
+import Fa from '../dist/vue-fa.esm';
 
 import DocsCode from './docs-code.vue';
 import DocsImg from './docs-img.vue';
@@ -292,8 +332,12 @@ export default {
       faBook,
       faPencilAlt,
       faCog,
+      faCircleNotch,
       faQuoteLeft,
       faQuoteRight,
+      faSpinner,
+      faStroopwafel,
+      faSync,
       faMagic,
 
       codes: {
@@ -349,6 +393,14 @@ import { faFlag } from '@fortawesome/free-solid-svg-icons'
           `<Fa :icon="faQuoteLeft" pull="left" size="2x" />
 <Fa :icon="faQuoteRight" pull="right" size="2x" />
 Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.`,
+        ],
+        animatingIcons: [
+          `<Fa :icon="faSpinner" size="3x" spin />
+<Fa :icon="faCircleNotch" size="3x" spin />
+<Fa :icon="faSync" size="3x" spin />
+<Fa :icon="faCog" size="3x" spin />
+<Fa :icon="faSpinner" size="3x" pulse />
+<Fa :icon="faStroopwafel" size="3x" spin />`,
         ],
         powerTransforms: [
           `<Fa :icon="faMagic" size="4x" :rotate="90" style="background: mistyrose"/>
