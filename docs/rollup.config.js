@@ -1,9 +1,9 @@
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import postcss from 'rollup-plugin-postcss';
 import babel from '@rollup/plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
 import vue from 'rollup-plugin-vue';
-import css from 'rollup-plugin-css-only';
 
 const commonConfig = (outputPrefix = '') => ({
   external: ['vue', 'vue-fa'],
@@ -17,8 +17,8 @@ const commonConfig = (outputPrefix = '') => ({
     vue({
       css: false,
     }),
-    css({
-      output: `${outputPrefix}index.css`,
+    postcss({
+      extract: `${outputPrefix}index.css`,
     }),
     typescript(),
     babel({
