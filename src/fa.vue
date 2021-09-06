@@ -52,10 +52,16 @@ import {
 import {
   validFlip,
   validPull,
+  typeNumber,
   IconDefinition,
   Flip,
   Pull,
 } from './types';
+
+import {
+  getStyles,
+  getTransform,
+} from './utils';
 
 export default defineComponent({
   props: {
@@ -76,17 +82,23 @@ export default defineComponent({
       validator: (value: Pull) => validPull.indexOf(value) >= 0,
     },
 
+    scale: {
+      ...typeNumber,
+      default: 1,
+    },
+    translateX: {
+      ...typeNumber,
+      default: 0,
+    },
+    translateY: {
+      ...typeNumber,
+      default: 0,
+    },
     flip: {
       type: String as PropType<Flip>,
       validator: (value: Flip) => validFlip.indexOf(value) >= 0,
     },
-    rotate: {
-      type: [
-        Number,
-        String,
-      ],
-      validator: (value: number | string) => /^[-\d.]+$/.test(`${value}`),
-    },
+    rotate: typeNumber,
 
     spin: Boolean,
     pulse: Boolean,
@@ -119,69 +131,20 @@ export default defineComponent({
         if (!i()[4]) {
           return {};
         }
-        const base: any = {
-          height: '1em',
-          overflow: 'visible',
-          verticalAlign: '-.125em',
-        };
-        const {
-          fw,
-          pull,
-          size,
-        } = props;
-
-        if (fw) {
-          base.textAlign = 'center';
-          base.width = '1.25em';
-        }
-
-        if (pull) {
-          base.float = pull;
-        }
-
-        if (size) {
-          if (size === 'lg') {
-            base.fontSize = '1.33333em';
-            base.lineHeight = '.75em';
-            base.verticalAlign = '-.225em';
-          } else if (size === 'xs') {
-            base.fontSize = '.75em';
-          } else if (size === 'sm') {
-            base.fontSize = '.875em';
-          } else {
-            base.fontSize = size.replace('x', 'em');
-          }
-        }
-
-        return base;
+        return getStyles(
+          props.size,
+          props.pull,
+          props.fw,
+        );
       }),
-      transform: computed(() => {
-        const {
-          flip,
-          rotate,
-        } = props;
-
-        let transform = '';
-
-        if (flip) {
-          let flipX = 1;
-          let flipY = 1;
-          if (flip === 'horizontal') {
-            flipX = -1;
-          } else if (flip === 'vertical') {
-            flipY = -1;
-          } else {
-            flipX = flipY = -1;
-          }
-          transform += ` scale(${flipX} ${flipY})`;
-        }
-
-        if (rotate) {
-          transform += ` rotate(${rotate} 0 0)`;
-        }
-
-        return transform;
-      }),
+      transform: computed(() => getTransform(
+        props.scale,
+        props.translateX,
+        props.translateY,
+        props.rotate,
+        props.flip,
+        512,
+      )),
     };
   },
 });

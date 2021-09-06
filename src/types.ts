@@ -13,6 +13,14 @@ export const validPull = [
 ] as const;
 export type Pull = typeof validPull[number];
 
+export const typeNumber = {
+  type: [
+    Number,
+    String,
+  ],
+  validator: (value: number | string): boolean => /^[-\d.]+$/.test(`${value}`),
+};
+
 export {
   IconDefinition,
 };
