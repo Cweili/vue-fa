@@ -224,280 +224,7 @@
   script.__scopeId = "data-v-d8b0228a";
   script.__file = "showcase.vue";
 
-  function _extends() {
-    _extends = Object.assign || function (target) {
-      for (var i = 1; i < arguments.length; i++) {
-        var source = arguments[i];
-
-        for (var key in source) {
-          if (Object.prototype.hasOwnProperty.call(source, key)) {
-            target[key] = source[key];
-          }
-        }
-      }
-
-      return target;
-    };
-
-    return _extends.apply(this, arguments);
-  }
-
-  var validFlip = ['horizontal', 'vertical', 'both'];
-  var validPull = ['right', 'left'];
-  var typeNumber = {
-    type: [Number, String],
-    validator: function validator(value) {
-      return /^[-\d.]+$/.test("" + value);
-    }
-  };
-
-  var parseNumber = function parseNumber(num) {
-    return parseFloat(num);
-  };
-
-  function getStyles(size, pull, fw) {
-    var float;
-    var width;
-    var height = '1em';
-    var lineHeight;
-    var fontSize;
-    var textAlign;
-    var verticalAlign = '-.125em';
-    var overflow = 'visible';
-
-    if (fw) {
-      textAlign = 'center';
-      width = '1.25em';
-    }
-
-    if (pull) {
-      float = pull;
-    }
-
-    if (size) {
-      if (size === 'lg') {
-        fontSize = '1.33333em';
-        lineHeight = '.75em';
-        verticalAlign = '-.225em';
-      } else if (size === 'xs') {
-        fontSize = '.75em';
-      } else if (size === 'sm') {
-        fontSize = '.875em';
-      } else {
-        fontSize = size.replace('x', 'em');
-      }
-    }
-
-    return {
-      float: float,
-      width: width,
-      height: height,
-      'line-height': lineHeight,
-      'font-size': fontSize,
-      'text-align': textAlign,
-      'vertical-align': verticalAlign,
-      'transform-origin': 'center',
-      overflow: overflow
-    };
-  }
-
-  function getTransform(scale, translateX, translateY, rotate, flip, translateTimes, translateUnit, rotateUnit) {
-    if (translateTimes === void 0) {
-      translateTimes = 1;
-    }
-
-    if (translateUnit === void 0) {
-      translateUnit = '';
-    }
-
-    if (rotateUnit === void 0) {
-      rotateUnit = '';
-    }
-
-    var flipX = 1;
-    var flipY = 1;
-
-    if (flip) {
-      if (flip === 'horizontal') {
-        flipX = -1;
-      } else if (flip === 'vertical') {
-        flipY = -1;
-      } else {
-        flipX = flipY = -1;
-      }
-    }
-
-    return ["translate(" + parseNumber(translateX) * translateTimes + translateUnit + "," + parseNumber(translateY) * translateTimes + translateUnit + ")", "scale(" + flipX * parseNumber(scale) + "," + flipY * parseNumber(scale) + ")", rotate && "rotate(" + rotate + rotateUnit + ")"].join(' ');
-  }
-
   var script$1 = vue.defineComponent({
-    props: {
-      icon: {
-        type: Object,
-        required: true
-      },
-      size: {
-        type: String,
-        validator: function validator(value) {
-          return /^(lg|xs|sm|([\d.]+)x)$/.test(value);
-        }
-      },
-      color: String,
-      fw: Boolean,
-      pull: {
-        type: String,
-        validator: function validator(value) {
-          return validPull.indexOf(value) >= 0;
-        }
-      },
-      scale: _extends({}, typeNumber, {
-        default: 1
-      }),
-      translateX: _extends({}, typeNumber, {
-        default: 0
-      }),
-      translateY: _extends({}, typeNumber, {
-        default: 0
-      }),
-      flip: {
-        type: String,
-        validator: function validator(value) {
-          return validFlip.indexOf(value) >= 0;
-        }
-      },
-      rotate: typeNumber,
-      spin: Boolean,
-      pulse: Boolean,
-      primaryColor: String,
-      secondaryColor: String,
-      primaryOpacity: {
-        type: [Number, String],
-        default: 1
-      },
-      secondaryOpacity: {
-        type: [Number, String],
-        default: 0.4
-      },
-      swapOpacity: Boolean
-    },
-    setup: function setup(props) {
-      var i = function i() {
-        var _props$icon$icon, _props$icon;
-
-        return (_props$icon$icon = (_props$icon = props.icon) == null ? void 0 : _props$icon.icon) != null ? _props$icon$icon : [0, 0, '', [], ''];
-      };
-
-      return {
-        i: vue.computed(i),
-        style: vue.computed(function () {
-          if (!i()[4]) {
-            return {};
-          }
-
-          return getStyles(props.size, props.pull, props.fw);
-        }),
-        transform: vue.computed(function () {
-          return getTransform(props.scale, props.translateX, props.translateY, props.rotate, props.flip, 512);
-        })
-      };
-    }
-  });
-  vue.pushScopeId("data-v-7e44f4d4");
-  var _hoisted_1$1 = ["viewBox"];
-  var _hoisted_2$1 = ["transform", "transform-origin"];
-  var _hoisted_3$1 = ["transform"];
-  var _hoisted_4$1 = ["d", "fill"];
-  var _hoisted_5 = ["d", "fill", "fill-opacity"];
-  var _hoisted_6 = ["d", "fill", "fill-opacity"];
-  vue.popScopeId();
-
-  function render$1(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("svg", {
-      viewBox: "0 0 " + _ctx.i[0] + " " + _ctx.i[1],
-      class: vue.normalizeClass({
-        spin: _ctx.spin,
-        pulse: _ctx.pulse
-      }),
-      style: vue.normalizeStyle(_ctx.style),
-      "aria-hidden": "true",
-      role: "img",
-      xmlns: "http://www.w3.org/2000/svg"
-    }, [_ctx.i[4] ? (vue.openBlock(), vue.createElementBlock("g", {
-      key: 0,
-      transform: "translate(" + _ctx.i[0] / 2 + " " + _ctx.i[1] / 2 + ")",
-      "transform-origin": _ctx.i[0] / 4 + " 0"
-    }, [vue.createElementVNode("g", {
-      transform: _ctx.transform
-    }, [typeof _ctx.i[4] === 'string' ? (vue.openBlock(), vue.createElementBlock("path", {
-      key: 0,
-      d: _ctx.i[4],
-      fill: _ctx.color || _ctx.primaryColor || 'currentColor',
-      transform: "translate(-256 -256)"
-    }, null, 8
-    /* PROPS */
-    , _hoisted_4$1)) : (vue.openBlock(), vue.createElementBlock(vue.Fragment, {
-      key: 1
-    }, [vue.createElementVNode("path", {
-      d: _ctx.i[4][0],
-      fill: _ctx.secondaryColor || _ctx.color || 'currentColor',
-      "fill-opacity": _ctx.swapOpacity !== false ? _ctx.primaryOpacity : _ctx.secondaryOpacity,
-      transform: "translate(-256 -256)"
-    }, null, 8
-    /* PROPS */
-    , _hoisted_5), vue.createElementVNode("path", {
-      d: _ctx.i[4][1],
-      fill: _ctx.primaryColor || _ctx.color || 'currentColor',
-      "fill-opacity": _ctx.swapOpacity !== false ? _ctx.secondaryOpacity : _ctx.primaryOpacity,
-      transform: "translate(-256 -256)"
-    }, null, 8
-    /* PROPS */
-    , _hoisted_6)], 64
-    /* STABLE_FRAGMENT */
-    ))], 8
-    /* PROPS */
-    , _hoisted_3$1)], 8
-    /* PROPS */
-    , _hoisted_2$1)) : vue.createCommentVNode("v-if", true)], 14
-    /* CLASS, STYLE, PROPS */
-    , _hoisted_1$1)), [[vue.vShow, _ctx.i[4]]]);
-  }
-
-  function styleInject(css, ref) {
-    if (ref === void 0) ref = {};
-    var insertAt = ref.insertAt;
-
-    if (!css || typeof document === 'undefined') {
-      return;
-    }
-
-    var head = document.head || document.getElementsByTagName('head')[0];
-    var style = document.createElement('style');
-    style.type = 'text/css';
-
-    if (insertAt === 'top') {
-      if (head.firstChild) {
-        head.insertBefore(style, head.firstChild);
-      } else {
-        head.appendChild(style);
-      }
-    } else {
-      head.appendChild(style);
-    }
-
-    if (style.styleSheet) {
-      style.styleSheet.cssText = css;
-    } else {
-      style.appendChild(document.createTextNode(css));
-    }
-  }
-
-  var css_248z = "@-webkit-keyframes spin-7e44f4d4{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes spin-7e44f4d4{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.spin[data-v-7e44f4d4]{-webkit-animation:spin-7e44f4d4 2s 0s infinite linear;animation:spin-7e44f4d4 2s 0s infinite linear}.pulse[data-v-7e44f4d4]{-webkit-animation:spin-7e44f4d4 1s infinite steps(8);animation:spin-7e44f4d4 1s infinite steps(8)}";
-  styleInject(css_248z);
-  script$1.render = render$1;
-  script$1.__scopeId = "data-v-7e44f4d4";
-  script$1.__file = "src/fa.vue";
-
-  var script$2 = vue.defineComponent({
     props: {
       code: {
         type: String,
@@ -527,11 +254,11 @@
     }
   });
 
-  var _hoisted_1$2 = {
+  var _hoisted_1$1 = {
     class: "shadow-sm mb-3 rounded"
   };
-  function render$2(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$2, [vue.createElementVNode("pre", null, [vue.createElementVNode("code", {
+  function render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1, [vue.createElementVNode("pre", null, [vue.createElementVNode("code", {
       ref: "el",
       class: vue.normalizeClass("language-" + _ctx.lang)
     }, vue.toDisplayString(_ctx.code), 3
@@ -539,36 +266,36 @@
     )])]);
   }
 
-  script$2.render = render$2;
-  script$2.__file = "docs-code.vue";
+  script$1.render = render$1;
+  script$1.__file = "docs-code.vue";
 
-  var script$3 = {
+  var script$2 = {
     inheritAttrs: false
   };
 
   vue.pushScopeId("data-v-218e963f");
 
-  var _hoisted_1$3 = {
+  var _hoisted_1$2 = {
     class: "position-relative shadow-sm p-3 mb-3 rounded"
   };
 
-  var _hoisted_2$2 = /*#__PURE__*/vue.createElementVNode("small", null, "images © fontawesome.com", -1
+  var _hoisted_2$1 = /*#__PURE__*/vue.createElementVNode("small", null, "images © fontawesome.com", -1
   /* HOISTED */
   );
 
   vue.popScopeId();
 
-  function render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$3, [vue.createElementVNode("img", vue.normalizeProps(vue.guardReactiveProps(_ctx.$attrs)), null, 16
+  function render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$2, [vue.createElementVNode("img", vue.normalizeProps(vue.guardReactiveProps(_ctx.$attrs)), null, 16
     /* FULL_PROPS */
-    ), _hoisted_2$2]);
+    ), _hoisted_2$1]);
   }
 
-  script$3.render = render$3;
-  script$3.__scopeId = "data-v-218e963f";
-  script$3.__file = "docs-img.vue";
+  script$2.render = render$2;
+  script$2.__scopeId = "data-v-218e963f";
+  script$2.__file = "docs-img.vue";
 
-  var script$4 = vue.defineComponent({
+  var script$3 = vue.defineComponent({
     components: {
       Fa: Fa__default['default']
     },
@@ -592,14 +319,14 @@
 
   vue.pushScopeId("data-v-5fc7f558");
 
-  var _hoisted_1$4 = ["id"];
-  var _hoisted_2$3 = ["href"];
+  var _hoisted_1$3 = ["id"];
+  var _hoisted_2$2 = ["href"];
 
-  var _hoisted_3$2 = /*#__PURE__*/vue.createTextVNode();
+  var _hoisted_3$1 = /*#__PURE__*/vue.createTextVNode();
 
   vue.popScopeId();
 
-  function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function render$3(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_Fa = vue.resolveComponent("Fa");
 
     return vue.openBlock(), vue.createElementBlock("h4", {
@@ -609,25 +336,25 @@
       href: "#" + _ctx.id
     }, vue.toDisplayString(_ctx.title), 9
     /* TEXT, PROPS */
-    , _hoisted_2$3), _hoisted_3$2, vue.createElementVNode("small", null, [vue.createVNode(_component_Fa, {
+    , _hoisted_2$2), _hoisted_3$1, vue.createElementVNode("small", null, [vue.createVNode(_component_Fa, {
       icon: _ctx.faLink
     }, null, 8
     /* PROPS */
     , ["icon"])])], 10
     /* CLASS, PROPS */
-    , _hoisted_1$4);
+    , _hoisted_1$3);
   }
 
-  script$4.render = render$4;
-  script$4.__scopeId = "data-v-5fc7f558";
-  script$4.__file = "docs-title.vue";
+  script$3.render = render$3;
+  script$3.__scopeId = "data-v-5fc7f558";
+  script$3.__file = "docs-title.vue";
 
-  var script$5 = {
+  var script$4 = {
     components: {
-      Fa: script$1,
-      DocsCode: script$2,
-      DocsImg: script$3,
-      DocsTitle: script$4
+      Fa: Fa__default['default'],
+      DocsCode: script$1,
+      DocsImg: script$2,
+      DocsTitle: script$3
     },
     setup: function setup() {
       return {
@@ -656,28 +383,28 @@
     }
   };
 
-  var _hoisted_1$5 = {
+  var _hoisted_1$4 = {
     class: "p-2 mb-3"
   };
 
-  var _hoisted_2$4 = /*#__PURE__*/vue.createTextVNode(" for Vue.js v2.x, uses vue-fa@2: ");
+  var _hoisted_2$3 = /*#__PURE__*/vue.createTextVNode(" for Vue.js v2.x, uses vue-fa@2: ");
 
-  var _hoisted_3$3 = /*#__PURE__*/vue.createElementVNode("span", {
+  var _hoisted_3$2 = /*#__PURE__*/vue.createElementVNode("span", {
     class: "shadow-sm p-1 rounded"
   }, "npm install vue-fa@2", -1
   /* HOISTED */
   );
 
-  var _hoisted_4$2 = /*#__PURE__*/vue.createTextVNode(" [");
+  var _hoisted_4$1 = /*#__PURE__*/vue.createTextVNode(" [");
 
-  var _hoisted_5$1 = /*#__PURE__*/vue.createElementVNode("a", {
+  var _hoisted_5 = /*#__PURE__*/vue.createElementVNode("a", {
     href: "https://cweili.github.io/vue-fa/v2/",
     target: "_blank"
   }, "vue-fa v2 documents", -1
   /* HOISTED */
   );
 
-  var _hoisted_6$1 = /*#__PURE__*/vue.createTextVNode("] ");
+  var _hoisted_6 = /*#__PURE__*/vue.createTextVNode("] ");
 
   var _hoisted_7$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
@@ -729,7 +456,7 @@
   var _hoisted_23$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
-  function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function render$4(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_DocsTitle = vue.resolveComponent("DocsTitle");
 
     var _component_DocsCode = vue.resolveComponent("DocsCode");
@@ -749,12 +476,12 @@
       lang: "js"
     }, null, 8
     /* PROPS */
-    , ["code"]), vue.createElementVNode("div", _hoisted_1$5, [vue.createVNode(_component_Fa, {
+    , ["code"]), vue.createElementVNode("div", _hoisted_1$4, [vue.createVNode(_component_Fa, {
       icon: $setup.faInfo,
       fw: ""
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_2$4, _hoisted_3$3, _hoisted_4$2, _hoisted_5$1, _hoisted_6$1]), vue.createVNode(_component_DocsTitle, {
+    , ["icon"]), _hoisted_2$3, _hoisted_3$2, _hoisted_4$1, _hoisted_5, _hoisted_6]), vue.createVNode(_component_DocsTitle, {
       title: "Basic Use"
     }), vue.createElementVNode("div", _hoisted_7$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faFlag
@@ -1195,30 +922,30 @@
     , ["code"])]);
   }
 
-  script$5.render = render$5;
-  script$5.__file = "docs.vue";
+  script$4.render = render$4;
+  script$4.__file = "docs.vue";
 
-  var script$6 = vue.defineComponent({
+  var script$5 = vue.defineComponent({
     components: {
       Showcase: script,
-      Docs: script$5
+      Docs: script$4
     }
   });
 
-  var _hoisted_1$6 = {
+  var _hoisted_1$5 = {
     class: "container my-4"
   };
-  function render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_showcase = vue.resolveComponent("showcase");
 
     var _component_docs = vue.resolveComponent("docs");
 
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$6, [vue.createVNode(_component_showcase), vue.createVNode(_component_docs)]);
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [vue.createVNode(_component_showcase), vue.createVNode(_component_docs)]);
   }
 
-  script$6.render = render$6;
-  script$6.__file = "app.vue";
+  script$5.render = render$5;
+  script$5.__file = "app.vue";
 
-  vue.createApp(script$6).mount('#app');
+  vue.createApp(script$5).mount('#app');
 
 }(Vue, VueFa));
