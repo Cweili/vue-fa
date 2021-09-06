@@ -17,15 +17,17 @@
       <Fa :icon="faFlag" /> Flag
     </div>
     <DocsCode :code="codes.basicUse[0]" />
+
     <div class="shadow-sm p-3 mb-3 rounded">
       <div style="font-size: 3em; color: tomato">
         <Fa :icon="faFlag" />
       </div>
     </div>
     <DocsCode :code="codes.basicUse[1]" />
+
     <DocsTitle title="Additional Styling" />
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Icon Sizes"
     />
     <div class="shadow-sm p-3 mb-3 rounded">
@@ -63,8 +65,9 @@
       />
     </div>
     <DocsCode :code="codes.additionalStyling[0]" />
+
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Fixed Width Icons"
     />
     <div class="shadow-sm p-3 mb-3 rounded">
@@ -105,8 +108,9 @@
       </div>
     </div>
     <DocsCode :code="codes.additionalStyling[1]" />
+
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Pulled Icons"
     />
     <div class="shadow-sm p-3 mb-3 rounded clearfix">
@@ -160,8 +164,69 @@
     <DocsCode :code="codes.animatingIcons[0]" />
 
     <DocsTitle title="Power Transforms" />
+    <DocsTitle title="Scaling" level={3} />
+    <div class="shadow-sm p-3 mb-3 rounded">
+      <Fa
+        :icon="faMagic"
+        size="4x"
+        style="background: mistyrose"
+      />
+      <Fa
+        :icon="faMagic"
+        :scale="0.5"
+        size="4x"
+        style="background: mistyrose"
+      />
+      <Fa
+        :icon="faMagic"
+        :scale="1.2"
+        size="4x"
+        style="background: mistyrose"
+      />
+    </div>
+    <DocsCode :code="codes.powerTransforms[0]" />
+
+    <DocsTitle title="Positioning" level={3} />
+    <div class="shadow-sm p-3 mb-3 rounded">
+      <Fa
+        :icon="faMagic"
+        :scale="0.5"
+        size="4x"
+        style="background: mistyrose"
+      />
+      <Fa
+        :icon="faMagic"
+        :scale="0.5"
+        :translateX="0.2"
+        size="4x"
+        style="background: mistyrose"
+      />
+      <Fa
+        :icon="faMagic"
+        :scale="0.5"
+        :translateX="-0.2"
+        size="4x"
+        style="background: mistyrose"
+      />
+      <Fa
+        :icon="faMagic"
+        :scale="0.5"
+        :translateY="0.2"
+        size="4x"
+        style="background: mistyrose"
+      />
+      <Fa
+        :icon="faMagic"
+        :scale="0.5"
+        :translateY="-0.2"
+        size="4x"
+        style="background: mistyrose"
+      />
+    </div>
+    <DocsCode :code="codes.powerTransforms[1]" />
+
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Rotating &amp; Flipping"
     />
     <div class="shadow-sm p-3 mb-3 rounded">
@@ -221,10 +286,11 @@
         style="background: mistyrose"
       />
     </div>
-    <DocsCode :code="codes.powerTransforms[0]" />
+    <DocsCode :code="codes.powerTransforms[2]" />
+
     <DocsTitle title="Duotone Icons" />
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Basic Use"
     />
     <DocsImg
@@ -237,7 +303,7 @@
     />
     <DocsCode :code="codes.duotoneIcons[1]" />
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Swapping Layer Opacity"
     />
     <DocsImg
@@ -246,7 +312,7 @@
     />
     <DocsCode :code="codes.duotoneIcons[2]" />
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Changing Opacity"
     />
     <DocsImg
@@ -260,7 +326,7 @@
     />
     <DocsCode :code="codes.duotoneIcons[4]" />
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Coloring Duotone Icons"
     />
     <DocsImg
@@ -269,7 +335,7 @@
     />
     <DocsCode :code="codes.duotoneIcons[5]" />
     <DocsTitle
-      :level="5"
+      :level="3"
       title="Advanced Use"
     />
     <DocsImg
@@ -310,7 +376,7 @@ import {
   faSync,
   faMagic,
 } from '@fortawesome/free-solid-svg-icons';
-import Fa from '../dist/vue-fa.esm';
+import Fa from 'vue-fa';
 
 import DocsCode from './docs-code.vue';
 import DocsImg from './docs-img.vue';
@@ -403,6 +469,14 @@ Gatsby believed in the green light, the orgastic future that year by year recede
 <Fa :icon="faStroopwafel" size="3x" spin />`,
         ],
         powerTransforms: [
+          `<Fa :icon="faMagic" size="4x" style="background: mistyrose" />
+<Fa :icon="faMagic" :scale="0.5" size="4x" style="background: mistyrose" />
+<Fa :icon="faMagic" :scale="1.2" size="4x" style="background: mistyrose" />`,
+          `<Fa :icon="faMagic" :scale="0.5" size="4x" style="background: mistyrose" />
+<Fa :icon="faMagic" :scale="0.5" :translateX="0.2" size="4x" style="background: mistyrose" />
+<Fa :icon="faMagic" :scale="0.5" :translateX="-0.2" size="4x" style="background: mistyrose" />
+<Fa :icon="faMagic" :scale="0.5" :translateY="0.2" size="4x" style="background: mistyrose" />
+<Fa :icon="faMagic" :scale="0.5" :translateY="-0.2" size="4x" style="background: mistyrose" />`,
           `<Fa :icon="faMagic" size="4x" :rotate="90" style="background: mistyrose"/>
 <Fa :icon="faMagic" size="4x" :rotate="180" style="background: mistyrose"/>
 <Fa :icon="faMagic" size="4x" rotate="270" style="background: mistyrose"/>

@@ -224,8 +224,112 @@
   script.__scopeId = "data-v-d8b0228a";
   script.__file = "showcase.vue";
 
+  function _extends() {
+    _extends = Object.assign || function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+
+      return target;
+    };
+
+    return _extends.apply(this, arguments);
+  }
+
   var validFlip = ['horizontal', 'vertical', 'both'];
   var validPull = ['right', 'left'];
+  var typeNumber = {
+    type: [Number, String],
+    validator: function validator(value) {
+      return /^[-\d.]+$/.test("" + value);
+    }
+  };
+
+  var parseNumber = function parseNumber(num) {
+    return parseFloat(num);
+  };
+
+  function getStyles(size, pull, fw) {
+    var float;
+    var width;
+    var height = '1em';
+    var lineHeight;
+    var fontSize;
+    var textAlign;
+    var verticalAlign = '-.125em';
+    var overflow = 'visible';
+
+    if (fw) {
+      textAlign = 'center';
+      width = '1.25em';
+    }
+
+    if (pull) {
+      float = pull;
+    }
+
+    if (size) {
+      if (size === 'lg') {
+        fontSize = '1.33333em';
+        lineHeight = '.75em';
+        verticalAlign = '-.225em';
+      } else if (size === 'xs') {
+        fontSize = '.75em';
+      } else if (size === 'sm') {
+        fontSize = '.875em';
+      } else {
+        fontSize = size.replace('x', 'em');
+      }
+    }
+
+    return {
+      float: float,
+      width: width,
+      height: height,
+      'line-height': lineHeight,
+      'font-size': fontSize,
+      'text-align': textAlign,
+      'vertical-align': verticalAlign,
+      'transform-origin': 'center',
+      overflow: overflow
+    };
+  }
+
+  function getTransform(scale, translateX, translateY, rotate, flip, translateTimes, translateUnit, rotateUnit) {
+    if (translateTimes === void 0) {
+      translateTimes = 1;
+    }
+
+    if (translateUnit === void 0) {
+      translateUnit = '';
+    }
+
+    if (rotateUnit === void 0) {
+      rotateUnit = '';
+    }
+
+    var flipX = 1;
+    var flipY = 1;
+
+    if (flip) {
+      if (flip === 'horizontal') {
+        flipX = -1;
+      } else if (flip === 'vertical') {
+        flipY = -1;
+      } else {
+        flipX = flipY = -1;
+      }
+    }
+
+    return ["translate(" + parseNumber(translateX) * translateTimes + translateUnit + "," + parseNumber(translateY) * translateTimes + translateUnit + ")", "scale(" + flipX * parseNumber(scale) + "," + flipY * parseNumber(scale) + ")", rotate && "rotate(" + rotate + rotateUnit + ")"].join(' ');
+  }
+
   var script$1 = vue.defineComponent({
     props: {
       icon: {
@@ -246,18 +350,22 @@
           return validPull.indexOf(value) >= 0;
         }
       },
+      scale: _extends({}, typeNumber, {
+        default: 1
+      }),
+      translateX: _extends({}, typeNumber, {
+        default: 0
+      }),
+      translateY: _extends({}, typeNumber, {
+        default: 0
+      }),
       flip: {
         type: String,
         validator: function validator(value) {
           return validFlip.indexOf(value) >= 0;
         }
       },
-      rotate: {
-        type: [Number, String],
-        validator: function validator(value) {
-          return /^[-\d.]+$/.test("" + value);
-        }
-      },
+      rotate: typeNumber,
       spin: Boolean,
       pulse: Boolean,
       primaryColor: String,
@@ -286,65 +394,10 @@
             return {};
           }
 
-          var base = {
-            height: '1em',
-            overflow: 'visible',
-            verticalAlign: '-.125em'
-          };
-          var fw = props.fw,
-              pull = props.pull,
-              size = props.size;
-
-          if (fw) {
-            base.textAlign = 'center';
-            base.width = '1.25em';
-          }
-
-          if (pull) {
-            base.float = pull;
-          }
-
-          if (size) {
-            if (size === 'lg') {
-              base.fontSize = '1.33333em';
-              base.lineHeight = '.75em';
-              base.verticalAlign = '-.225em';
-            } else if (size === 'xs') {
-              base.fontSize = '.75em';
-            } else if (size === 'sm') {
-              base.fontSize = '.875em';
-            } else {
-              base.fontSize = size.replace('x', 'em');
-            }
-          }
-
-          return base;
+          return getStyles(props.size, props.pull, props.fw);
         }),
         transform: vue.computed(function () {
-          var flip = props.flip,
-              rotate = props.rotate;
-          var transform = '';
-
-          if (flip) {
-            var flipX = 1;
-            var flipY = 1;
-
-            if (flip === 'horizontal') {
-              flipX = -1;
-            } else if (flip === 'vertical') {
-              flipY = -1;
-            } else {
-              flipX = flipY = -1;
-            }
-
-            transform += " scale(" + flipX + " " + flipY + ")";
-          }
-
-          if (rotate) {
-            transform += " rotate(" + rotate + " 0 0)";
-          }
-
-          return transform;
+          return getTransform(props.scale, props.translateX, props.translateY, props.rotate, props.flip, 512);
         })
       };
     }
@@ -521,7 +574,7 @@
     },
     props: {
       level: {
-        default: 4
+        default: 2
       },
       title: {
         default: ''
@@ -596,7 +649,7 @@
           basicUse: ['<Fa :icon="faFlag" /> Flag', "<div style=\"font-size: 3em; color: tomato\">\n  <Fa :icon=\"faFlag\" />\n</div>"],
           additionalStyling: ["<Fa :icon=\"faFlag\" size=\"xs\" />\n<Fa :icon=\"faFlag\" size=\"sm\" />\n<Fa :icon=\"faFlag\" size=\"lg\" />\n<Fa :icon=\"faFlag\" size=\"2x\" />\n<Fa :icon=\"faFlag\" size=\"2.5x\" />\n<Fa :icon=\"faFlag\" size=\"5x\" />\n<Fa :icon=\"faFlag\" size=\"7x\" />\n<Fa :icon=\"faFlag\" size=\"10x\" />", "<div>\n  <Fa :icon=\"faHome\" fw style=\"background: mistyrose\" /> Home\n</div>\n<div>\n  <Fa :icon=\"faInfo\" fw style=\"background: mistyrose\" /> Info\n</div>\n<div>\n  <Fa :icon=\"faBook\" fw style=\"background: mistyrose\" /> Library\n</div>\n<div>\n  <Fa :icon=\"faPencilAlt\" fw style=\"background: mistyrose\" /> Applications\n</div>\n<div>\n  <Fa :icon=\"faCog\" fw style=\"background: mistyrose\" /> Settins\n</div>", "<Fa :icon=\"faQuoteLeft\" pull=\"left\" size=\"2x\" />\n<Fa :icon=\"faQuoteRight\" pull=\"right\" size=\"2x\" />\nGatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that\u2019s no matter \u2014 tomorrow we will run faster, stretch our arms further... And one fine morning \u2014 So we beat on, boats against the current, borne back ceaselessly into the past."],
           animatingIcons: ["<Fa :icon=\"faSpinner\" size=\"3x\" spin />\n<Fa :icon=\"faCircleNotch\" size=\"3x\" spin />\n<Fa :icon=\"faSync\" size=\"3x\" spin />\n<Fa :icon=\"faCog\" size=\"3x\" spin />\n<Fa :icon=\"faSpinner\" size=\"3x\" pulse />\n<Fa :icon=\"faStroopwafel\" size=\"3x\" spin />"],
-          powerTransforms: ["<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"90\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"180\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"270\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"-30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"vertical\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"horizontal\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>"],
+          powerTransforms: ["<Fa :icon=\"faMagic\" size=\"4x\" style=\"background: mistyrose\" />\n<Fa :icon=\"faMagic\" :scale=\"0.5\" size=\"4x\" style=\"background: mistyrose\" />\n<Fa :icon=\"faMagic\" :scale=\"1.2\" size=\"4x\" style=\"background: mistyrose\" />", "<Fa :icon=\"faMagic\" :scale=\"0.5\" size=\"4x\" style=\"background: mistyrose\" />\n<Fa :icon=\"faMagic\" :scale=\"0.5\" :translateX=\"0.2\" size=\"4x\" style=\"background: mistyrose\" />\n<Fa :icon=\"faMagic\" :scale=\"0.5\" :translateX=\"-0.2\" size=\"4x\" style=\"background: mistyrose\" />\n<Fa :icon=\"faMagic\" :scale=\"0.5\" :translateY=\"0.2\" size=\"4x\" style=\"background: mistyrose\" />\n<Fa :icon=\"faMagic\" :scale=\"0.5\" :translateY=\"-0.2\" size=\"4x\" style=\"background: mistyrose\" />", "<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"90\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" :rotate=\"180\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"270\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" rotate=\"-30\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"vertical\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"horizontal\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>\n<Fa :icon=\"faMagic\" size=\"4x\" flip=\"both\" style=\"background: mistyrose\"/>"],
           duotoneIcons: ["import {\n  faCamera,\n  faFireAlt,\n  faBusAlt,\n  faFillDrip,\n} from '@fortawesome/pro-duotone-svg-icons'", "<Fa :icon=\"faCamera\" size=\"3x\" />\n<Fa :icon=\"faFireAlt\" size=\"3x\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" />\n<Fa :icon=\"faFillDrip\" size=\"3x\" />", "<Fa :icon=\"faCamera\" size=\"3x\" />\n<Fa :icon=\"faCamera\" size=\"3x\" swap-opacity />\n<Fa :icon=\"faFireAlt\" size=\"3x\" />\n<Fa :icon=\"faFireAlt\" size=\"3x\" swap-opacity />\n<Fa :icon=\"faBusAlt\" size=\"3x\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" swap-opacity />\n<Fa :icon=\"faFillDrip\" size=\"3x\" />\n<Fa :icon=\"faFillDrip\" size=\"3x\" swap-opacity />", "<Fa :icon=\"faBusAlt\" size=\"3x\" :secondary-opacity=\".2\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :secondary-opacity=\".4\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :secondary-opacity=\".6\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :secondary-opacity=\".8\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :secondary-opacity=\"1\" />", "<Fa :icon=\"faBusAlt\" size=\"3x\" :primary-opacity=\".2\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :primary-opacity=\".4\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :primary-opacity=\".6\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :primary-opacity=\".8\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" :primary-opacity=\"1\" />", "<Fa :icon=\"faBusAlt\" size=\"3x\" primary-color=\"gold\" />\n<Fa :icon=\"faBusAlt\" size=\"3x\" primary-color=\"orangered\" />\n<Fa :icon=\"faFillDrip\" size=\"3x\" secondary-color=\"limegreen\" />\n<Fa :icon=\"faFillDrip\" size=\"3x\" secondary-color=\"rebeccapurple\" />\n<Fa :icon=\"faBatteryFull\" size=\"3x\" primary-color=\"limegreen\" secondary-color=\"dimgray\" />\n<Fa :icon=\"faBatteryQuarter\" size=\"3x\" primary-color=\"orange\" secondary-color=\"dimgray\" />", "<Fa :icon=\"faBook\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"lightseagreen\" secondary-color=\"linen\" />\n<Fa :icon=\"faBookSpells\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"mediumpurple\" secondary-color=\"linen\" />\n<Fa :icon=\"faBookMedical\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"crimson\" secondary-color=\"linen\" />\n<Fa :icon=\"faBookUser\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"peru\" secondary-color=\"linen\" />\n<Fa :icon=\"faToggleOff\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"white\" secondary-color=\"gray\" />\n<Fa :icon=\"faToggleOn\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"dodgerblue\" secondary-color=\"white\" />\n<Fa :icon=\"faFilePlus\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"white\" secondary-color=\"limegreen\" />\n<Fa :icon=\"faFileExclamation\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"white\" secondary-color=\"gold\" />\n<Fa :icon=\"faFileTimes\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"white\" secondary-color=\"tomato\" />", "<Fa :icon=\"faCrow\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"dodgerblue\" secondary-color=\"gold\" />\n<Fa :icon=\"faCampfire\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"sienna\" secondary-color=\"red\" />\n<Fa :icon=\"faBirthdayCake\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"pink\" secondary-color=\"palevioletred\" />\n<Fa :icon=\"faEar\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"sandybrown\" secondary-color=\"bisque\" />\n<Fa :icon=\"faCorn\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"mediumseagreen\" secondary-color=\"gold\" />\n<Fa :icon=\"faCookieBite\" size=\"3x\" :secondary-opacity=\"1\" primary-color=\"saddlebrown\" secondary-color=\"burlywood\" />", "const themeRavenclaw = {\n  secondaryOpacity: 1,\n  primary-color: '#0438a1',\n  secondary-color: '#6c6c6c',\n}", "<Fa :icon=\"faHatWizard\" size=\"3x\" v-bind=\"themeRavenclaw\" />\n<Fa :icon=\"faFlaskPotion\" size=\"3x\" v-bind=\"themeRavenclaw\" />\n<Fa :icon=\"faWandMagic\" size=\"3x\" v-bind=\"themeRavenclaw\" />\n<Fa :icon=\"faScarf\" size=\"3x\" v-bind=\"themeRavenclaw\" />\n<Fa :icon=\"faBookSpells\" size=\"3x\" v-bind=\"themeRavenclaw\" />"]
         }
       };
@@ -670,6 +723,12 @@
   var _hoisted_21$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
+  var _hoisted_22$1 = {
+    class: "shadow-sm p-3 mb-3 rounded"
+  };
+  var _hoisted_23$1 = {
+    class: "shadow-sm p-3 mb-3 rounded"
+  };
   function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_DocsTitle = vue.resolveComponent("DocsTitle");
 
@@ -716,7 +775,7 @@
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       title: "Additional Styling"
     }), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Icon Sizes"
     }), vue.createElementVNode("div", _hoisted_11$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faFlag,
@@ -763,7 +822,7 @@
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Fixed Width Icons"
     }), vue.createElementVNode("div", _hoisted_12$1, [vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faHome,
@@ -810,7 +869,7 @@
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Pulled Icons"
     }), vue.createElementVNode("div", _hoisted_18$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faQuoteLeft,
@@ -873,9 +932,98 @@
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       title: "Power Transforms"
     }), vue.createVNode(_component_DocsTitle, {
-      level: 5,
-      title: "Rotating & Flipping"
+      title: "Scaling",
+      level: "{3}"
     }), vue.createElementVNode("div", _hoisted_21$1, [vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon"]), vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      scale: 0.5,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon", "scale"]), vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      scale: 1.2,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon", "scale"])]), vue.createVNode(_component_DocsCode, {
+      code: $setup.codes.powerTransforms[0]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      title: "Positioning",
+      level: "{3}"
+    }), vue.createElementVNode("div", _hoisted_22$1, [vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      scale: 0.5,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon", "scale"]), vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      scale: 0.5,
+      translateX: 0.2,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon", "scale", "translateX"]), vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      scale: 0.5,
+      translateX: -0.2,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon", "scale", "translateX"]), vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      scale: 0.5,
+      translateY: 0.2,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon", "scale", "translateY"]), vue.createVNode(_component_Fa, {
+      icon: $setup.faMagic,
+      scale: 0.5,
+      translateY: -0.2,
+      size: "4x",
+      style: {
+        "background": "mistyrose"
+      }
+    }, null, 8
+    /* PROPS */
+    , ["icon", "scale", "translateY"])]), vue.createVNode(_component_DocsCode, {
+      code: $setup.codes.powerTransforms[1]
+    }, null, 8
+    /* PROPS */
+    , ["code"]), vue.createVNode(_component_DocsTitle, {
+      level: 3,
+      title: "Rotating & Flipping"
+    }), vue.createElementVNode("div", _hoisted_23$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faMagic,
       rotate: 90,
       size: "4x",
@@ -958,13 +1106,13 @@
     }, null, 8
     /* PROPS */
     , ["icon"])]), vue.createVNode(_component_DocsCode, {
-      code: $setup.codes.powerTransforms[0]
+      code: $setup.codes.powerTransforms[2]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       title: "Duotone Icons"
     }), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Basic Use"
     }), vue.createVNode(_component_DocsImg, {
       src: "assets/duotone-0.png",
@@ -979,7 +1127,7 @@
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Swapping Layer Opacity"
     }), vue.createVNode(_component_DocsImg, {
       src: "assets/duotone-1.png",
@@ -989,7 +1137,7 @@
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Changing Opacity"
     }), vue.createVNode(_component_DocsImg, {
       src: "assets/duotone-2.png",
@@ -1006,7 +1154,7 @@
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Coloring Duotone Icons"
     }), vue.createVNode(_component_DocsImg, {
       src: "assets/duotone-4.png",
@@ -1016,7 +1164,7 @@
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
-      level: 5,
+      level: 3,
       title: "Advanced Use"
     }), vue.createVNode(_component_DocsImg, {
       src: "assets/duotone-5.png",

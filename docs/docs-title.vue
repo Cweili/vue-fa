@@ -22,7 +22,7 @@ export default defineComponent({
 
   props: {
     level: {
-      default: 4,
+      default: 2,
     },
     title: {
       default: '',

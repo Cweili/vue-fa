@@ -69,6 +69,9 @@ npm install vue-fa@next --save
   color="#ff0000"
   fw
   pull="left"
+  :scale="1.2"
+  :translateX="0.2"
+  :translateY="0.2"
   flip="horizontal"
   :rotate="90"
   spin
@@ -81,9 +84,12 @@ npm install vue-fa@next --save
 * `color`: `string` icon color, default `currentColor`
 * `fw`: `boolean` fixed width
 * `pull`: `string` values `left`, `right`
+* `scale`: `number | string` transform scale, unit is `em`, default `1`
+* `translateX`: `number | string` transform position X, unit is `em`, default `0`
+* `translateY`: `number | string` transform position Y, unit is `em`, default `0`
 * `flip`: `string` values `horizontal`, `vertical`, `both`
 * `rotate`: `number | string` values `90`, `180`, `270`, `30`, `-30` ...
-* * `spin`: `boolean` spin icons
+* `spin`: `boolean` spin icons
 * `pulse`: `boolean` pulse spin icons
 
 ## Duotone Icons
@@ -99,7 +105,8 @@ import { faFlag } from '@fortawesome/pro-duotone-svg-icons'
   secondary-color="#000000"
   :primary-opacity="0.8"
   :secondary-opacity="0.6"
-  swap-opacity/>
+  swap-opacity
+/>
 ```
 
 ### Duotone Icons Theme
@@ -119,7 +126,8 @@ const theme = {
 
 <fa
   icon={faFlag}
-  v-bind="theme"/>
+  v-bind="theme"
+/>
 ```
 
 [fontawesome]: https://fontawesome.com/
