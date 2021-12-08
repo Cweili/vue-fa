@@ -6,7 +6,6 @@ cache:
   directories:
     - node_modules
 script:
-  - npm i @fortawesome/fontawesome-common-types
   - npm run build
   - npm test
   - npx codecov
