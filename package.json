@@ -31,7 +31,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
-    "pretest": "eslint --fix \"{src,test,docs,docs/v2}/*.{js,ts,vue}\"",
+    "predev": "eslint --fix \"{src,test,docs,docs/v2}/*.{js,ts,vue}\"",
     "build:docs": "cd docs && rollup -c",
     "dev:build": "cd docs && rollup -c -w",
     "dev:serve": "sirv docs --dev",
