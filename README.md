@@ -8,7 +8,7 @@
 
 [![github][badge-issues]][github]
 [![workflows][badge-build]][workflows]
-[![coverage][badge-coverage]][codecov]
+[![coverage][badge-coverage]][coveralls]
 
 Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
 
@@ -152,5 +152,5 @@ const theme = {
 [badge-build]: https://img.shields.io/github/workflow/status/Cweili/vue-fa/ci/master
 [workflows]: https://github.com/Cweili/vue-fa/actions/workflows/ci.yml?query=branch%3Amaster
 
-[badge-coverage]: https://img.shields.io/codecov/c/github/Cweili/vue-fa.svg
-[codecov]: https://codecov.io/gh/Cweili/vue-fa
+[badge-coverage]: https://img.shields.io/coveralls/github/Cweili/vue-fa/master.svg
+[coveralls]: https://coveralls.io/github/Cweili/vue-fa?branch=master
