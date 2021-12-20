@@ -7,7 +7,7 @@
 
 
 [![github][badge-issues]][github]
-[![build][badge-build]][travis]
+[![workflows][badge-build]][workflows]
 [![coverage][badge-coverage]][codecov]
 
 Tiny [FontAwesome 5][fontawesome] component for [Vue.js][vuejs].
@@ -113,7 +113,7 @@ import { faFlag } from '@fortawesome/pro-duotone-svg-icons'
 
 ```html
 <script>
-import Fa from 'svelte-fa'
+import Fa from 'vue-fa'
 import { faFlag } from '@fortawesome/pro-duotone-svg-icons'
 
 const theme = {
@@ -149,8 +149,8 @@ const theme = {
 [badge-issues]: https://img.shields.io/github/issues/Cweili/vue-fa.svg
 [github]: https://github.com/Cweili/vue-fa
 
-[badge-build]: https://img.shields.io/travis/com/Cweili/vue-fa/master.svg
-[travis]: https://travis-ci.com/Cweili/vue-fa
+[badge-build]: https://img.shields.io/github/workflow/status/Cweili/vue-fa/ci/master
+[workflows]: https://github.com/Cweili/vue-fa/actions/workflows/ci.yml?query=branch%3Amaster
 
 [badge-coverage]: https://img.shields.io/codecov/c/github/Cweili/vue-fa.svg
 [codecov]: https://codecov.io/gh/Cweili/vue-fa
