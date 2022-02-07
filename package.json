@@ -43,7 +43,7 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@cweili/fa-test-util": "^0.1.0",
-    "@fortawesome/fontawesome-common-types": "^0.2.34",
+    "@fortawesome/fontawesome-common-types": "^0.3.0",
     "@fortawesome/free-solid-svg-icons": "^5.10.1",
     "@rollup/plugin-babel": "^5.2.2",
     "@rollup/plugin-node-resolve": "^13.0.0",
@@ -78,7 +78,7 @@
     "vue3-jest": "^27.0.0-alpha.1"
   },
   "peerDependencies": {
-    "@fortawesome/fontawesome-common-types": "^0.2.34",
+    "@fortawesome/fontawesome-common-types": "^0.3.0",
     "vue": "^3.0.0"
   }
 }
