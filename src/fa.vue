@@ -3,6 +3,7 @@
     v-show="i[4]"
     :viewBox="`0 0 ${i[0]} ${i[1]}`"
     :class="{
+      'vue-fa': true,
       spin,
       pulse,
     }"
@@ -21,20 +22,20 @@
           v-if="typeof i[4] === 'string'"
           :d="i[4]"
           :fill="color || primaryColor || 'currentColor'"
-          transform="translate(-256 -256)"
+          :transform="`translate(${i[0] / -2} ${i[1] / -2})`"
         />
         <template v-else>
           <path
             :d="i[4][0]"
             :fill="secondaryColor || color || 'currentColor'"
             :fill-opacity="swapOpacity !== false ? primaryOpacity : secondaryOpacity"
-            transform="translate(-256 -256)"
+            :transform="`translate(${i[0] / -2} ${i[1] / -2})`"
           />
           <path
             :d="i[4][1]"
             :fill="primaryColor || color || 'currentColor'"
             :fill-opacity="swapOpacity !== false ? secondaryOpacity : primaryOpacity"
-            transform="translate(-256 -256)"
+            :transform="`translate(${i[0] / -2} ${i[1] / -2})`"
           />
         </template>
       </g>

@@ -5,12 +5,11 @@ import vue from 'rollup-plugin-vue';
 import pkg from './package.json';
 
 export default {
-  input: 'src/fa.vue',
+  input: 'src/index.ts',
   output: [
     {
       file: pkg.main,
       format: 'cjs',
-      exports: 'default',
     },
     {
       file: pkg.module,

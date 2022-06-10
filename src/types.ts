@@ -1,4 +1,4 @@
-import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { IconDefinition } from '@fortawesome/fontawesome-common-types/index.d';
 
 export const validFlip = [
   'horizontal',
