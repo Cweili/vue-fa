@@ -2,7 +2,7 @@ import { promisify } from 'util';
 import { resolve } from 'path';
 import {
   readFile,
-  writeFile,
+  // writeFile,
   readdirSync,
 } from 'fs';
 
@@ -13,7 +13,7 @@ import pretty from 'pretty';
 import App from './app';
 
 const readFileAsync = promisify(readFile);
-const writeFileAsync = promisify(writeFile);
+// const writeFileAsync = promisify(writeFile);
 
 const resolvePath = (...paths) => resolve(__dirname, ...paths);
 

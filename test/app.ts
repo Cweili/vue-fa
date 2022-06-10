@@ -7,11 +7,16 @@ import {
   fadFlag,
 } from '@cweili/fa-test-util';
 import { defineComponent } from 'vue';
-import Fa from '../src/fa.vue';
+import Fa, {
+  FaLayers,
+  FaLayersText,
+} from '../src';
 
 export default defineComponent({
   components: {
     Fa,
+    FaLayers,
+    FaLayersText,
   },
 
   setup() {
