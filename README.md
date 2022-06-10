@@ -26,7 +26,7 @@ Tiny [FontAwesome 5+][fontawesome] component for [Vue.js][vuejs].
 **Notice:** vue-fa >= 3.x is based on Vue.js 3.x.
 
 ```shell
-npm install vue-fa@next --save
+npm install vue-fa --save
 ```
 
 > Old versions:
@@ -34,6 +34,12 @@ npm install vue-fa@next --save
 > vue-fa@2 => vue@2 [[Documents][doc-v2]]
 >
 > `npm install vue-fa@2`
+
+Install FontAwesome icons via [official packages][fontawesome-npm], for example:
+
+```shell
+npm install @fortawesome/free-solid-svg-icons
+```
 
 ## Usage
 
