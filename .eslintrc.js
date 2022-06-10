@@ -21,6 +21,7 @@ module.exports = {
     'no-multi-assign': 0,
     'max-len': 1,
     'import/no-extraneous-dependencies': 1,
+    'import/no-named-as-default': 0,
     'import/no-unresolved': [2, { ignore: ['vue-fa'] }],
     'import/extensions': [
       2,

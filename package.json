@@ -26,8 +26,8 @@
   "module": "dist/vue-fa.esm.js",
   "unpkg": "dist/vue-fa.js",
   "jsdelivr": "dist/vue-fa.js",
-  "source": "src/fa.vue",
-  "types": "dist/fa.vue.d.ts",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
@@ -78,7 +78,7 @@
     "vue3-jest": "^27.0.0-alpha.1"
   },
   "peerDependencies": {
-    "@fortawesome/fontawesome-common-types": "^0.2.34",
+    "@fortawesome/fontawesome-common-types": "*",
     "vue": "^3.0.0"
   }
 }
