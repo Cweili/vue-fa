@@ -56,7 +56,7 @@
             class="hue"
             href="https://fontawesome.com/"
             target="_blank"
-          >FontAwesome 5</a> component for <a
+          >FontAwesome 5+</a> component for <a
             class="hue"
             href="https://vuejs.org/"
             target="_blank"
@@ -164,7 +164,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import {
   defineComponent,
   reactive,
@@ -173,7 +173,7 @@ import {
   faFlag,
   faHome,
   faCog,
-  faMagic,
+  faSeedling,
 } from '@fortawesome/free-solid-svg-icons';
 import Fa from 'vue-fa';
 
@@ -195,7 +195,7 @@ export default defineComponent({
       faFlag,
       faHome,
       faCog,
-      faMagic,
+      faSeedling,
     ];
 
     const setValue = (prop, value) => {

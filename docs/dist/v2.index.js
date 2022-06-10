@@ -5,11 +5,11 @@
 
   var Fa__default = /*#__PURE__*/_interopDefaultLegacy(Fa);
 
-  var faBook={prefix:'fas',iconName:'book',icon:[448,512,[],"f02d","M448 360V24c0-13.3-10.7-24-24-24H96C43 0 0 43 0 96v320c0 53 43 96 96 96h328c13.3 0 24-10.7 24-24v-16c0-7.5-3.5-14.3-8.9-18.7-4.2-15.4-4.2-59.3 0-74.7 5.4-4.3 8.9-11.1 8.9-18.6zM128 134c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm0 64c0-3.3 2.7-6 6-6h212c3.3 0 6 2.7 6 6v20c0 3.3-2.7 6-6 6H134c-3.3 0-6-2.7-6-6v-20zm253.4 250H96c-17.7 0-32-14.3-32-32 0-17.6 14.4-32 32-32h285.4c-1.9 17.1-1.9 46.9 0 64z"]};var faCog={prefix:'fas',iconName:'cog',icon:[512,512,[],"f013","M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"]};var faFlag={prefix:'fas',iconName:'flag',icon:[512,512,[],"f024","M349.565 98.783C295.978 98.783 251.721 64 184.348 64c-24.955 0-47.309 4.384-68.045 12.013a55.947 55.947 0 0 0 3.586-23.562C118.117 24.015 94.806 1.206 66.338.048 34.345-1.254 8 24.296 8 56c0 19.026 9.497 35.825 24 45.945V488c0 13.255 10.745 24 24 24h16c13.255 0 24-10.745 24-24v-94.4c28.311-12.064 63.582-22.122 114.435-22.122 53.588 0 97.844 34.783 165.217 34.783 48.169 0 86.667-16.294 122.505-40.858C506.84 359.452 512 349.571 512 339.045v-243.1c0-23.393-24.269-38.87-45.485-29.016-34.338 15.948-76.454 31.854-116.95 31.854z"]};var faHome={prefix:'fas',iconName:'home',icon:[576,512,[],"f015","M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"]};var faInfo={prefix:'fas',iconName:'info',icon:[192,512,[],"f129","M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"]};var faLink={prefix:'fas',iconName:'link',icon:[512,512,[],"f0c1","M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"]};var faMagic={prefix:'fas',iconName:'magic',icon:[512,512,[],"f0d0","M224 96l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zM80 160l26.66-53.33L160 80l-53.34-26.67L80 0 53.34 53.33 0 80l53.34 26.67L80 160zm352 128l-26.66 53.33L352 368l53.34 26.67L432 448l26.66-53.33L512 368l-53.34-26.67L432 288zm70.62-193.77L417.77 9.38C411.53 3.12 403.34 0 395.15 0c-8.19 0-16.38 3.12-22.63 9.38L9.38 372.52c-12.5 12.5-12.5 32.76 0 45.25l84.85 84.85c6.25 6.25 14.44 9.37 22.62 9.37 8.19 0 16.38-3.12 22.63-9.37l363.14-363.15c12.5-12.48 12.5-32.75 0-45.24zM359.45 203.46l-50.91-50.91 86.6-86.6 50.91 50.91-86.6 86.6z"]};var faPencilAlt={prefix:'fas',iconName:'pencil-alt',icon:[512,512,[],"f303","M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"]};var faQuoteLeft={prefix:'fas',iconName:'quote-left',icon:[512,512,[],"f10d","M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"]};var faQuoteRight={prefix:'fas',iconName:'quote-right',icon:[512,512,[],"f10e","M464 32H336c-26.5 0-48 21.5-48 48v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48zm-288 0H48C21.5 32 0 53.5 0 80v128c0 26.5 21.5 48 48 48h80v64c0 35.3-28.7 64-64 64h-8c-13.3 0-24 10.7-24 24v48c0 13.3 10.7 24 24 24h8c88.4 0 160-71.6 160-160V80c0-26.5-21.5-48-48-48z"]};
+  var faBook={prefix:'fas',iconName:'book',icon:[448,512,[128212],"f02d","M448 336v-288C448 21.49 426.5 0 400 0H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h320c17.67 0 32-14.33 32-31.1c0-11.72-6.607-21.52-16-27.1v-81.36C441.8 362.8 448 350.2 448 336zM143.1 128h192C344.8 128 352 135.2 352 144C352 152.8 344.8 160 336 160H143.1C135.2 160 128 152.8 128 144C128 135.2 135.2 128 143.1 128zM143.1 192h192C344.8 192 352 199.2 352 208C352 216.8 344.8 224 336 224H143.1C135.2 224 128 216.8 128 208C128 199.2 135.2 192 143.1 192zM384 448H96c-17.67 0-32-14.33-32-32c0-17.67 14.33-32 32-32h288V448z"]};var faFlag={prefix:'fas',iconName:'flag',icon:[512,512,[61725,127988],"f024","M64 496C64 504.8 56.75 512 48 512h-32C7.25 512 0 504.8 0 496V32c0-17.75 14.25-32 32-32s32 14.25 32 32V496zM476.3 0c-6.365 0-13.01 1.35-19.34 4.233c-45.69 20.86-79.56 27.94-107.8 27.94c-59.96 0-94.81-31.86-163.9-31.87C160.9 .3055 131.6 4.867 96 15.75v350.5c32-9.984 59.87-14.1 84.85-14.1c73.63 0 124.9 31.78 198.6 31.78c31.91 0 68.02-5.971 111.1-23.09C504.1 355.9 512 344.4 512 332.1V30.73C512 11.1 495.3 0 476.3 0z"]};var faGear={prefix:'fas',iconName:'gear',icon:[512,512,[9881,"cog"],"f013","M495.9 166.6C499.2 175.2 496.4 184.9 489.6 191.2L446.3 230.6C447.4 238.9 448 247.4 448 256C448 264.6 447.4 273.1 446.3 281.4L489.6 320.8C496.4 327.1 499.2 336.8 495.9 345.4C491.5 357.3 486.2 368.8 480.2 379.7L475.5 387.8C468.9 398.8 461.5 409.2 453.4 419.1C447.4 426.2 437.7 428.7 428.9 425.9L373.2 408.1C359.8 418.4 344.1 427 329.2 433.6L316.7 490.7C314.7 499.7 307.7 506.1 298.5 508.5C284.7 510.8 270.5 512 255.1 512C241.5 512 227.3 510.8 213.5 508.5C204.3 506.1 197.3 499.7 195.3 490.7L182.8 433.6C167 427 152.2 418.4 138.8 408.1L83.14 425.9C74.3 428.7 64.55 426.2 58.63 419.1C50.52 409.2 43.12 398.8 36.52 387.8L31.84 379.7C25.77 368.8 20.49 357.3 16.06 345.4C12.82 336.8 15.55 327.1 22.41 320.8L65.67 281.4C64.57 273.1 64 264.6 64 256C64 247.4 64.57 238.9 65.67 230.6L22.41 191.2C15.55 184.9 12.82 175.3 16.06 166.6C20.49 154.7 25.78 143.2 31.84 132.3L36.51 124.2C43.12 113.2 50.52 102.8 58.63 92.95C64.55 85.8 74.3 83.32 83.14 86.14L138.8 103.9C152.2 93.56 167 84.96 182.8 78.43L195.3 21.33C197.3 12.25 204.3 5.04 213.5 3.51C227.3 1.201 241.5 0 256 0C270.5 0 284.7 1.201 298.5 3.51C307.7 5.04 314.7 12.25 316.7 21.33L329.2 78.43C344.1 84.96 359.8 93.56 373.2 103.9L428.9 86.14C437.7 83.32 447.4 85.8 453.4 92.95C461.5 102.8 468.9 113.2 475.5 124.2L480.2 132.3C486.2 143.2 491.5 154.7 495.9 166.6V166.6zM256 336C300.2 336 336 300.2 336 255.1C336 211.8 300.2 175.1 256 175.1C211.8 175.1 176 211.8 176 255.1C176 300.2 211.8 336 256 336z"]};var faCog=faGear;var faHouse={prefix:'fas',iconName:'house',icon:[576,512,[63498,63500,127968,"home","home-alt","home-lg-alt"],"f015","M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"]};var faHome=faHouse;var faInfo={prefix:'fas',iconName:'info',icon:[192,512,[],"f129","M160 448h-32V224c0-17.69-14.33-32-32-32L32 192c-17.67 0-32 14.31-32 32s14.33 31.1 32 31.1h32v192H32c-17.67 0-32 14.31-32 32s14.33 32 32 32h128c17.67 0 32-14.31 32-32S177.7 448 160 448zM96 128c26.51 0 48-21.49 48-48S122.5 32.01 96 32.01s-48 21.49-48 48S69.49 128 96 128z"]};var faLink={prefix:'fas',iconName:'link',icon:[640,512,[128279,"chain"],"f0c1","M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"]};var faPencil={prefix:'fas',iconName:'pencil',icon:[512,512,[61504,9999,"pencil-alt"],"f303","M421.7 220.3L188.5 453.4L154.6 419.5L158.1 416H112C103.2 416 96 408.8 96 400V353.9L92.51 357.4C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3zM492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75z"]};var faPencilAlt=faPencil;var faQuoteLeft={prefix:'fas',iconName:'quote-left',icon:[448,512,[8220,"quote-left-alt"],"f10d","M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"]};var faQuoteRight={prefix:'fas',iconName:'quote-right',icon:[448,512,[8221,"quote-right-alt"],"f10e","M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"]};var faWandMagic={prefix:'fas',iconName:'wand-magic',icon:[512,512,["magic"],"f0d0","M14.06 463.3C-4.686 444.6-4.686 414.2 14.06 395.4L395.4 14.06C414.2-4.686 444.6-4.686 463.3 14.06L497.9 48.64C516.6 67.38 516.6 97.78 497.9 116.5L116.5 497.9C97.78 516.6 67.38 516.6 48.64 497.9L14.06 463.3zM347.6 187.6L452.6 82.58L429.4 59.31L324.3 164.3L347.6 187.6z"]};var faMagic=faWandMagic;
 
-  var script = vue.defineComponent({
+  var script$5 = vue.defineComponent({
     components: {
-      Fa: Fa__default['default']
+      Fa: Fa__default["default"]
     },
     setup: function setup() {
       var model = vue.reactive({
@@ -43,51 +43,51 @@
 
   vue.pushScopeId("data-v-535d0c7c");
 
-  var _hoisted_1 = {
+  var _hoisted_1$5 = {
     class: "jumbotron"
   };
-  var _hoisted_2 = {
+  var _hoisted_2$3 = {
     class: "row"
   };
-  var _hoisted_3 = {
+  var _hoisted_3$2 = {
     class: "col-md"
   };
 
-  var _hoisted_4 = /*#__PURE__*/vue.createStaticVNode("<h1 class=\"hue\" data-v-535d0c7c><strong data-v-535d0c7c><a href=\"https://github.com/Cweili/vue-fa\" target=\"_blank\" data-v-535d0c7c>vue-fa</a></strong></h1><p class=\"lead mb-5\" data-v-535d0c7c> Tiny <a class=\"hue\" href=\"https://fontawesome.com/\" target=\"_blank\" data-v-535d0c7c>FontAwesome 5</a> component for <a class=\"hue\" href=\"https://vuejs.org/\" target=\"_blank\" data-v-535d0c7c>Vue.js</a>. </p>", 2);
+  var _hoisted_4$1 = /*#__PURE__*/vue.createStaticVNode("<h1 class=\"hue\" data-v-535d0c7c><strong data-v-535d0c7c><a href=\"https://github.com/Cweili/vue-fa\" target=\"_blank\" data-v-535d0c7c>vue-fa</a></strong></h1><p class=\"lead mb-5\" data-v-535d0c7c> Tiny <a class=\"hue\" href=\"https://fontawesome.com/\" target=\"_blank\" data-v-535d0c7c>FontAwesome 5</a> component for <a class=\"hue\" href=\"https://vuejs.org/\" target=\"_blank\" data-v-535d0c7c>Vue.js</a>. </p>", 2);
 
-  var _hoisted_6 = {
+  var _hoisted_6$1 = {
     class: "form-group row"
   };
 
-  var _hoisted_7 = /*#__PURE__*/vue.createElementVNode("label", {
+  var _hoisted_7$1 = /*#__PURE__*/vue.createElementVNode("label", {
     class: "col-sm-3 col-form-label"
   }, "Icon Sizes", -1
   /* HOISTED */
   );
 
-  var _hoisted_8 = {
+  var _hoisted_8$1 = {
     class: "col-sm-9 row"
   };
-  var _hoisted_9 = {
+  var _hoisted_9$1 = {
     class: "col-md-8 py-2"
   };
-  var _hoisted_10 = {
+  var _hoisted_10$1 = {
     class: "col-md-4"
   };
-  var _hoisted_11 = {
+  var _hoisted_11$1 = {
     class: "form-control text-center"
   };
-  var _hoisted_12 = {
+  var _hoisted_12$1 = {
     class: "form-group row"
   };
 
-  var _hoisted_13 = /*#__PURE__*/vue.createElementVNode("label", {
+  var _hoisted_13$1 = /*#__PURE__*/vue.createElementVNode("label", {
     class: "col-sm-3 col-form-label"
   }, "Pulled Icons", -1
   /* HOISTED */
   );
 
-  var _hoisted_14 = {
+  var _hoisted_14$1 = {
     class: "col-sm-9"
   };
   var _hoisted_15 = {
@@ -143,12 +143,12 @@
 
   vue.popScopeId();
 
-  function render(_ctx, _cache, $props, $setup, $data, $options) {
+  function render$5(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_Fa = vue.resolveComponent("Fa");
 
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [vue.createElementVNode("div", _hoisted_2, [vue.createElementVNode("div", _hoisted_3, [_hoisted_4, vue.createElementVNode("form", {
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [vue.createElementVNode("div", _hoisted_2$3, [vue.createElementVNode("div", _hoisted_3$2, [_hoisted_4$1, vue.createElementVNode("form", {
       onSubmit: _cache[2] || (_cache[2] = vue.withModifiers(function () {}, ["prevent"]))
-    }, [vue.createElementVNode("div", _hoisted_6, [_hoisted_7, vue.createElementVNode("div", _hoisted_8, [vue.createElementVNode("div", _hoisted_9, [vue.withDirectives(vue.createElementVNode("input", {
+    }, [vue.createElementVNode("div", _hoisted_6$1, [_hoisted_7$1, vue.createElementVNode("div", _hoisted_8$1, [vue.createElementVNode("div", _hoisted_9$1, [vue.withDirectives(vue.createElementVNode("input", {
       "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
         return _ctx.model.size = $event;
       }),
@@ -159,9 +159,9 @@
       step: "0.1"
     }, null, 512
     /* NEED_PATCH */
-    ), [[vue.vModelText, _ctx.model.size]])]), vue.createElementVNode("div", _hoisted_10, [vue.createElementVNode("div", _hoisted_11, vue.toDisplayString(_ctx.model.size) + "x ", 1
+    ), [[vue.vModelText, _ctx.model.size]])]), vue.createElementVNode("div", _hoisted_10$1, [vue.createElementVNode("div", _hoisted_11$1, vue.toDisplayString(_ctx.model.size) + "x ", 1
     /* TEXT */
-    )])])]), vue.createElementVNode("div", _hoisted_12, [_hoisted_13, vue.createElementVNode("div", _hoisted_14, [vue.createElementVNode("div", _hoisted_15, [(vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.pull, function (p) {
+    )])])]), vue.createElementVNode("div", _hoisted_12$1, [_hoisted_13$1, vue.createElementVNode("div", _hoisted_14$1, [vue.createElementVNode("div", _hoisted_15, [(vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.pull, function (p) {
       return vue.openBlock(), vue.createElementBlock("button", {
         key: p,
         class: vue.normalizeClass("btn btn-" + _ctx.checked('pull', p)),
@@ -220,11 +220,11 @@
     ))])])]);
   }
 
-  script.render = render;
-  script.__scopeId = "data-v-535d0c7c";
-  script.__file = "v2/showcase.vue";
+  script$5.render = render$5;
+  script$5.__scopeId = "data-v-535d0c7c";
+  script$5.__file = "v2/showcase.vue";
 
-  var script$1 = vue.defineComponent({
+  var script$4 = vue.defineComponent({
     props: {
       code: {
         type: String,
@@ -254,11 +254,11 @@
     }
   });
 
-  var _hoisted_1$1 = {
+  var _hoisted_1$4 = {
     class: "shadow-sm mb-3 rounded"
   };
-  function render$1(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$1, [vue.createElementVNode("pre", null, [vue.createElementVNode("code", {
+  function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$4, [vue.createElementVNode("pre", null, [vue.createElementVNode("code", {
       ref: "el",
       class: vue.normalizeClass("language-" + _ctx.lang)
     }, vue.toDisplayString(_ctx.code), 3
@@ -266,38 +266,38 @@
     )])]);
   }
 
-  script$1.render = render$1;
-  script$1.__file = "docs-code.vue";
+  script$4.render = render$4;
+  script$4.__file = "docs-code.vue";
 
-  var script$2 = {
+  var script$3 = {
     inheritAttrs: false
   };
 
   vue.pushScopeId("data-v-218e963f");
 
-  var _hoisted_1$2 = {
+  var _hoisted_1$3 = {
     class: "position-relative shadow-sm p-3 mb-3 rounded"
   };
 
-  var _hoisted_2$1 = /*#__PURE__*/vue.createElementVNode("small", null, "images © fontawesome.com", -1
+  var _hoisted_2$2 = /*#__PURE__*/vue.createElementVNode("small", null, "images © fontawesome.com", -1
   /* HOISTED */
   );
 
   vue.popScopeId();
 
-  function render$2(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$2, [vue.createElementVNode("img", vue.normalizeProps(vue.guardReactiveProps(_ctx.$attrs)), null, 16
+  function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$3, [vue.createElementVNode("img", vue.normalizeProps(vue.guardReactiveProps(_ctx.$attrs)), null, 16
     /* FULL_PROPS */
-    ), _hoisted_2$1]);
+    ), _hoisted_2$2]);
   }
 
-  script$2.render = render$2;
-  script$2.__scopeId = "data-v-218e963f";
-  script$2.__file = "docs-img.vue";
+  script$3.render = render$3;
+  script$3.__scopeId = "data-v-218e963f";
+  script$3.__file = "docs-img.vue";
 
-  var script$3 = vue.defineComponent({
+  var script$2 = vue.defineComponent({
     components: {
-      Fa: Fa__default['default']
+      Fa: Fa__default["default"]
     },
     props: {
       level: {
@@ -319,14 +319,14 @@
 
   vue.pushScopeId("data-v-5fc7f558");
 
-  var _hoisted_1$3 = ["id"];
-  var _hoisted_2$2 = ["href"];
+  var _hoisted_1$2 = ["id"];
+  var _hoisted_2$1 = ["href"];
 
   var _hoisted_3$1 = /*#__PURE__*/vue.createTextVNode();
 
   vue.popScopeId();
 
-  function render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  function render$2(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_Fa = vue.resolveComponent("Fa");
 
     return vue.openBlock(), vue.createElementBlock("h4", {
@@ -336,25 +336,25 @@
       href: "#" + _ctx.id
     }, vue.toDisplayString(_ctx.title), 9
     /* TEXT, PROPS */
-    , _hoisted_2$2), _hoisted_3$1, vue.createElementVNode("small", null, [vue.createVNode(_component_Fa, {
+    , _hoisted_2$1), _hoisted_3$1, vue.createElementVNode("small", null, [vue.createVNode(_component_Fa, {
       icon: _ctx.faLink
     }, null, 8
     /* PROPS */
     , ["icon"])])], 10
     /* CLASS, PROPS */
-    , _hoisted_1$3);
+    , _hoisted_1$2);
   }
 
-  script$3.render = render$3;
-  script$3.__scopeId = "data-v-5fc7f558";
-  script$3.__file = "docs-title.vue";
+  script$2.render = render$2;
+  script$2.__scopeId = "data-v-5fc7f558";
+  script$2.__file = "docs-title.vue";
 
-  var script$4 = {
+  var script$1 = {
     components: {
-      Fa: Fa__default['default'],
-      DocsCode: script$1,
-      DocsImg: script$2,
-      DocsTitle: script$3
+      Fa: Fa__default["default"],
+      DocsCode: script$4,
+      DocsImg: script$3,
+      DocsTitle: script$2
     },
     setup: function setup() {
       return {
@@ -378,16 +378,16 @@
     }
   };
 
-  var _hoisted_1$4 = {
+  var _hoisted_1$1 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
 
-  var _hoisted_2$3 = /*#__PURE__*/vue.createTextVNode(" Flag ");
+  var _hoisted_2 = /*#__PURE__*/vue.createTextVNode(" Flag ");
 
-  var _hoisted_3$2 = {
+  var _hoisted_3 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
-  var _hoisted_4$1 = {
+  var _hoisted_4 = {
     style: {
       "font-size": "3em",
       "color": "tomato"
@@ -396,30 +396,30 @@
   var _hoisted_5 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
-  var _hoisted_6$1 = {
+  var _hoisted_6 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
 
-  var _hoisted_7$1 = /*#__PURE__*/vue.createTextVNode(" Home ");
+  var _hoisted_7 = /*#__PURE__*/vue.createTextVNode(" Home ");
 
-  var _hoisted_8$1 = /*#__PURE__*/vue.createTextVNode(" Info ");
+  var _hoisted_8 = /*#__PURE__*/vue.createTextVNode(" Info ");
 
-  var _hoisted_9$1 = /*#__PURE__*/vue.createTextVNode(" Library ");
+  var _hoisted_9 = /*#__PURE__*/vue.createTextVNode(" Library ");
 
-  var _hoisted_10$1 = /*#__PURE__*/vue.createTextVNode(" Applications ");
+  var _hoisted_10 = /*#__PURE__*/vue.createTextVNode(" Applications ");
 
-  var _hoisted_11$1 = /*#__PURE__*/vue.createTextVNode(" Settins ");
+  var _hoisted_11 = /*#__PURE__*/vue.createTextVNode(" Settins ");
 
-  var _hoisted_12$1 = {
+  var _hoisted_12 = {
     class: "shadow-sm p-3 mb-3 rounded clearfix"
   };
 
-  var _hoisted_13$1 = /*#__PURE__*/vue.createTextVNode(" Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past. ");
+  var _hoisted_13 = /*#__PURE__*/vue.createTextVNode(" Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past. ");
 
-  var _hoisted_14$1 = {
+  var _hoisted_14 = {
     class: "shadow-sm p-3 mb-3 rounded"
   };
-  function render$4(_ctx, _cache, $props, $setup, $data, $options) {
+  function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_DocsTitle = vue.resolveComponent("DocsTitle");
 
     var _component_DocsCode = vue.resolveComponent("DocsCode");
@@ -441,15 +441,15 @@
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       title: "Basic Use"
-    }), vue.createElementVNode("div", _hoisted_1$4, [vue.createVNode(_component_Fa, {
+    }), vue.createElementVNode("div", _hoisted_1$1, [vue.createVNode(_component_Fa, {
       icon: $setup.faFlag
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_2$3]), vue.createVNode(_component_DocsCode, {
+    , ["icon"]), _hoisted_2]), vue.createVNode(_component_DocsCode, {
       code: $setup.codes.basicUse[0]
     }, null, 8
     /* PROPS */
-    , ["code"]), vue.createElementVNode("div", _hoisted_3$2, [vue.createElementVNode("div", _hoisted_4$1, [vue.createVNode(_component_Fa, {
+    , ["code"]), vue.createElementVNode("div", _hoisted_3, [vue.createElementVNode("div", _hoisted_4, [vue.createVNode(_component_Fa, {
       icon: $setup.faFlag
     }, null, 8
     /* PROPS */
@@ -509,7 +509,7 @@
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Fixed Width Icons"
-    }), vue.createElementVNode("div", _hoisted_6$1, [vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
+    }), vue.createElementVNode("div", _hoisted_6, [vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faHome,
       fw: "",
       style: {
@@ -517,7 +517,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_7$1]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_7]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faInfo,
       fw: "",
       style: {
@@ -525,7 +525,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_8$1]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_8]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faBook,
       fw: "",
       style: {
@@ -533,7 +533,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_9$1]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_9]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faPencilAlt,
       fw: "",
       style: {
@@ -541,7 +541,7 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_10$1]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
+    , ["icon"]), _hoisted_10]), vue.createElementVNode("div", null, [vue.createVNode(_component_Fa, {
       icon: $setup.faCog,
       fw: "",
       style: {
@@ -549,14 +549,14 @@
       }
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_11$1])]), vue.createVNode(_component_DocsCode, {
+    , ["icon"]), _hoisted_11])]), vue.createVNode(_component_DocsCode, {
       code: $setup.codes.additionalStyling[1]
     }, null, 8
     /* PROPS */
     , ["code"]), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Pulled Icons"
-    }), vue.createElementVNode("div", _hoisted_12$1, [vue.createVNode(_component_Fa, {
+    }), vue.createElementVNode("div", _hoisted_12, [vue.createVNode(_component_Fa, {
       icon: $setup.faQuoteLeft,
       pull: "left",
       size: "2x"
@@ -568,7 +568,7 @@
       size: "2x"
     }, null, 8
     /* PROPS */
-    , ["icon"]), _hoisted_13$1]), vue.createVNode(_component_DocsCode, {
+    , ["icon"]), _hoisted_13]), vue.createVNode(_component_DocsCode, {
       code: $setup.codes.additionalStyling[2]
     }, null, 8
     /* PROPS */
@@ -577,7 +577,7 @@
     }), vue.createVNode(_component_DocsTitle, {
       level: 5,
       title: "Rotating & Flipping"
-    }), vue.createElementVNode("div", _hoisted_14$1, [vue.createVNode(_component_Fa, {
+    }), vue.createElementVNode("div", _hoisted_14, [vue.createVNode(_component_Fa, {
       icon: $setup.faMagic,
       rotate: 90,
       size: "4x",
@@ -749,30 +749,30 @@
     , ["code"])]);
   }
 
-  script$4.render = render$4;
-  script$4.__file = "v2/docs.vue";
+  script$1.render = render$1;
+  script$1.__file = "v2/docs.vue";
 
-  var script$5 = vue.defineComponent({
+  var script = vue.defineComponent({
     components: {
-      Showcase: script,
-      Docs: script$4
+      Showcase: script$5,
+      Docs: script$1
     }
   });
 
-  var _hoisted_1$5 = {
+  var _hoisted_1 = {
     class: "container my-4"
   };
-  function render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function render(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_showcase = vue.resolveComponent("showcase");
 
     var _component_docs = vue.resolveComponent("docs");
 
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$5, [vue.createVNode(_component_showcase), vue.createVNode(_component_docs)]);
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1, [vue.createVNode(_component_showcase), vue.createVNode(_component_docs)]);
   }
 
-  script$5.render = render$5;
-  script$5.__file = "v2/app.vue";
+  script.render = render;
+  script.__file = "v2/app.vue";
 
-  vue.createApp(script$5).mount('#app');
+  vue.createApp(script).mount('#app');
 
-}(Vue, VueFa));
+})(Vue, VueFa);

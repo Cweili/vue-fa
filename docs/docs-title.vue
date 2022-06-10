@@ -7,7 +7,7 @@
   </h4>
 </template>
 
-<script lang="ts">
+<script>
 import {
   defineComponent,
   computed,

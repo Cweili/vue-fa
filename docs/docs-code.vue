@@ -7,19 +7,13 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import {
   defineComponent,
   ref,
   watch,
   onMounted,
 } from 'vue';
-
-declare global {
-  interface Window {
-    Prism: any
-  }
-}
 
 export default defineComponent({
   props: {

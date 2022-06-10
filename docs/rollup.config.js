@@ -2,7 +2,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import postcss from 'rollup-plugin-postcss';
 import babel from '@rollup/plugin-babel';
-import typescript from 'rollup-plugin-typescript2';
 import vue from 'rollup-plugin-vue';
 
 const commonConfig = (outputPrefix = '') => ({
@@ -20,7 +19,6 @@ const commonConfig = (outputPrefix = '') => ({
     postcss({
       extract: `${outputPrefix}index.css`,
     }),
-    typescript(),
     babel({
       extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.vue'],
     }),
@@ -30,7 +28,7 @@ const commonConfig = (outputPrefix = '') => ({
 export default [
   {
     ...commonConfig(),
-    input: 'index.ts',
+    input: 'index.js',
     output: {
       file: 'dist/index.js',
       name: 'vueFaExamples',
@@ -43,7 +41,7 @@ export default [
   },
   {
     ...commonConfig('v2.'),
-    input: 'v2/index.ts',
+    input: 'v2/index.js',
     output: {
       file: 'dist/v2.index.js',
       name: 'vueFaExamples',
