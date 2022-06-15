@@ -70,7 +70,7 @@
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-typescript2": "^0.31.1",
     "rollup-plugin-vue": "^6.0.0",
-    "sirv-cli": "^1.0.0",
+    "sirv-cli": "^2.0.2",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.2",
     "vue": "^3.2.9",
