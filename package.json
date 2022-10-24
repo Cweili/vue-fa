@@ -45,7 +45,7 @@
     "@cweili/fa-test-util": "^1.0.0",
     "@fortawesome/fontawesome-common-types": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "@rollup/plugin-replace": "^4.0.0",
     "@rollup/plugin-typescript": "^8.3.0",
