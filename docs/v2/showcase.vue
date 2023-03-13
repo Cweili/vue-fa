@@ -13,7 +13,7 @@
             class="hue"
             href="https://fontawesome.com/"
             target="_blank"
-          >FontAwesome 5</a> component for <a
+          >FontAwesome</a> component for <a
             class="hue"
             href="https://vuejs.org/"
             target="_blank"
