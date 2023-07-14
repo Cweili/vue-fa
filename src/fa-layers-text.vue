@@ -10,14 +10,16 @@
 import {
   defineComponent,
   computed,
-  PropType,
 } from 'vue';
 
 import {
-  validFlip,
-  typeNumber,
-  Flip,
-} from './types';
+  size,
+  color,
+  scale,
+  translate,
+  flip,
+  rotate,
+} from './props';
 
 import {
   getStyles,
@@ -26,29 +28,14 @@ import {
 
 export default defineComponent({
   props: {
-    size: {
-      type: String,
-      validator: (value: string) => /^(lg|xs|sm|([\d.]+)x)$/.test(value),
-    },
-    color: String,
+    size,
+    color,
 
-    scale: {
-      ...typeNumber,
-      default: 1,
-    },
-    translateX: {
-      ...typeNumber,
-      default: 0,
-    },
-    translateY: {
-      ...typeNumber,
-      default: 0,
-    },
-    flip: {
-      type: String as PropType<Flip>,
-      validator: (value: Flip) => validFlip.indexOf(value) >= 0,
-    },
-    rotate: typeNumber,
+    scale,
+    translateX: translate,
+    translateY: translate,
+    flip,
+    rotate,
   },
 
   setup(props) {

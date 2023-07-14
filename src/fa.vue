@@ -49,15 +49,17 @@ import {
   computed,
   PropType,
 } from 'vue';
+import { IconDefinition } from '@fortawesome/fontawesome-common-types/index.d';
 
 import {
-  validFlip,
-  validPull,
-  typeNumber,
-  IconDefinition,
-  Flip,
-  Pull,
-} from './types';
+  size,
+  color,
+  pull,
+  scale,
+  translate,
+  flip,
+  rotate,
+} from './props';
 
 import {
   getStyles,
@@ -71,41 +73,23 @@ export default defineComponent({
       required: true,
     },
 
-    size: {
-      type: String,
-      validator: (value: string) => /^(lg|xs|sm|([\d.]+)x)$/.test(value),
-    },
-    color: String,
+    size,
+    color,
 
     fw: Boolean,
-    pull: {
-      type: String as PropType<Pull>,
-      validator: (value: Pull) => validPull.indexOf(value) >= 0,
-    },
+    pull,
 
-    scale: {
-      ...typeNumber,
-      default: 1,
-    },
-    translateX: {
-      ...typeNumber,
-      default: 0,
-    },
-    translateY: {
-      ...typeNumber,
-      default: 0,
-    },
-    flip: {
-      type: String as PropType<Flip>,
-      validator: (value: Flip) => validFlip.indexOf(value) >= 0,
-    },
-    rotate: typeNumber,
+    scale,
+    translateX: translate,
+    translateY: translate,
+    flip,
+    rotate,
 
     spin: Boolean,
     pulse: Boolean,
 
-    primaryColor: String,
-    secondaryColor: String,
+    primaryColor: color,
+    secondaryColor: color,
     primaryOpacity: {
       type: [
         Number,

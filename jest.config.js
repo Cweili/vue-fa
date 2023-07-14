@@ -8,7 +8,7 @@ module.exports = {
     'vue',
   ],
   transform: {
-    '.*\\.vue$': 'vue3-jest',
+    '.*\\.vue$': '@vue/vue3-jest',
     '.*\\.tsx?$': 'ts-jest',
     '.*\\.jsx?$': 'babel-jest',
   },

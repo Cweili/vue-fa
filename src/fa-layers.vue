@@ -11,13 +11,12 @@
 import {
   defineComponent,
   computed,
-  PropType,
 } from 'vue';
 
 import {
-  validPull,
-  Pull,
-} from './types';
+  size,
+  pull,
+} from './props';
 
 import {
   getStyles,
@@ -25,14 +24,8 @@ import {
 
 export default defineComponent({
   props: {
-    size: {
-      type: String,
-      validator: (value: string) => /^(lg|xs|sm|([\d.]+)x)$/.test(value),
-    },
-    pull: {
-      type: String as PropType<Pull>,
-      validator: (value: Pull) => validPull.indexOf(value) >= 0,
-    },
+    size,
+    pull,
   },
 
   setup(props) {

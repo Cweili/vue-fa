@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 import { promisify } from 'util';
 import { resolve } from 'path';
 import {
@@ -6,6 +8,10 @@ import {
   readdirSync,
 } from 'fs';
 
+import {
+  test,
+  expect,
+} from '@jest/globals';
 import { createSSRApp } from 'vue';
 import { renderToString } from '@vue/server-renderer';
 import pretty from 'pretty';
