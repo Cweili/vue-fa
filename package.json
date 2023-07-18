@@ -73,7 +73,7 @@
     "rollup-plugin-vue": "^6.0.0",
     "sirv-cli": "^2.0.2",
     "ts-jest": "^29.1.1",
-    "typescript": "^4.4.2",
+    "typescript": "^5.1.6",
     "vue": "^3.2.9",
     "vue-eslint-parser": "^9.0.3"
   },
