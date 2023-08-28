@@ -43,7 +43,7 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@cweili/fa-test-util": "^1.0.0",
-    "@fortawesome/fontawesome-common-types": "6.4.0",
+    "@fortawesome/fontawesome-common-types": "6.4.2",
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@jest/globals": "^29.6.1",
     "@rollup/plugin-babel": "^5.2.2",
