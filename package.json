@@ -67,7 +67,7 @@
     "postcss": "^8.3.6",
     "postcss-csso": "^6.0.0",
     "pretty": "^2.0.0",
-    "rollup": "^2.61.1",
+    "rollup": "^4.13.0",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-typescript2": "^0.36.0",
     "rollup-plugin-vue": "^6.0.0",
