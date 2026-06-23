@@ -1,8 +1,8 @@
 <template>
-  <div class="container my-4">
+  <main class="container">
     <showcase />
     <docs />
-  </div>
+  </main>
 </template>
 
 <script>

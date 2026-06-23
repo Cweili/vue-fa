@@ -1,10 +1,10 @@
 <template>
-  <h4
+  <component
+    :is="`h${level}`"
     :id="id"
-    :class="`h${level}`"
   >
     <a :href="`#${id}`">{{ title }}</a> <small><Fa :icon="faLink" /></small>
-  </h4>
+  </component>
 </template>
 
 <script>

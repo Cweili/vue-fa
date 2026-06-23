@@ -1,8 +1,8 @@
 <template>
-  <div class="container my-4">
+  <main class="container my-4">
     <showcase />
     <docs />
-  </div>
+  </main>
 </template>
 
 <script>
@@ -18,3 +18,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.my-4 {
+  margin-top: calc(var(--pico-block-spacing-vertical) * 4);
+  margin-bottom: calc(var(--pico-block-spacing-vertical) * 4);
+}
+</style>

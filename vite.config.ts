@@ -38,7 +38,7 @@ export default defineConfig({
       },
     },
     minify: false,
-    cssMinify: false,
+    cssMinify: true,
     cssCodeSplit: false,
   },
 });

@@ -7,22 +7,20 @@
       lang="js"
     />
     <DocsTitle title="Basic Use" />
-    <div class="shadow-sm p-3 mb-3 rounded">
-      <Fa :icon="faFlag" /> Flag
-    </div>
+    <article><Fa :icon="faFlag" /> Flag</article>
     <DocsCode :code="codes.basicUse[0]" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <div style="font-size: 3em; color: tomato">
         <Fa :icon="faFlag" />
       </div>
-    </div>
+    </article>
     <DocsCode :code="codes.basicUse[1]" />
     <DocsTitle title="Additional Styling" />
     <DocsTitle
       :level="5"
       title="Icon Sizes"
     />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <Fa
         :icon="faFlag"
         size="xs"
@@ -55,13 +53,13 @@
         :icon="faFlag"
         size="10x"
       />
-    </div>
+    </article>
     <DocsCode :code="codes.additionalStyling[0]" />
     <DocsTitle
       :level="5"
       title="Fixed Width Icons"
     />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <div>
         <Fa
           :icon="faHome"
@@ -97,13 +95,13 @@
           style="background: mistyrose"
         /> Settins
       </div>
-    </div>
+    </article>
     <DocsCode :code="codes.additionalStyling[1]" />
     <DocsTitle
       :level="5"
       title="Pulled Icons"
     />
-    <div class="shadow-sm p-3 mb-3 rounded clearfix">
+    <article>
       <Fa
         :icon="faQuoteLeft"
         pull="left"
@@ -114,15 +112,15 @@
         pull="right"
         size="2x"
       />
-      Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
-    </div>
+      Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that's no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.
+    </article>
     <DocsCode :code="codes.additionalStyling[2]" />
     <DocsTitle title="Power Transforms" />
     <DocsTitle
       :level="5"
       title="Rotating &amp; Flipping"
     />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <Fa
         :icon="faMagic"
         :rotate="90"
@@ -178,7 +176,7 @@
         rotate="30"
         style="background: mistyrose"
       />
-    </div>
+    </article>
     <DocsCode :code="codes.powerTransforms[0]" />
     <DocsTitle title="Duotone Icons" />
     <DocsTitle
@@ -342,7 +340,7 @@ import { faFlag } from '@fortawesome/free-solid-svg-icons'
 </div>`,
           `<Fa :icon="faQuoteLeft" pull="left" size="2x" />
 <Fa :icon="faQuoteRight" pull="right" size="2x" />
-Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.`,
+Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that's no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.`,
         ],
         powerTransforms: [
           `<Fa :icon="faMagic" size="4x" :rotate="90" style="background: mistyrose"/>

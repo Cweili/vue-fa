@@ -1,10 +1,10 @@
 <template>
-  <div class="shadow-sm mb-3 rounded">
+  <article>
     <pre><code
       ref="el"
       :class="`language-${lang}`"
     >{{ code }}</code></pre>
-  </div>
+  </article>
 </template>
 
 <script>

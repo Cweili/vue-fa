@@ -3,28 +3,28 @@
     <DocsTitle title="Installation" />
     <DocsCode :code="codes.installation[0]" />
     <DocsCode :code="codes.installation[1]" lang="js" />
-    <div class="p-2 mb-3">
+    <article>
       <Fa :icon="faInfo" fw />
       for Vue.js v2.x, uses vue-fa@2:
-      <span class="shadow-sm p-1 rounded">npm install vue-fa@2</span>
+      <code>npm install vue-fa@2</code>
       [<a href="https://cweili.github.io/vue-fa/v2/" target="_blank"
         >vue-fa v2 documents</a
       >]
-    </div>
+    </article>
     <DocsTitle title="Basic Use" />
-    <div class="shadow-sm p-3 mb-3 rounded"><Fa :icon="faFlag" /> Flag</div>
+    <article><Fa :icon="faFlag" /> Flag</article>
     <DocsCode :code="codes.basicUse[0]" />
 
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <div style="font-size: 3em; color: tomato">
         <Fa :icon="faFlag" />
       </div>
-    </div>
+    </article>
     <DocsCode :code="codes.basicUse[1]" />
 
     <DocsTitle title="Additional Styling" />
     <DocsTitle :level="3" title="Icon Sizes" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <Fa :icon="faFlag" size="xs" />
       &nbsp;
       <Fa :icon="faFlag" size="sm" />
@@ -40,11 +40,11 @@
       <Fa :icon="faFlag" size="7x" />
       &nbsp;
       <Fa :icon="faFlag" size="10x" />
-    </div>
+    </article>
     <DocsCode :code="codes.additionalStyling[0]" />
 
     <DocsTitle :level="3" title="Fixed Width Icons" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <div><Fa :icon="faHome" fw style="background: mistyrose" /> Home</div>
       <div><Fa :icon="faInfo" fw style="background: mistyrose" /> Info</div>
       <div><Fa :icon="faBook" fw style="background: mistyrose" /> Library</div>
@@ -52,22 +52,22 @@
         <Fa :icon="faPencilAlt" fw style="background: mistyrose" /> Applications
       </div>
       <div><Fa :icon="faCog" fw style="background: mistyrose" /> Settins</div>
-    </div>
+    </article>
     <DocsCode :code="codes.additionalStyling[1]" />
 
     <DocsTitle :level="3" title="Pulled Icons" />
-    <div class="shadow-sm p-3 mb-3 rounded clearfix">
+    <article>
       <Fa :icon="faQuoteLeft" pull="left" size="2x" />
       <Fa :icon="faQuoteRight" pull="right" size="2x" />
       Gatsby believed in the green light, the orgastic future that year by year
-      recedes before us. It eluded us then, but that’s no matter — tomorrow we
+      recedes before us. It eluded us then, but that's no matter — tomorrow we
       will run faster, stretch our arms further... And one fine morning — So we
       beat on, boats against the current, borne back ceaselessly into the past.
-    </div>
+    </article>
     <DocsCode :code="codes.additionalStyling[2]" />
 
     <DocsTitle title="Animating Icons" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <Fa :icon="faSpinner" size="3x" spin />
       &nbsp;
       <Fa :icon="faCircleNotch" size="3x" spin />
@@ -79,12 +79,12 @@
       <Fa :icon="faSpinner" size="3x" pulse />
       &nbsp;
       <Fa :icon="faStroopwafel" size="3x" spin />
-    </div>
+    </article>
     <DocsCode :code="codes.animatingIcons[0]" />
 
     <DocsTitle title="Power Transforms" />
     <DocsTitle title="Scaling" level="{3}" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <Fa :icon="faSeedling" size="4x" style="background: mistyrose" />
       &nbsp;
       <Fa
@@ -100,11 +100,11 @@
         size="4x"
         style="background: mistyrose"
       />
-    </div>
+    </article>
     <DocsCode :code="codes.powerTransforms[0]" />
 
     <DocsTitle title="Positioning" level="{3}" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <Fa
         :icon="faSeedling"
         :scale="0.5"
@@ -143,11 +143,11 @@
         size="4x"
         style="background: mistyrose"
       />
-    </div>
+    </article>
     <DocsCode :code="codes.powerTransforms[1]" />
 
     <DocsTitle :level="3" title="Rotating &amp; Flipping" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <Fa
         :icon="faSeedling"
         :rotate="90"
@@ -211,11 +211,11 @@
         rotate="30"
         style="background: mistyrose"
       />
-    </div>
+    </article>
     <DocsCode :code="codes.powerTransforms[2]" />
 
     <DocsTitle title="Layering &amp; Text" />
-    <div class="shadow-sm p-3 mb-3 rounded">
+    <article>
       <FaLayers size="4x" style="background: mistyrose">
         <Fa :icon="faCircle" color="tomato" />
         <Fa :icon="faTimes" :scale="0.5" color="white" />
@@ -255,7 +255,7 @@
           </span>
         </FaLayersText>
       </FaLayers>
-    </div>
+    </article>
     <DocsCode :code="codes.layering[0]" lang="js" />
     <DocsCode :code="codes.layering[1]" />
 
@@ -414,7 +414,7 @@ import { faFlag } from '@fortawesome/free-solid-svg-icons'
 </div>`,
           `<Fa :icon="faQuoteLeft" pull="left" size="2x" />
 <Fa :icon="faQuoteRight" pull="right" size="2x" />
-Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that’s no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.`,
+Gatsby believed in the green light, the orgastic future that year by year recedes before us. It eluded us then, but that's no matter — tomorrow we will run faster, stretch our arms further... And one fine morning — So we beat on, boats against the current, borne back ceaselessly into the past.`,
         ],
         animatingIcons: [
           `<Fa :icon="faSpinner" size="3x" spin />
