@@ -11,7 +11,7 @@ import {
 import {
   test,
   expect,
-} from '@jest/globals';
+} from 'vitest';
 import { createSSRApp } from 'vue';
 import { renderToString } from '@vue/server-renderer';
 import pretty from 'pretty';
@@ -21,7 +21,7 @@ import App from './app';
 const readFileAsync = promisify(readFile);
 // const writeFileAsync = promisify(writeFile);
 
-const resolvePath = (...paths) => resolve(__dirname, ...paths);
+const resolvePath = (...paths: string[]) => resolve(__dirname, ...paths);
 
 readdirSync(resolvePath('template')).forEach((templateName) => {
   test(`vue-fa ${templateName}`, async () => {

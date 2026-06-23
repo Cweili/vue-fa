@@ -10,16 +10,39 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
 
       - run: npm install
       - run: npm run build
-      - run: npm test -- --coverageReporters=lcov
+      - run: npm test
 
-      - uses: coverallsapp/github-action@master
+  deploy-docs:
+    needs: test
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 20
+
+      - run: npm install
+      - run: npm run build:docs
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/dist
+
+      - uses: actions/deploy-pages@v4
+        id: deployment

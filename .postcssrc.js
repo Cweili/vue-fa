@@ -1,9 +1,7 @@
-const autoprefixer = require('autoprefixer');
-const csso = require('postcss-csso');
+import autoprefixer from 'autoprefixer';
 
-module.exports = {
+export default {
   plugins: [
     autoprefixer(),
-    csso(),
   ],
 }
