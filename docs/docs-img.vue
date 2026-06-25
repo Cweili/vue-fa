@@ -18,7 +18,8 @@ export default {
 
 img {
   max-width: 100%;
-  max-height: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .credit {

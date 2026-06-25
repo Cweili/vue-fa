@@ -206,6 +206,14 @@ export default defineComponent({
   margin-bottom: 0;
 }
 
+.hero fieldset.grid:has([role="group"]) {
+  grid-template-columns: 1fr;
+}
+
+.hero fieldset.grid:has([role="group"]) label {
+  margin-bottom: 0;
+}
+
 .hue {
   color: #238ae6;
   animation: hue 30s infinite linear;
