@@ -78,5 +78,6 @@ export function getTransform(
     `scale(${flipX * parseNumber(scale)},${flipY * parseNumber(scale)})`,
     rotate && `rotate(${rotate}${rotateUnit})`,
   ]
+    .filter(Boolean)
     .join(' ');
 }
