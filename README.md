@@ -23,7 +23,7 @@ Tiny [FontAwesome][fontawesome] component for [Vue.js][vuejs].
 
 ## Installation
 
-**Notice:** vue-fa >= 3.x is based on Vue.js 3.x.
+**Notice:** vue-fa 4.1+ is based on Vue.js 3.2+.
 
 ```shell
 npm install vue-fa --save

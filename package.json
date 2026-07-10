@@ -71,6 +71,6 @@
   },
   "peerDependencies": {
     "@fortawesome/fontawesome-common-types": "*",
-    "vue": "^3.0.0"
+    "vue": "^3.2.0"
   }
 }
