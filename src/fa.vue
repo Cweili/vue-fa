@@ -1,7 +1,7 @@
 <template>
   <svg
     v-show="i[4]"
-    :viewBox="`0 0 ${i[0]} ${i[1]}`"
+    :viewBox.attr="`0 0 ${i[0]} ${i[1]}`"
     :class="{
       'vue-fa': true,
       spin,
@@ -14,28 +14,28 @@
   >
     <g
       v-if="i[4]"
-      :transform="`translate(${i[0] / 2} ${i[1] / 2})`"
+      :transform.attr="`translate(${i[0] / 2} ${i[1] / 2})`"
       :transform-origin="`${i[0] / 4} 0`"
     >
-      <g :transform="transform">
+      <g :transform.attr="transform">
         <path
           v-if="typeof i[4] === 'string'"
           :d="i[4]"
           :fill="color || primaryColor || 'currentColor'"
-          :transform="`translate(${i[0] / -2} ${i[1] / -2})`"
+          :transform.attr="`translate(${i[0] / -2} ${i[1] / -2})`"
         />
         <template v-else>
           <path
             :d="i[4][0]"
             :fill="secondaryColor || color || 'currentColor'"
             :fill-opacity="swapOpacity !== false ? primaryOpacity : secondaryOpacity"
-            :transform="`translate(${i[0] / -2} ${i[1] / -2})`"
+            :transform.attr="`translate(${i[0] / -2} ${i[1] / -2})`"
           />
           <path
             :d="i[4][1]"
             :fill="primaryColor || color || 'currentColor'"
             :fill-opacity="swapOpacity !== false ? secondaryOpacity : primaryOpacity"
-            :transform="`translate(${i[0] / -2} ${i[1] / -2})`"
+            :transform.attr="`translate(${i[0] / -2} ${i[1] / -2})`"
           />
         </template>
       </g>
