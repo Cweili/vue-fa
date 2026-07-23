@@ -32,9 +32,18 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/vue-fa.esm.js",
-      "require": "./dist/vue-fa.cjs.js",
-      "default": "./dist/vue-fa.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue-fa.esm.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/vue-fa.cjs.js"
+      },
+      "default": {
+        "types": "./dist/vue-fa.js",
+        "default": "./dist/vue-fa.cjs.js"
+      }
     }
   },
   "scripts": {
