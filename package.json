@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@cweili/fa-test-util": "^1.0.0",
-    "@fortawesome/fontawesome-common-types": "6.5.2",
+    "@fortawesome/fontawesome-common-types": "6.6.0",
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vitest/coverage-v8": "^4.1.9",
